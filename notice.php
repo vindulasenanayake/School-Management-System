@@ -1,29 +1,5 @@
 <?php
     session_start();
-    header('Cache-Control: no-cache');
-    header('Pragma: no-cache');
-    
-    if(isset($_POST["btn_save"]))
-    {
-        $user = $_SESSION["user"];
-        $cont_name = $_POST["cont_name"];
-        $cont_tele = $_POST["cont_tele"];
-        $com_name = $_POST["com_name"];
-        $com_add = $_POST["com_add"];
-        $br_no = $_POST["br_no"];
-        $bus_type = $_POST["bus_type"];
-        $email = $_POST["email"];
-       
-        
-         include("connection.php");
-        
-        $result3 = mysqli_query($con,"UPDATE client_info SET com_name='$com_name',com_add='$com_add', br_no='$br_no', bus_type='$bus_type' WHERE username='$user'");
-        
-        $result4 = mysqli_query($con,"UPDATE client_contact SET cont_name='$cont_name', cont_tele='$cont_tele', email='$email' WHERE username='$user'");
-        
-        header('Location: client_profile.php');
-   
-    }
 
     if(!isset($_SESSION["user"]) && $_SESSION["type"] != 2 )
     {
@@ -33,17 +9,54 @@
     {
         $user = $_SESSION["user"];
 
-        include("connection.php");
+        // include("connection.php");
 
-        $result1 = mysqli_query($con, "SELECT * FROM upload WHERE username='$user'");
-        $row1 = mysqli_fetch_row($result1); 
+        // $result1 = mysqli_query($con, "SELECT * FROM upload WHERE username='$user'");
+        // $row1 = mysqli_fetch_row($result1); 
                 
-        $result2 = mysqli_query($con, "SELECT * FROM upload WHERE username='$user'");
-        $row2 = mysqli_fetch_row($result2);
+        // $result2 = mysqli_query($con, "SELECT * FROM upload WHERE username='$user'");
+        // $row2 = mysqli_fetch_row($result2);
         
-        $_SESSION["real_name"] = $row1[1];
-        $_SESSION["pic_path"] = $row1[4];
+        // $_SESSION["real_name"] = $row1[1];
+        // $_SESSION["pic_path"] = $row1[4];
         
+include 'connection.php';
+$statusMsg = '';
+
+// File upload path
+$targetDir = "uploads/";
+$fileName = basename($_FILES["file"]["name"]);
+$targetFilePath = $targetDir . $fileName;
+$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+
+if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
+    // Allow certain file formats
+    $allowTypes = array('jpg','png','jpeg','gif','pdf');
+    if(in_array($fileType, $allowTypes)){
+        // Upload file to server
+        echo "<script>console.log(`$targetFilePath`)</script>";
+        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+            // Insert image file name into database
+
+            $insert = $db->query("INSERT into upload (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
+            if($insert){
+                $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+            }else{
+                $statusMsg = "File upload failed, please try again.";
+            } 
+        }else{
+            $statusMsg = "Sorry, there was an error uploading your file.";
+        }
+    }else{
+        $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
+    }
+}else{
+    $statusMsg = 'Please select a file to upload.';
+}
+
+// Display status message
+echo $statusMsg;
+
         
     }   
 ?>
