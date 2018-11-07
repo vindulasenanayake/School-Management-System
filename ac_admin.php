@@ -29,7 +29,7 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
@@ -53,7 +53,7 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
@@ -93,7 +93,7 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
+            <a href="admin_pannel.php" class="nav-page">Previous </a>      
         </div>        
         
         
@@ -194,7 +194,7 @@
 
                                     <div class='center'>
                                         <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
-                                            <a href="client_profile.php"><img src="images/up.png"></a>
+                                            <a href="notices.php"><img src="images/up.png"></a>
                                         </form>
                                     </div>
                                 <hr>
@@ -223,7 +223,8 @@
 
                                     <div class='center'>
                                         <form action="uploads.php" method="POST">
-                                            <a href="client_profile.php"><img src="images/up.png"></a>
+                                            <a href="results.php"><img src="images/up.png"></a>
+
                                         </form>
                                     </div>
                                 <hr>
@@ -276,7 +277,7 @@
                         }
                        /* else if($row[0] == 2)
                         {
-                            $res2 = mysqli_query($con, "SELECT * FROM client_info WHERE username='$username' ");
+                            $res2 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$username' ");
                             $row2 = mysqli_fetch_row($res2);
                             $display_name = $row2[1];
                             $display_type = "Company";

@@ -31,7 +31,7 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
@@ -55,7 +55,7 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
@@ -138,7 +138,7 @@
                     <div class="row">
                         
                         <div class="col-md-12 col-xs-12 col-sm-12 no-padding">
-                            <div class="col-md-4 col-xs-12 col-sm-4">
+                            <div class="col-md-4 col-xs-12 col-sm-3">
                                 <div class="blog-list">
                                     <div class="image">
                                         <img src="images/student.jpg" alt=""/>
