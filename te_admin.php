@@ -9,6 +9,7 @@
     $username = "";
     $display_name = "";
     $display_type = "";
+    $email="";
 ?>
 
 <html>
@@ -23,16 +24,14 @@
             {
                 $username = $_POST["user_s"];
                 include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
                 $num = mysqli_num_rows($res);
                
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
+                   
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -52,10 +51,8 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM principals_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
-                    echo "<script> alert('User successfully deleted'); </script>";
+                  
+                    m                    echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
                 {
@@ -93,21 +90,21 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="prin_admin.php" class="nav-page">Previous </a>      
+            <a href="te_admin.php" class="nav-page">Previous </a>      
         </div>        
         
         
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel  -  Principal</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel  -  Teacher</div></div><br>
             <div class="row">
                 
                 <div class="col-3">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/prin.jpg" width="100%">
+                                <img src="images/teacher.jpg" width="100%">
                             </div>
                             <div class='col-12'>
                             <br>
@@ -117,7 +114,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Register a Principal</strong></div>                                  
+                                    <div class='center'><strong>Register a Teacher</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -126,7 +123,7 @@
 
 
                                     <div class='center'>
-                                        <form action="prin_admin.php" method="POST" >
+                                        <form action="te_admin.php" method="POST" >
                                             <a href="register.php"><img src="images/reg.png"></a>
                                            
                                         </form>
@@ -144,7 +141,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/prin.jpg" width="100%">
+                                <img src="images/sh.jpg" width="100%">
                             </div>
                             <div class='col-12'>
                             <br>
@@ -154,7 +151,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>View Principals</strong></div>                                  
+                                    <div class='center'><strong>View Teachers</strong></div>                                  
                                 </div><hr>
                                     <br>
                                     <br>
@@ -165,10 +162,10 @@
                                     <div class='center' bgcolor:green>
 
 
-                                           <form action="prin_admin.php" method="POST" >
+                                           <form action="te_admin.php" method="POST" >
 
                                            
-                                                <a href="prin_viewusers.php"><img src="images/view.png"></a>
+                                                <a href="te_viewusers.php"><img src="images/view.png"></a>
                                             
                                         </form>
                                     </div>
@@ -183,7 +180,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/prin.jpg" width="100%"  >
+                                <img src="images/cover.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -193,11 +190,11 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Search a Principal</strong></div>                                  
+                                    <div class='center'><strong>Search a Teacher</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="prin_admin.php" method="POST">
+                                        <form action="te_admin.php" method="POST">
                                             <input type="text" required name="user_name" placeholder="Type username">
                                             <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">Search</button>
                                         </form>
@@ -214,7 +211,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/prin.jpg" width="100%"  >
+                                <img src="images/teacher.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -224,11 +221,11 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Delete a Principal</strong></div>                                  
+                                    <div class='center'><strong>Delete a Teacher</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="prin_admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
+                                        <form action="te_admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                             <input type="text" required name="user_s" placeholder="Type username">
                                             <button type="submit" name="submit_user" class="btn btn-red btn-large btn-wide">Delete</button>
                                         </form>
@@ -289,12 +286,12 @@
 
                             echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
                         }
-                       else if($row[0] == 4)
+                       else if($row[0] == 2)
                         {
-                            $res2 = mysqli_query($con, "SELECT * FROM principals_info WHERE username='$username' ");
+                            $res2 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$username' ");
                             $row2 = mysqli_fetch_row($res2);
                             $display_name = $row2[1];
-                            $display_type = "Principal";
+                            $display_type = "Teacher";
                             echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
                         }
                         else

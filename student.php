@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    if($_SESSION["type"] != 3)
+    if($_SESSION["type"] != 1)
     {
         header('location: logout.php');
     }
@@ -13,7 +13,7 @@
 <html>
     <head>
         
-        <title>Admin Panel | Lumbini College</title>
+        <title>Lumbini College</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
@@ -107,11 +107,10 @@
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.php"><b>Home</b></a></li>
-                            <li class="hidden-xs"></li>
-                            <li><a href="ac_admin.php"><b>Academic and Publications</b></a></li>
-                            <li class="hidden-xs"></li>
+                            
+                            
                             <li><a href="logout.php"><b>logout</b></a></li>
+                            <li><a href="student_profile.php"><b>Profile</b></a></li>
                             <li class="hidden-xs"></li>
                             
                         </ul>
@@ -120,13 +119,14 @@
             </div>
         </header>
 
+        
         <section>
 
             <div class="banner-home">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-xs-12 col-sm-12">
-                            <h1>Admin Panel | Lumbini College</h1>
+                            <h1>STUDENT | Lumbini College</h1>
                             
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                                     <div class="bottom-details">
                                       
                                         
-                                        <a href="admin.php">STUDENT</a>
+                                        <a href="client_profile.php">PROFILE</a>
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@
                                     <div class="bottom-details">
                                         
                                         
-                                        <a href="te_admin.php">TEACHER</a>
+                                        <a href="te_admin.php">NOTICES</a>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,52 @@
                                     <div class="bottom-details">
                                         
                                         
-                                        <a href="prin_admin.php">PRINCIPAL</a>
+                                        <a href="prin_admin.php">TIMETABLE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <div class="blogs-home common-heading-2">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-md-12 col-xs-12 col-sm-12 no-padding">
+                            <div class="col-md-4 col-xs-12 col-sm-4">
+                                <div class="blog-list">
+                                    <div class="image">
+                                        <img src="images/student.jpg" alt=""/>
+                                    </div>
+                                    <div class="bottom-details">
+                                      
+                                        
+                                        <a href="client_profile.php">VIEW ASSIGNMETS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12 col-sm-4">
+                                <div class="blog-list">
+                                    <div class="image">
+                                        <img src="images/teacher.jpg" alt="" />
+                                    </div>
+                                    <div class="bottom-details">
+                                        
+                                        
+                                        <a href="te_admin.php">REPORT CARD</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12 col-sm-4">
+                                <div class="blog-list">
+                                    <div class="image">
+                                        <img src="images/prin.jpg" alt="" />
+                                    </div>
+                                    <div class="bottom-details">
+                                        
+                                        
+                                        <a href="prin_admin.php">EXTRA CURRICULAR ACTIVITIES</a>
                                     </div>
                                 </div>
                             </div>

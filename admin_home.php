@@ -17,13 +17,12 @@
         <title> Admin panel | Lumbini College! </title>
         <link rel="icon" href="images/logo1.png" type="image/png">
        
-
         <?php
            if(isset($_POST["submit_user"]))
             {
                 $username = $_POST["user_s"];
                 include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1");
                 $num = mysqli_num_rows($res);
                
                 if($num == 1)
@@ -53,7 +52,7 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM principals_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
@@ -92,22 +91,21 @@
             <a href="logout.php"> <img src="images/logo.png"></a>
 
                
-            <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="prin_admin.php" class="nav-page">Previous </a>      
+            <a href="logout.php" class="nav-page"> Logout </a>       
         </div>        
         
         
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel  -  Principal</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel</div></div><br>
             <div class="row">
                 
-                <div class="col-3">
+                <div class="col-3 center">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/prin.jpg" width="100%">
+                                <img src="images/teacher.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -117,89 +115,13 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Register a Principal</strong></div>                                  
-                                </div><hr>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-
-
-                                    <div class='center'>
-                                        <form action="prin_admin.php" method="POST" >
-                                            <a href="register.php"><img src="images/reg.png"></a>
-                                           
-                                        </form>
-                                    </div>
-                                <hr>
-                                
-                            </div>
-                        </div>                  
-                    </div>
-                 </div>
-                
-                
-                
-                <div class="col-3">
-                    <div class='card-container'>                           
-                        <div class='card-job card-top'>
-                            <div>
-                                <img src="images/prin.jpg" width="100%">
-                            </div>
-                            <div class='col-12'>
-                            <br>
-                                <div class='row'>
-                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
-
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='center'><strong>View Principals</strong></div>                                  
-                                </div><hr>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-
-
-                                    <div class='center' bgcolor:green>
-
-
-                                           <form action="prin_admin.php" method="POST" >
-
-                                           
-                                                <a href="prin_viewusers.php"><img src="images/view.png"></a>
-                                            
-                                        </form>
-                                    </div>
-                                <hr>
-                                
-                            </div>
-                        </div>                  
-                    </div>
-                 </div>
-
-                 <div class="col-3 center">
-                    <div class='card-container'>                           
-                        <div class='card-job card-top'>
-                            <div>
-                                <img src="images/prin.jpg" width="100%"  >
-                            </div>
-                            <div class='col-12'>
-                            <br>
-                                <div class='row'>
-                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
-
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='center'><strong>Search a Principal</strong></div>                                  
+                                    <div class='center'><strong>View a Teacher</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="prin_admin.php" method="POST">
+                                        <form action="admin.php" method="POST">
                                             <input type="text" required name="user_name" placeholder="Type username">
-                                            <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">Search</button>
+                                            <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">View</button>
                                         </form>
                                     </div>
                                 <hr>
@@ -214,7 +136,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/prin.jpg" width="100%"  >
+                                <img src="images/teacher.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -224,11 +146,11 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Delete a Principal</strong></div>                                  
+                                    <div class='center'><strong>Delete a teacher</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="prin_admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
+                                        <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                             <input type="text" required name="user_s" placeholder="Type username">
                                             <button type="submit" name="submit_user" class="btn btn-red btn-large btn-wide">Delete</button>
                                         </form>
@@ -239,15 +161,69 @@
                         </div>                  
                     </div>
                  </div>
+                
+                
+              
+                
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/teacher.jpg" width="100%">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
 
-                 
-            
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>Delete a company</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
+                                            <input type="text" required name="user_s" placeholder="Type username">
+                                            <button type="submit" name="submit_company" class="btn btn-red btn-large btn-wide">Delete</button>
+                                        </form>
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
                 
-                
-               
-           
-            </div>
-            
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/teacher.jpg" width="100%">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>Reset passwords</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to reset?')">
+                                            <input type="text" required name="user_s" placeholder="Type username">
+                                            <button type="submit" name="submit_reset" class="btn btn-green btn-large btn-wide">Reset password</button>
+                                        </form>
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
                
            
             </div>
@@ -285,16 +261,16 @@
                             $res2 = mysqli_query($con, "SELECT * FROM cust_name WHERE username='$username' ");
                             $row2 = mysqli_fetch_row($res2);
                             $display_name = $row2[2]." ".$row2[3]." ".  $row2[4];
-                            $display_type = "Student";
+                            $display_type = "Personal";
 
                             echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
                         }
-                       else if($row[0] == 4)
+                        else if($row[0] == 2)
                         {
-                            $res2 = mysqli_query($con, "SELECT * FROM principals_info WHERE username='$username' ");
+                            $res2 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$username' ");
                             $row2 = mysqli_fetch_row($res2);
                             $display_name = $row2[1];
-                            $display_type = "Principal";
+                            $display_type = "Company";
                             echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
                         }
                         else
@@ -308,8 +284,8 @@
                         <div class="card">
                             <h2>User Details</h2>
                         <table class="table table-striped center">
-                            <tr><th>Username</th><th>Account type</th></tr>
-                            <tr><td><?php echo $username;  ?></td></td><td><?php echo $display_type; ?></td></tr>
+                            <tr><th>Username</th><th>Name</th><th>Account type</th></tr>
+                            <tr><td><?php echo $username;  ?></td><td><?php echo $display_name; ?></td><td><?php echo $display_type; ?></td></tr>
                         </table>
 
                         </div>
