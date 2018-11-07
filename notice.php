@@ -25,7 +25,7 @@
    
     }
 
-    if(!isset($_SESSION["user"]) || $_SESSION["type"] != 2 )
+    if(!isset($_SESSION["user"]) && $_SESSION["type"] != 2 )
     {
         header('Location: login.php');
     }
@@ -35,10 +35,10 @@
 
         include("connection.php");
 
-        $result1 = mysqli_query($con, "SELECT * FROM client_info WHERE username='$user'");
+        $result1 = mysqli_query($con, "SELECT * FROM upload WHERE username='$user'");
         $row1 = mysqli_fetch_row($result1); 
                 
-        $result2 = mysqli_query($con, "SELECT * FROM client_contact WHERE username='$user'");
+        $result2 = mysqli_query($con, "SELECT * FROM upload WHERE username='$user'");
         $row2 = mysqli_fetch_row($result2);
         
         $_SESSION["real_name"] = $row1[1];
@@ -50,24 +50,63 @@
 
 <html>
     <head>
-        <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title> Lumbini College | Academic and Publications</title>
-        <link rel="icon" href="images/favicon.png" type="image/png">
-    </head>  
+        
+        <title>Admin Panel | Lumbini College</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" href="images/logo1.png" type="image/png">
+</head>
+    <body>
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-inverse header">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="images/logo.png" alt="logo" />
+                        </a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.php"><b>Home</b></a></li>
+                            <li class="hidden-xs"></li>
+                            <li><a href="ac_admin.php"><b>Academic and Publications</b></a></li>
+                            <li class="hidden-xs"></li>
+                            <li><a href="logout.php"><b>logout</b></a></li>
+                            <li class="hidden-xs"></li>
+                            <li><a href="te admin.php"><b>Previous</b> </a></li>
+                             <li class="hidden-xs"></li>  
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+       <section>
+
+            <div class="banner-home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12 col-sm-12">
+                            <h1>Teacher Panel | Lumbini College</h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     
     <body class="font">  
-        
-        
-        <div class="nav-fixed">
-          <a href="home.php"> <img src="images/logo.png"></a>
-            
-
-            <a href="logout.php" class="nav-page"> Logout </a>       
-                
-            <a href="client_home.php" class="nav-page"> Home </a> 
-            
-        
-        </div> 
+    
              
             
         <div class="container">
@@ -79,7 +118,7 @@
 
                     <form action="client_profile.php" method="POST" enctype="multipart/form-data">
                         <label class="btn btn-wide btn-blue">
-                        <input type="file" name="fileToUpload" id="fileToUpload" onchange="return upload_btn(this)" accept="image/*"><center>Choose Assignment</center></label>
+                        <input type="file" name="fileToUpload" id="fileToUpload" onchange="return upload_btn(this)" accept=""><center>Choose Assignment</center></label>
                         <input type="submit" value="Upload Image" name="upload" id="upload" class="btn btn-wide btn-green" disabled>
                          <input type="reset" value="Cancel" name="cancel_up" id="cancel_up" class="btn btn-wide btn-red" onclick="cancel_btn()" disabled>
                     </form>
@@ -107,6 +146,7 @@
                             $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
                             $valid = 1;
                             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                            echo $imageFileType;
                             // $filename = pathinfo($_FILES["fileToUpload"])
 
                             if ($_FILES["fileToUpload"]["size"] > 1000000)
@@ -115,7 +155,7 @@
                                 $valid = 0;
                             }
 
-                            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") 
+                            if( $imageFileType != "pdf") 
                             {
                                 echo "<script> fail_type.parentElement.style.display='block'; </script>";
                                 $valid = 0;
@@ -127,7 +167,7 @@
                                 {
                                     $pro_pic = $target_dir.$_SESSION["user"].".".$imageFileType;
                                     include("connection.php");
-                                    $result3 = mysqli_query($con, "UPDATE client_info SET logo='$pro_pic' WHERE username='$user'");
+                                    $result3 = mysqli_query($con, "UPDATE upload SET logo='$pro_pic' WHERE username='$user'");
                                     echo "<script> window.location.href = window.location.href; </script>";
                                 } 
                                 else
@@ -175,14 +215,14 @@
             function upload_btn(file) {
                 var ext = file.files[0].name.split('.').pop();                
                 var valid = 1;
-                var FileSize = file.files[0].size / 1024 / 1024; 
+                var FileSize = file.files[0].size / 10000 / 10000; 
                 
                 if (FileSize > 1) 
                 {
                     fail_size.parentElement.style.display='block';
                     valid = 0;   
                 }                 
-                else if ( ext == "jpg" || ext == "JPG" || ext == "jpeg" || ext == "JPEG" || ext == "png" || ext == "PNG" ) 
+                else if ( ext == "PDF" ) 
                 {
                     valid = 1 
                 }

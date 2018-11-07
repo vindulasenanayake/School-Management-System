@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    if($_SESSION["type"] != 3)
+    if($_SESSION["type"] != 2)
     {
         header('location: logout.php');
     }
@@ -100,80 +100,139 @@
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel  -  Principal</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Teacher Panel  -  Academic and Publications</div></div><br>
             <div class="row">
                 
                 
-                
-                
-                <div class="col-3 center">
-                    <div class='card-container'>                           
-                        <div class='card-job card-top'>
-                            <div>
-                                <img src="images/pp.jpg" width="100%"  >
-                            </div>
-                            <div class='col-12'>
-                            <br>
-                                <div class='row'>
-                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
 
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='center'><strong>View Student progress</strong></div>                                  
-                                </div><hr>
-
-                                    <div class='center'>
-                                        <form action="admin.php" method="POST">
-                                            <input type="text" required name="user_name" placeholder="Type username">
-                                            <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">View</button>
-                                        </form>
-                                    </div>
-                                <hr>
-                                
-                            </div>
-                        </div>                  
-                    </div>
-                 </div>
-                
-                                
-                <div class="col-3 center">
-                    <div class='card-container'>                           
-                        <div class='card-job card-top'>
-                            <div>
-                                <img src="images/re.jpg" width="100%" height="30%" >
-                            </div>
-                            <div class='col-12'>
-                            <br>
-                                <div class='row'>
-                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
-
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='center'><strong>View Exam Results</strong></div>                                  
-                                </div><hr>
-
-                                    <div class='center'>
-                                        <form action="admin.php" method="POST">
-                                            <input type="text" required name="user_name" placeholder="Type username">
-                                            <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">View</button>
-                                        </form>
-                                    </div>
-                                <hr>
-                                
-                            </div>
-                        </div>                  
-                    </div>
-                 </div>
-                
-            
-                
-                
                
            
             </div>
-            
+            <div class="container ">
+            <br>
+            <div class="row">
+                
+                <div class="col-3 center">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/student.jpg" width="100%"  >
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>View Timetable</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        <!-- <form action="client_profile.php" method="POST"> -->
+                                            <a href="view_time_table.php"><img src="images/up.png"></a>
+                                            
+                                        <!-- </form> -->
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+                
+                                
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/cover.jpg" width="100%"  >
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>Upload Activities</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        <!-- <form action="te admin.php" method="POST" > -->
+                                              <a href="upload_activities.php"><img src="images/up.png"></a>
+                                        <!-- </form> -->
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+                
+                
+              
+                
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/student.jpg" width="100%">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>Upload Notices</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        <!-- <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')"> -->
+                                            <a href="notice.php"><img src="images/up.png"></a>
+                                        <!-- </form> -->
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+                
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/cover.jpg" width="100%">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>Upload Marks</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        <!-- <form action="uploads.php" method="POST"> -->
+                                            <a href="marks.php"><img src="images/up.png"></a>
+                                        <!-- </form> -->
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+                 
                
            
             </div>
@@ -242,12 +301,6 @@
                     </div>
             </div>
         </div> 
-                      
-        <?php include("footer.php"); ?>
-        
-       
-        
-        </body>
+
+</body>
 </html>
-
-

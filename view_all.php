@@ -137,14 +137,14 @@
                     
                     if ($type == 1)
                     {
-                        $result2 = mysqli_query($con, "INSERT INTO student_info(username, email,pro_pic) VALUES('$user','$email','$pic_default')");
+                        $result2 = mysqli_query($con, "INSERT INTO cust_info(username, email,pro_pic) VALUES('$user','$email','$pic_default')");
                         $result3 = mysqli_query($con, "INSERT INTO cust_name(username) VALUES('$user')");
                         $result4 = mysqli_query($con, "INSERT INTO cust_qual(username, cv_path) VALUES('$user','cv/default.pdf')");
                         $result5 = mysqli_query($con, "INSERT INTO cust_qual_deg(username) VALUES('$user')");
                     }
                     else if ($type == 2)
                     {
-                        $result6 = mysqli_query($con, "INSERT INTO teachers_info(username, logo) VALUES('$user','$pic_default')");
+                        $result6 = mysqli_query($con, "INSERT INTO client_info(username, logo) VALUES('$user','$pic_default')");
                         $result6 = mysqli_query($con, "INSERT INTO client_contact(username, email) VALUES('$user','$email')");
                     }
                     echo "<script> register_success.parentElement.style.display='block'; </script>";

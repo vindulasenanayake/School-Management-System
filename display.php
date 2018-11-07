@@ -17,7 +17,7 @@
         
          include("connection.php");
         
-        $result3 = mysqli_query($con,"UPDATE teachers_info SET com_name='$com_name',com_add='$com_add', br_no='$br_no', bus_type='$bus_type' WHERE username='$user'");
+        $result3 = mysqli_query($con,"UPDATE client_info SET com_name='$com_name',com_add='$com_add', br_no='$br_no', bus_type='$bus_type' WHERE username='$user'");
         
         $result4 = mysqli_query($con,"UPDATE client_contact SET cont_name='$cont_name', cont_tele='$cont_tele', email='$email' WHERE username='$user'");
         
@@ -35,7 +35,7 @@
 
         include("connection.php");
 
-        $result1 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$user'");
+        $result1 = mysqli_query($con, "SELECT * FROM client_info WHERE username='$user'");
         $row1 = mysqli_fetch_row($result1); 
                 
         $result2 = mysqli_query($con, "SELECT * FROM client_contact WHERE username='$user'");
@@ -121,7 +121,7 @@
                                 {
                                     $pro_pic = $target_dir.$_SESSION["user"].".".$imageFileType;
                                     include("connection.php");
-                                    $result3 = mysqli_query($con, "UPDATE teachers_info SET logo='$pro_pic' WHERE username='$user'");
+                                    $result3 = mysqli_query($con, "UPDATE client_info SET logo='$pro_pic' WHERE username='$user'");
                                     echo "<script> window.location.href = window.location.href; </script>";
                                 } 
                                 else
