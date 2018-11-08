@@ -43,6 +43,7 @@ echo "
 			<table>
 			 	<tr>
 			 		<th> Username </th>
+			 		<th> Name </th>
 			 		<th> Email</th>
 			 		<th> Address </th>
 			 		<th> Class </th>
@@ -57,6 +58,7 @@ if($numrow>0){
 	
 	while($row = mysqli_fetch_assoc($result)){
 		$username=$row['username'];
+		$names=$row['names'];
 		$email=$row['email'];
 		$address=$row['address'];
 		$class=$row['class'];
@@ -67,17 +69,9 @@ if($numrow>0){
 		
 		
 		
-
-		// echo $Username.'<br>';
-		// echo $Location. '<br>';
-		// echo $Email. '<br>';
-		// echo $Website. '<br>';
-		// echo $Category. '<br>';
-		// echo $Businessname. '<br>';
-		// echo '<br>';
-
-		echo '<tr>
+	echo '<tr>
 			 		<td>'.$username.'</td>
+			 		<td>'.$names.'</td>
 			 		<td>'.$email.'</td>
 			 		<td>'.$address.'</td>
 			 		<td>'.$class.'</td>
@@ -92,9 +86,7 @@ if($numrow>0){
 	echo "</table><br>";
 }
 
-// esle{
-// 	echo "Empty Database";
-// }
+
 ?>
 
 

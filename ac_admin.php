@@ -93,7 +93,7 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin_pannel.php" class="nav-page">Previous </a>      
+            <a href="admin.php" class="nav-page">Previous </a>      
         </div>        
         
         
@@ -194,7 +194,7 @@
 
                                     <div class='center'>
                                         <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
-                                            <a href="notices.php"><img src="images/up.png"></a>
+                                            <a href="client_profile.php"><img src="images/up.png"></a>
                                         </form>
                                     </div>
                                 <hr>
@@ -223,8 +223,7 @@
 
                                     <div class='center'>
                                         <form action="uploads.php" method="POST">
-                                            <a href="results.php"><img src="images/up.png"></a>
-
+                                            <a href="client_profile.php"><img src="images/up.png"></a>
                                         </form>
                                     </div>
                                 <hr>

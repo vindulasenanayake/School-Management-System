@@ -5,9 +5,10 @@
 <html>
     <head>
         <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title>Register | Lumbini College</title>
+        <title>Register| Lumbini College!</title>
+         <link rel="icon" href="images/logo1.png" type="image/png">
         
-        <a href="index.php">
+       
         <style>
             body {
             background-image: url("images/sh.jpg");
@@ -40,12 +41,6 @@
                                     <input type="text" id="user" name="user" placeholder="Username" required autocomplete="off" onfocus="alert_user_close()">                     
                                     <input type="password" id="pass1" name="pass1" placeholder="Password" required autocomplete="off" onchange="return check_pass()">
                                     <input type="password" id="pass2" name="pass2" placeholder="Retype password" required autocomplete="off" onchange="return check_pass()">
-                                    <input type="email" name="email" placeholder="Email" required autocomplete="off">
-                                    <input type="text" name="address" placeholder="Address">
-                                    <input type="text" name="class" placeholder="Class/Section"> 
-                                    <input type="text" name="telephone" placeholder="Telephone">
-                                    <input type="text" name="gender" placeholder="Gender">
-                                    <input type="text" name="age" placeholder="Age">
                                     <hr>
                                     User Type
                                     <select name="type" required>
@@ -134,31 +129,14 @@
                 else
                 {
                     $pass = md5($_POST["pass1"]);
-                    $email = $_POST["email"];
                     $type = $_POST["type"];
                     $pic_default = "images/pro_pic.png";
-                    $class=$_POST["class"];
-                    $address=$_POST["address"];
-                    $telephone=$_POST["telephone"];
-                    $gender=$_POST["gender"];
-                    $age=$_POST["age"];
+                   
                     
                     $result1 = mysqli_query($con, "INSERT INTO user_login(username, pw, type) VALUES('$user','$pass','$type')");
-                    
-                    if ($type == 1)
-                    {
-                        $result2 = mysqli_query($con, "INSERT INTO student_info(username, email,address,class,telephone,gender,age,pro_pic) VALUES('$user','$email','$address','$class','$telephone','$gender','$age','$pic_default')");
-                        
-                    }
-                   
 
-                    else if($type ==2)
-                    {
-                        $result4 = mysqli_query($con, "INSERT INTO teachers_info(username, email,address,class,telephone,gender,age,pro_pic) VALUES('$user','$email','$address','$class','$telephone','$gender','$age','$pic_default')");
-                      
-                    }
                     echo "<script> register_success.parentElement.style.display='block'; </script>";
-
+                    
                     
                    
                 }

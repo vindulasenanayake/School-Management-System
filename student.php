@@ -110,6 +110,7 @@
                             
                             
                             <li><a href="logout.php"><b>logout</b></a></li>
+                            <li><a href="student_profile.php"><b>Profile</b></a></li>
                             <li class="hidden-xs"></li>
                             
                         </ul>

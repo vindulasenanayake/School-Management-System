@@ -9,6 +9,7 @@
     $username = "";
     $display_name = "";
     $display_type = "";
+    $email="";
 ?>
 
 <html>
@@ -23,16 +24,14 @@
             {
                 $username = $_POST["user_s"];
                 include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
                 $num = mysqli_num_rows($res);
                
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
+                   
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -52,10 +51,8 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
-                    echo "<script> alert('User successfully deleted'); </script>";
+                  
+                    m                    echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
                 {

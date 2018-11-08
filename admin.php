@@ -97,7 +97,7 @@
 
             <a href="admin_pannel.php" class="nav-page">Previous </a>
 
-             <a href="editusers.php"  class="nav-page">Student Profiles</a> 
+             <a href="profile.php"  class="nav-page">Student Profiles</a> 
               
         </div>        
         

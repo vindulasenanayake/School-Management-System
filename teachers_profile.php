@@ -7,14 +7,14 @@
         $names = $_POST["names"];
         $gender = $_POST["gender"];
         $telephone= $_POST["telephone"];
-        $email = $_POST["email"];
+        
         $address = $_POST["address"];
        
         $age = $_POST["age"];
         
         include("connection.php");
         
-        $result3 = mysqli_query($con,"UPDATE teachers_info SET names='$names', gender='$gender',age='$age',class='$class',telephone='$telephone', email='$email',address='$address', WHERE username='$user'");
+        $result3 = mysqli_query($con,"UPDATE teachers_info SET names='$names', gender='$gender',age='$age',class='$class',telephone='$telephone',address='$address', WHERE username='$user'");
         
        
         
@@ -167,15 +167,7 @@
 
                         <br>
 
-                        <div class="row">
-                            <div class="col-3 lbl">Email</div>
-                            <div class="col-9">
-                                   <input type="email" id="email" name="email" placeholder="email" value="<?php echo $row1[2]; ?>" disabled>
-                            </div>
-                        </div>
-
-                        <br>
-
+                        
                         
 
                         <div class="row">
@@ -213,7 +205,7 @@
                 document.getElementById("names").disabled = false;
                 document.getElementById("gender").disabled = false;
                 document.getElementById("class").disabled = false;
-                document.getElementById("email").disabled = false;
+               
                 document.getElementById("telephone").disabled = false;
                 document.getElementById("age").disabled = false;
                 document.getElementById("address").disabled = false;
@@ -228,7 +220,7 @@
                 document.getElementById("names").disabled = true;
                 document.getElementById("class").disabled = true;
                 document.getElementById("gender").disabled = true;
-                document.getElementById("email").disabled = true;
+               
                 document.getElementById("telephone").disabled = true;
                 document.getElementById("age").disabled = true;
                 document.getElementById("address").disabled = true;

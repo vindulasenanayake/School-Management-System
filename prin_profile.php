@@ -7,14 +7,14 @@
         $names = $_POST["names"];
         $gender = $_POST["gender"];
         $telephone= $_POST["telephone"];
-        $email = $_POST["email"];
+       
         $address = $_POST["address"];
        
         $age = $_POST["age"];
         
         include("connection.php");
         
-        $result3 = mysqli_query($con,"UPDATE principals_info SET names='$names', gender='$gender',age='$age',class='$class',telephone='$telephone', email='$email',address='$address', WHERE username='$user'");
+        $result3 = mysqli_query($con,"UPDATE principals_info SET names='$names', gender='$gender',age='$age',class='$class',telephone='$telephone',address='$address', WHERE username='$user'");
         
        
         
@@ -119,7 +119,7 @@
                             <div class="col-3 lbl">Name</div>
                             <div class="col-9">
                             
-                                <input type="text" id="names" name="names" placeholder="Name" value="<?php echo $row1[1]; ?>" disabled>
+                                <input type="text" id="names" name="names" placeholder="Name" value="<?php echo $row1[1]; ?>" >
                             </div>
                         </div>
 
@@ -128,7 +128,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Gender</div>
                             <div class="col-9">
-                                <select name="gender" id="gender" disabled>
+                                <select name="gender" id="gender" >
                                     <option value="<?php echo $row1[6]; ?>" hidden><?php echo $row1[6]; ?></option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>                                       
@@ -142,7 +142,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Age</div>
                             <div class="col-9">
-                                   <input type="text" id="age" name="age" placeholder="Age" value="<?php echo $row1[7];?>" disabled>
+                                   <input type="text" id="age" name="age" placeholder="Age" value="<?php echo $row1[7];?>">
                             </div>
                         </div>
 
@@ -151,7 +151,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Class</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="class" placeholder="eg - 7A" value="<?php echo $row1[4];?>" disabled>
+                                   <input type="text" id="class" name="class" placeholder="eg - 7A" value="<?php echo $row1[4];?>" >
                             </div>
                         </div>
 
@@ -161,20 +161,14 @@
                         <div class="row">
                             <div class="col-3 lbl">Telephone</div>
                             <div class="col-9">
-                                   <input type="text" id="telephone" name="telephone" placeholder="eg - +94712345678" value="<?php echo $row1[5]; ?>" disabled>
+                                   <input type="text" id="telephone" name="telephone" placeholder="eg - +94712345678" value="<?php echo $row1[5]; ?>" >
                             </div>
                         </div>
 
                         <br>
 
-                        <div class="row">
-                            <div class="col-3 lbl">Email</div>
-                            <div class="col-9">
-                                   <input type="email" id="email" name="email" placeholder="email" value="<?php echo $row1[2]; ?>" disabled>
-                            </div>
-                        </div>
-
-                        <br>
+                        
+                        
 
                         
 
@@ -213,7 +207,7 @@
                 document.getElementById("names").disabled = false;
                 document.getElementById("gender").disabled = false;
                 document.getElementById("class").disabled = false;
-                document.getElementById("email").disabled = false;
+               
                 document.getElementById("telephone").disabled = false;
                 document.getElementById("age").disabled = false;
                 document.getElementById("address").disabled = false;
@@ -228,7 +222,7 @@
                 document.getElementById("names").disabled = true;
                 document.getElementById("class").disabled = true;
                 document.getElementById("gender").disabled = true;
-                document.getElementById("email").disabled = true;
+               
                 document.getElementById("telephone").disabled = true;
                 document.getElementById("age").disabled = true;
                 document.getElementById("address").disabled = true;
