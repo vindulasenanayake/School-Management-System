@@ -81,10 +81,10 @@
           <a href="home.php"> <img src="images/logo.png"></a>
             
 
-            <a href="logout.php" class="nav-page"> Logout </a>       
-            <a href="qualification.php" class="nav-page "> Extra Curricular Activities </a>      
-            <a href="home.php" class="nav-page"> Home </a> 
-            <a class="nav-name">Student - <?php echo $_SESSION["real_name"] ?>!</a>
+              
+                
+            <a href="student.php" class="nav-page"> Previous </a> 
+            
             <img class="nav-pro-pic" src="<?php echo $_SESSION['pic_path'];?>?<?php echo rand(1,3000); ?>">
         
         </div> 
