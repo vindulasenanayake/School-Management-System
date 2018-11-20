@@ -147,7 +147,7 @@
                                     <div class="bottom-details">
                                       
                                         
-                                        <a href="client_profile.php">PROFILE</a>
+                                        <a href="student_profile.php">PROFILE</a>
                                     </div>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@
                                     <div class="bottom-details">
                                         
                                         
-                                        <a href="te_admin.php">REPORT CARD</a>
+                                        <a href="student_report.php">REPORT CARD</a>
                                     </div>
                                 </div>
                             </div>

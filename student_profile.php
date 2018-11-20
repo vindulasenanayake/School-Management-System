@@ -7,9 +7,7 @@
         $names = $_POST["names"];
         $gender = $_POST["gender"];
         $telephone= $_POST["telephone"];
-        
         $address = $_POST["address"];
-       
         $age = $_POST["age"];
         
         include("connection.php");
