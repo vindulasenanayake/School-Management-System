@@ -130,7 +130,7 @@
                             <div class="col-3 lbl">Name</div>
                             <div class="col-9">
                             
-                                <input type="text" id="names" name="names" placeholder="Name" value="<?php echo $row2[1]; ?>" >
+                                <input type="text" id="names" name="names" placeholder="Name" value="<?php echo $row2[1]; ?>"disabled >
                             </div>
                         </div>
 
@@ -140,7 +140,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Class</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="class" placeholder="eg - 7A" value="<?php echo $row2[3];?>" >
+                                   <input type="text" id="class" name="class" placeholder="eg - 7A" value="<?php echo $row2[3];?>"disabled >
                             </div>
                         </div>
 
@@ -149,7 +149,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Term</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="term" placeholder="eg - 1" value="<?php echo $row1[1];?>" >
+                                   <input type="text" id="class" name="term" placeholder="eg - 1" value="<?php echo $row1[1];?>" disabled >
                             </div>
                         </div>
 
@@ -158,7 +158,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Buddhism</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="buddhism" placeholder="eg - 7A" value="<?php echo $row1[2];?>" >
+                                   <input type="text" id="class" name="buddhism" placeholder="eg - 7A" value="<?php echo $row1[2];?>" disabled >
                             </div>
                         </div>
 
@@ -167,7 +167,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Mother Language</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="m_language" placeholder="eg - 7A" value="<?php echo $row1[3];?>" >
+                                   <input type="text" id="class" name="m_language" placeholder="eg - 7A" value="<?php echo $row1[3];?>"disabled >
                             </div>
                         </div>
 
@@ -176,7 +176,7 @@
                         <div class="row">
                             <div class="col-3 lbl">English</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="english" placeholder="eg - 7A" value="<?php echo $row1[4];?>" >
+                                   <input type="text" id="class" name="english" placeholder="eg - 7A" value="<?php echo $row1[4];?>" disabled>
                             </div>
                         </div>
 
@@ -185,7 +185,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Science</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="science" placeholder="eg - 7A" value="<?php echo $row1[5];?>" >
+                                   <input type="text" id="class" name="science" placeholder="eg - 7A" value="<?php echo $row1[5];?>"disabled >
                             </div>
                         </div>
 
@@ -194,7 +194,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Health</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="health" placeholder="eg - 7A" value="<?php echo $row1[6];?>" >
+                                   <input type="text" id="class" name="health" placeholder="eg - 7A" value="<?php echo $row1[6];?>"disabled>
                             </div>
                         </div>
 
@@ -202,7 +202,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Tamil</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="" placeholder="eg - 7A" value="<?php echo $row1[7];?>" >
+                                   <input type="text" id="class" name="" placeholder="eg - 7A" value="<?php echo $row1[7];?>"disabled >
                             </div>
                         </div>
 
@@ -210,7 +210,7 @@
                         <div class="row">
                             <div class="col-3 lbl">History</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="history" placeholder="eg - 7A" value="<?php echo $row1[8];?>" >
+                                   <input type="text" id="class" name="history" placeholder="eg - 7A" value="<?php echo $row1[8];?>"disabled >
                             </div>
                         </div>
 
@@ -218,7 +218,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Maths</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="maths" placeholder="eg - 7A" value="<?php echo $row1[9];?>" >
+                                   <input type="text" id="class" name="maths" placeholder="eg - 7A" value="<?php echo $row1[9];?>"disabled >
                             </div>
                         </div>
 
@@ -226,7 +226,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Geography</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="geography" placeholder="eg - 7A" value="<?php echo $row1[10];?>" >
+                                   <input type="text" id="class" name="geography" placeholder="eg - 7A" value="<?php echo $row1[10];?>"disabled >
                             </div>
                         </div>
 
@@ -234,7 +234,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Citizenship Studies</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="c_studies" placeholder="eg - 7A" value="<?php echo $row1[11];?>" >
+                                   <input type="text" id="class" name="c_studies" placeholder="eg - 7A" value="<?php echo $row1[11];?>" disabled>
                             </div>
                         </div>
 
@@ -242,7 +242,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Western Music</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="w_music" placeholder="eg - 7A" value="<?php echo $row1[12];?>" >
+                                   <input type="text" id="class" name="w_music" placeholder="eg - 7A" value="<?php echo $row1[12];?>"disabled>
                             </div>
                         </div>
 
@@ -250,7 +250,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Estern Music</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="e_music" placeholder="eg - 7A" value="<?php echo $row1[13];?>" >
+                                   <input type="text" id="class" name="e_music" placeholder="eg - 7A" value="<?php echo $row1[13];?>"disabled >
                             </div>
                         </div>
 
@@ -258,7 +258,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Art</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="art" placeholder="eg - 7A" value="<?php echo $row1[14];?>" >
+                                   <input type="text" id="class" name="art" placeholder="eg - 7A" value="<?php echo $row1[14];?>"disabled >
                             </div>
                         </div>
 
@@ -266,7 +266,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Dancing</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="dancinng" placeholder="eg - 7A" value="<?php echo $row1[15];?>" >
+                                   <input type="text" id="class" name="dancinng" placeholder="eg - 7A" value="<?php echo $row1[15];?>"disabled >
                             </div>
                         </div>
 
@@ -274,7 +274,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Drama</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="drama" placeholder="eg - 7A" value="<?php echo $row1[16];?>" >
+                                   <input type="text" id="class" name="drama" placeholder="eg - 7A" value="<?php echo $row1[16];?>"disabled >
                             </div>
                         </div>
 
@@ -282,7 +282,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Praactical and Technical Skill</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="t_skill" placeholder="eg - 7A" value="<?php echo $row1[17];?>" >
+                                   <input type="text" id="class" name="t_skill" placeholder="eg - 7A" value="<?php echo $row1[17];?>"disabled >
                             </div>
                         </div>
 
@@ -290,7 +290,7 @@
                         <div class="row">
                             <div class="col-3 lbl">ICT</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="it" placeholder="eg - 7A" value="<?php echo $row1[18];?>" >
+                                   <input type="text" id="class" name="it" placeholder="eg - 7A" value="<?php echo $row1[18];?>"disabled disabled>
                             </div>
                         </div>
 
@@ -298,7 +298,7 @@
                          <div class="row">
                             <div class="col-3 lbl">Average</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="avg" placeholder="eg - 7A" value="<?php echo $row1[19];?>" >
+                                   <input type="text" id="class" name="avg" placeholder="eg - 7A" value="<?php echo $row1[19];?>"disabled >
                             </div>
                         </div>
 

@@ -11,11 +11,8 @@
         $age = $_POST["age"];
         
         include("connection.php");
-        
-        $result3 = mysqli_query($con,"UPDATE student_info SET names='$names', gender='$gender',age='$age',class='$class',telephone='$telephone',address='$address', WHERE username='$user'");
-        
        
-        
+  
         header('Location: profile.php');
     }
 
@@ -77,13 +74,9 @@
                     ?>
         <div class="nav-fixed">
           <a href="home.php"> <img src="images/logo.png"></a>
+          <a href="student.php" class="nav-page"> Previous </a> 
             
-
-              
-                
-            <a href="student.php" class="nav-page"> Previous </a> 
-            
-            <img class="nav-pro-pic" src="<?php echo $_SESSION['pic_path'];?>?<?php echo rand(1,3000); ?>">
+         
         
         </div> 
         <br>
@@ -119,7 +112,7 @@
                             <div class="col-3 lbl">Name</div>
                             <div class="col-9">
                             
-                                <input type="text" id="names" name="names" placeholder="Name" value="<?php echo $row1[1]; ?>" >
+                                <input type="text" id="names" name="names" placeholder="Name" value="<?php echo $row1[1]; ?>" disabled>
                             </div>
                         </div>
 
@@ -129,7 +122,7 @@
                             <div class="col-3 lbl">Gender</div>
                             <div class="col-9">
                                
-                                         <input type="text" id="gender" name="gender" placeholder="Gender" value="<?php echo $row1[5]; ?>" >
+                                         <input type="text" id="gender" name="gender" placeholder="Gender" value="<?php echo $row1[5]; ?>" disabled>
                                 
                             </div>
                         </div>
@@ -140,7 +133,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Age</div>
                             <div class="col-9">
-                                   <input type="text" id="age" name="age" placeholder="Age" value="<?php echo $row1[6];?>" >
+                                   <input type="text" id="age" name="age" placeholder="Age" value="<?php echo $row1[6];?>" disabled>
                             </div>
                         </div>
 
@@ -149,7 +142,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Class</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="class" placeholder="eg - 7A" value="<?php echo $row1[3];?>" >
+                                   <input type="text" id="class" name="class" placeholder="eg - 7A" value="<?php echo $row1[3];?>" disabled>
                             </div>
                         </div>
 
@@ -159,7 +152,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Telephone</div>
                             <div class="col-9">
-                                   <input type="text" id="telephone" name="telephone" placeholder="eg - +94712345678" value="<?php echo $row1[4]; ?>" >
+                                   <input type="text" id="telephone" name="telephone" placeholder="eg - +94712345678" value="<?php echo $row1[4]; ?>"disabled >
                             </div>
                         </div>
 
@@ -172,7 +165,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Address</div>
                             <div class="col-9">
-                                <textarea type="text" id="address" name="address" placeholder="Address" ><?php echo $row1[2]; ?></textarea>
+                                <input type="text" id="address" name="address" placeholder="Address"  value="<?php echo $row1[2]; ?>"disabled>
                             </div>
                         </div>
 

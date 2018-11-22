@@ -3,7 +3,7 @@
     
     if(isset($_POST["btn_save"]))
     {
-        $user = $_SESSION["user"];
+        $user = $_POST["user"];
         $type = $_POST["type"];
         $names = $_POST["names"];
         $gender = $_POST["gender"];
@@ -11,6 +11,7 @@
         $email = $_POST["email"];
         $address = $_POST["address"];
         $age = $_POST["age"];
+  
         
         include("connection.php");
         
@@ -21,21 +22,11 @@
         header('Location: profile.php');
     }
 
-    if(!isset($_SESSION["user"]) || $_SESSION["type"] != 3)
+    if($_SESSION["type"] != 3)
     {
         header('Location: login.php');
     }
-    else
-    {
-        $user = $_SESSION["user"];
-
-        include("connection.php");
-
-        $result1 = mysqli_query($con, "SELECT * FROM student_info WHERE username='$user'");
-        $row1 = mysqli_fetch_row($result1);
-
-       
-    }   
+    
 ?>
 
 <html>
@@ -74,7 +65,29 @@
 
                             
                         }   
+                        
+                        if(isset($_POST["suser"]))
+                    {
+                        
+                        $res = mysqli_query($con, "SELECT type FROM user_login WHERE username='$user' ");
+                        $row = mysqli_fetch_row($res);
 
+
+                        if($row[0] == 1)
+                        {
+                            $res2 = mysqli_query($con, "SELECT * FROM student_info WHERE username='$username' ");
+                            $row2 = mysqli_fetch_row($res2);
+                            $display_name = $row2[1]." ".$row2[2]." ".$row2[3];
+                            $display_type = "Student";
+
+                            echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
+                        }
+                      
+                        else
+                        {
+                            echo "<script> alert('Could not find user'); </script>";
+                        }                
+                    }
 
                     ?>
         <div class="nav-fixed">
@@ -102,7 +115,8 @@
                 
                     <div class="col-9">
                             
-                                <input type="text" id="names" name="names" placeholder="Name" value="<?php echo $row1[1]; ?>" disabled>
+                                <input type="text" id="suser" name="suser" placeholder="Insert Index Number">
+                                <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">Search</button>
                     </div>
              
                </form>
@@ -142,11 +156,7 @@
                         <div class="row">
                             <div class="col-3 lbl">Gender</div>
                             <div class="col-9">
-                                <select name="gender" id="gender" disabled>
-                                    <option value="<?php echo $row1[6]; ?>" hidden><?php echo $row1[6]; ?></option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>                                       
-                                </select>
+                                <input  type="text" name="gender" id="gender" placeholder ="grnder" value="<?php echo $row1[6]; ?>" disabled>
                             </div>
                         </div>
 
@@ -215,6 +225,14 @@
                 </form>
             </div>
         </div>
+
+         <div class="col-3 right-sidebar">
+
+                    <button name="btn_edit" id="btn_edit" type="button" class="btn btn-blue btn-large btn-wide" onclick="edit()">Edit details</button>    
+                    <button name="btn_save" id="btn_save" type="submit" class="btn btn-green btn-large btn-wide" disabled>Save changes</button>    
+                    <button name="btn_cancel" id="btn_cancel" type="reset" class="btn btn-red btn-large btn-wide" onclick="cancel()" disabled>Cancel</button>    
+
+                </div>
 
         
         
