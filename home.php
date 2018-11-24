@@ -10,7 +10,7 @@
 
     include("connection.php");
     $result1 = mysqli_query($con, "SELECT fname FROM cust_name WHERE username='$user'");
-    $result2 = mysqli_query($con, "SELECT pro_pic FROM student_info WHERE username='$user'");
+    $result2 = mysqli_query($con, "SELECT pro_pic FROM cust_info WHERE username='$user'");
    
     $row1 = mysqli_fetch_row($result1);
     $row2 = mysqli_fetch_row($result2);
