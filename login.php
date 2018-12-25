@@ -9,7 +9,7 @@
         }
         else if ($_SESSION["type"] == 2)
         {
-            header('Location:te admin.php');
+            header('Location:teacher.php');
         }
          else if ($_SESSION["type"] == 4)
         {

@@ -1,46 +1,29 @@
 body{
-	background-image: url(images/footer.jpg);
+    background-image: url(images/footer.jpg);
 }
 
-
-
-
-
-.table {
+    border-collapse:collapse;
+    top: 10%;
+    position:absolute;
+    border-style: solid;
+    border-width: 15px;
     width: 100%;
-    max-width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
-    border-collapse: collapse !important;
 }
 
-.table th,
-.table td {
-    padding: 0.75rem;
-    vertical-align: top;
-    border-top: 1px solid  rgba(0,0,0,0.3);
-    
+table th{
+    color:black;
+    border:1px solid;
+    border-color: #8c8c8c;
+    width: 100px;
+    height:40px;
+    font-size: 18px;
 }
 
-.table thead tr {
-    vertical-align: bottom;
-    border-top: 2px solid  rgba(0,0,0,0.3);
-    border-bottom: 2px solid  rgba(0,0,0,0.3);
-    
-}
 
-.table tbody tr {
-    vertical-align: bottom;
-    border-bottom: 1.5px solid  rgba(0,0,0,0.3);
-    
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.border td, .border th {
-    border-right: 1.5px solid  rgba(0,0,0,0.3);
-    border-left: 1.5px solid  rgba(0,0,0,0.3);
-    
+table td{
+    color:hsl(0, 7%, 7%);
+    border:1px solid;
+    border-color: #120f0f;
+    text-align: center;
+    font-size: 16px;
 }
