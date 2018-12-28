@@ -123,10 +123,9 @@
 
 
                                     <div class='center'>
-                                        <form action="te_admin.php" method="POST" >
-                                            <a href="register.php"><img src="images/reg.png"></a>
-                                           
-                                        </form>
+                                        <div class='center'>                                                                               
+                                         <a class="btn btn-green btn-large btn-wide" href="register.php">Register</a>
+                                        </div>
                                     </div>
                                 <hr>
                                 
@@ -162,12 +161,9 @@
                                     <div class='center' bgcolor:green>
 
 
-                                           <form action="te_admin.php" method="POST" >
-
-                                           
-                                                <a href="te_viewusers.php"><img src="images/view.png"></a>
-                                            
-                                        </form>
+                                           <div class='center'>                                                                               
+                                         <a class="btn btn-green btn-large btn-wide" href="te_viewusers.php">Register</a>
+                                        </div>
                                     </div>
                                 <hr>
                                 
@@ -196,7 +192,7 @@
                                     <div class='center'>
                                         <form action="te_admin.php" method="POST">
                                             <input type="text" required name="user_name" placeholder="Type username">
-                                            <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">Search</button>
+                                            <button type="submit" name="submit_view_user" class="btn btn-green btn-large btn-wide">Search</button>
                                         </form>
                                     </div>
                                 <hr>
@@ -227,7 +223,7 @@
                                     <div class='center'>
                                         <form action="te_admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                             <input type="text" required name="user_s" placeholder="Type username">
-                                            <button type="submit" name="submit_user" class="btn btn-red btn-large btn-wide">Delete</button>
+                                            <button type="submit" name="submit_user" class="btn btn-green btn-large btn-wide">Delete</button>
                                         </form>
                                     </div>
                                 <hr>

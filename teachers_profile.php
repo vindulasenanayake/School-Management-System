@@ -96,9 +96,8 @@
         
             
       
-
-                 
-                <form action="profile.php" method="POST">
+<center>
+    <form action="profile.php" method="POST">
 
                 </div>
 
@@ -196,6 +195,9 @@
             </div>
         </div>
 
+</center>
+                 
+                
         
         
         <script>

@@ -28,8 +28,7 @@
             <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            
-            </div>   
+        </div>   
 
             <div class="container ">
             <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel</div></div><br>
@@ -60,12 +59,10 @@
                                     <div class='center' bgcolor:green>
 
 
-                                           <form action="admin.php" method="POST" >
-
-                                           
-                                                <a href="prin_admin.php"><img src="images/s3.png"></a>
-                                            
-                                        </form>
+                                           <div class='center' bgcolor:green>
+                                         <a class="btn btn-green btn-large btn-wide" href="prin_admin.php">PRINCIPAL</a>
+                                        
+                                    </div>
                                     </div>
                                 <hr>
                                 
@@ -96,12 +93,10 @@
                                     <div class='center' bgcolor:green>
 
 
-                                           <form action="admin.php" method="POST" >
-
-                                           
-                                                <a href="te_admin.php"><img src="images/s2.png"></a>
-                                            
-                                        </form>
+                                          <div class='center' bgcolor:green>
+                                         <a class="btn btn-green btn-large btn-wide" href="te_admin.php">TEACHER</a>
+                                        
+                                    </div>
                                     </div>
                                 <hr>
                                 
@@ -134,12 +129,10 @@
                                     <div class='center' bgcolor:green>
 
 
-                                           <form action="admin.php" method="POST" >
-
-                                           
-                                                <a href="admin.php"><img src="images/s1.png"></a>
-                                            
-                                        </form>
+                                          <div class='center' bgcolor:green>
+                                         <a class="btn btn-green btn-large btn-wide" href="admin.php">STUDENT</a>
+                                        
+                                    </div>
                                     </div>
 
                                     

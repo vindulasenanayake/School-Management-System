@@ -216,7 +216,7 @@
                                     <div class="bottom-details">
                                         
                                         
-                                        <a href="prin_admin.php">EXTRA CURRICULAR ACTIVITIES</a>
+                                        <a href="prin_admin.php">EXTRA ACTIVITIES</a>
                                     </div>
                                 </div>
                             </div>

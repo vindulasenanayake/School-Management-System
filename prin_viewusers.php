@@ -11,6 +11,12 @@
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="admin.php" class="nav-page">Previous </a>      
+        </div>
+        <div>
+        	<br>
+            <br>
+            <br>
+            <br>
         </div> 
            
 
@@ -36,7 +42,6 @@ if(!isset($_SESSION['admin'])){
 
 $query="SELECT * FROM principals_info";
 $result=mysqli_query($con,$query);
-
 $numrow = mysqli_num_rows($result);
 
 echo "	 
@@ -50,7 +55,7 @@ echo "
 			 		<th> Telephone </th>
 			 		<th> Gender </th>
 			 		<th> Age</th>
-			 		<th>Profile Picture</th>
+			 	
 			 		
 			 	</tr>";
 
@@ -65,7 +70,7 @@ if($numrow>0){
 		$telephone=$row['telephone'];
 		$gender=$row['gender'];
 		$age=$row['age'];
-		$pro_pic=$pro_pic=$row['pro_pic'];
+	
 		
 		
 		
@@ -87,7 +92,7 @@ if($numrow>0){
 			 		<td>'.$telephone.'</td>
 			 		<td>'.$gender.'</td>
 			 		<td>'.$age.'</td>
-			 		<td>'.$pro_pic.'</td>
+			 
 			 		
 			 		
 			 	</tr>';
