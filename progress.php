@@ -88,7 +88,7 @@
         
         ?>
 
-        
+		
     </head>
     <body>
         <header>
@@ -118,7 +118,47 @@
                 </nav>
             </div>
         </header>
-
+		
+		<canvas id="myChart" width="400" height="400"></canvas>
+		<script>
+		var ctx = document.getElementById("myChart").getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+				datasets: [{
+					label: '# of Votes',
+					data: [12, 19, 3, 5, 2, 3],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)'
+					],
+					borderColor: [
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero:true
+						}
+					}]
+				}
+			}
+		});
+		</script>    
         
         <section>
 
@@ -126,103 +166,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-xs-12 col-sm-12">
-                            <h1>PRINCIPAL | Lumbini College</h1>
+                            <h1>STUDENT PROGRESS</h1>
                             
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="blogs-home common-heading-2">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12 col-xs-12 col-sm-12 no-padding">
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/student.jpg" alt=""/>
-                                    </div>
-                                    <div class="bottom-details">
-                                      
-                                        
-                                        <a href="client_profile.php">PROFILE</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="te_admin.php">NOTICES</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="prin_admin.php">TIMETABLE</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-              <div class="blogs-home common-heading-2">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12 col-xs-12 col-sm-12 no-padding">
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/student.jpg" alt=""/>
-                                    </div>
-                                    <div class="bottom-details">
-                                      
-                                        
-                                        <a href="prin_chart.html">STUDENT PROGRESS</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="te_admin.php">REPORT CARD</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="prin_admin.php">EXTRA CURRICULAR ACTIVITIES</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             
             
