@@ -14,6 +14,16 @@
     <head>
         
         <title>Lumbini College</title>
+		
+		<script src="script/Chart.js"></script>
+		<script src="script/utils.js"></script>
+		<style>
+			canvas {
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+		</style>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
@@ -119,66 +129,241 @@
             </div>
         </header>
 		
-		<canvas id="myChart" width="400" height="400"></canvas>
-		<script>
-		var ctx = document.getElementById("myChart").getContext('2d');
-		var myChart = new Chart(ctx, {
-			type: 'bar',
-			data: {
-				labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-				datasets: [{
-					label: '# of Votes',
-					data: [12, 19, 3, 5, 2, 3],
-					backgroundColor: [
-						'rgba(255, 99, 132, 0.2)',
-						'rgba(54, 162, 235, 0.2)',
-						'rgba(255, 206, 86, 0.2)',
-						'rgba(75, 192, 192, 0.2)',
-						'rgba(153, 102, 255, 0.2)',
-						'rgba(255, 159, 64, 0.2)'
-					],
-					borderColor: [
-						'rgba(255,99,132,1)',
-						'rgba(54, 162, 235, 1)',
-						'rgba(255, 206, 86, 1)',
-						'rgba(75, 192, 192, 1)',
-						'rgba(153, 102, 255, 1)',
-						'rgba(255, 159, 64, 1)'
-					],
-					borderWidth: 1
-				}]
-			},
-			options: {
-				scales: {
-					yAxes: [{
-						ticks: {
-							beginAtZero:true
+			<!Term Test Marks>
+			<div style="width: 48%; vertical-align: left; ">
+				<canvas id="canvas"></canvas>
+				<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+			</div>
+			<br>
+			<br>
+			<button id="randomizeData">Term Test Marks</button>
+			<script>
+				var progress = document.getElementById('animationProgress');
+				var config = {
+					type: 'line',
+					data: {
+						labels: ['1st Term', '2nd Term', '3rd Term'],
+						datasets: [{
+							label: 'Maths',
+							fill: false,
+							borderColor: window.chartColors.green,
+							backgroundColor: window.chartColors.green,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'Sinhala',
+							fill: false,
+							borderColor: window.chartColors.blue,
+							backgroundColor: window.chartColors.blue,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'English',
+							fill: false,
+							borderColor: window.chartColors.red,
+							backgroundColor: window.chartColors.red,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'Science',
+							fill: false,
+							borderColor: window.chartColors.yellow,
+							backgroundColor: window.chartColors.yellow,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'History',
+							fill: false,
+							borderColor: window.chartColors.purple,
+							backgroundColor: window.chartColors.purple,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'Buddhism',
+							fill: false,
+							borderColor: window.chartColors.orange,
+							backgroundColor: window.chartColors.orange,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}]
+					},
+					options: {
+						title: {
+							display: true,
+							text: 'Student Progress'
+						},
+						animation: {
+							duration: 2000,
+							onProgress: function(animation) {
+								progress.value = animation.currentStep / animation.numSteps;
+							},
+							onComplete: function() {
+								window.setTimeout(function() {
+									progress.value = 0;
+								}, 2000);
+							}
 						}
-					}]
-				}
-			}
-		});
-		</script>    
-        
-        <section>
 
-            <div class="banner-home">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-xs-12 col-sm-12">
-                            <h1>STUDENT PROGRESS</h1>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+					}
+				};
 
-            
+				window.onload = function() {
+					var ctx = document.getElementById('canvas').getContext('2d');
+					window.myLine = new Chart(ctx, config);
+				};
 
-            
-            
-        </section>
+				document.getElementById('randomizeData').addEventListener('click', function() {
+					config.data.datasets.forEach(function(dataset) {
+						dataset.data = dataset.data.map(function() {
+							return randomScalingFactor();
+						});
+					});
 
+					window.myLine.update();
+				});
+			</script>
+			
+			<!A/L results>
+			<div style="width: 47%; vertical-align: right;">
+				<canvas id="canvas"></canvas>
+				<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+			</div>
+			<br>
+			<br>
+			<button id="randomizeData">A/L Results</button>
+			<script>
+				var progress = document.getElementById('animationProgress');
+				var config = {
+					type: 'line',
+					data: {
+						labels: ['1st Term', '2nd Term', '3rd Term'],
+						datasets: [{
+							label: 'Maths',
+							fill: false,
+							borderColor: window.chartColors.green,
+							backgroundColor: window.chartColors.green,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'Sinhala',
+							fill: false,
+							borderColor: window.chartColors.blue,
+							backgroundColor: window.chartColors.blue,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'English',
+							fill: false,
+							borderColor: window.chartColors.red,
+							backgroundColor: window.chartColors.red,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'Science',
+							fill: false,
+							borderColor: window.chartColors.yellow,
+							backgroundColor: window.chartColors.yellow,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'History',
+							fill: false,
+							borderColor: window.chartColors.purple,
+							backgroundColor: window.chartColors.purple,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'Buddhism',
+							fill: false,
+							borderColor: window.chartColors.orange,
+							backgroundColor: window.chartColors.orange,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}]
+					},
+					options: {
+						title: {
+							display: true,
+							text: 'Student Progress'
+						},
+						animation: {
+							duration: 2000,
+							onProgress: function(animation) {
+								progress.value = animation.currentStep / animation.numSteps;
+							},
+							onComplete: function() {
+								window.setTimeout(function() {
+									progress.value = 0;
+								}, 2000);
+							}
+						}
+
+					}
+				};
+
+				window.onload = function() {
+					var ctx = document.getElementById('canvas').getContext('2d');
+					window.myLine = new Chart(ctx, config);
+				};
+
+				document.getElementById('randomizeData').addEventListener('click', function() {
+					config.data.datasets.forEach(function(dataset) {
+						dataset.data = dataset.data.map(function() {
+							return randomScalingFactor();
+						});
+					});
+
+					window.myLine.update();
+				});
+			</script>
       
         
 

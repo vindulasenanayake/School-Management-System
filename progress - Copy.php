@@ -14,6 +14,16 @@
     <head>
         
         <title>Lumbini College</title>
+		
+		<script src="script/Chart.js"></script>
+		<script src="script/utils.js"></script>
+		<style>
+			canvas {
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+		</style>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
@@ -88,7 +98,7 @@
         
         ?>
 
-        
+		
     </head>
     <body>
         <header>
@@ -118,115 +128,83 @@
                 </nav>
             </div>
         </header>
+			<div style="width: 75%;">
+				<canvas id="canvas"></canvas>
+				<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+			</div>
+			<br>
+			<br>
+			<button id="randomizeData">Randomize Data</button>
+			<script>
+				var progress = document.getElementById('animationProgress');
+				var config = {
+					type: 'line',
+					data: {
+						labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+						datasets: [{
+							label: 'Subject 1',
+							fill: false,
+							borderColor: window.chartColors.red,
+							backgroundColor: window.chartColors.red,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}, {
+							label: 'Subject 2',
+							fill: false,
+							borderColor: window.chartColors.blue,
+							backgroundColor: window.chartColors.blue,
+							data: [
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor(),
+								randomScalingFactor()
+							]
+						}]
+					},
+					options: {
+						title: {
+							display: true,
+							text: 'Chart.js Line Chart - Animation Progress Bar'
+						},
+						animation: {
+							duration: 2000,
+							onProgress: function(animation) {
+								progress.value = animation.currentStep / animation.numSteps;
+							},
+							onComplete: function() {
+								window.setTimeout(function() {
+									progress.value = 0;
+								}, 2000);
+							}
+						}
+					}
+				};
 
-        
-        <section>
+				window.onload = function() {
+					var ctx = document.getElementById('canvas').getContext('2d');
+					window.myLine = new Chart(ctx, config);
+				};
 
-            <div class="banner-home">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-xs-12 col-sm-12">
-                            <h1>PRINCIPAL | Lumbini College</h1>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+				document.getElementById('randomizeData').addEventListener('click', function() {
+					config.data.datasets.forEach(function(dataset) {
+						dataset.data = dataset.data.map(function() {
+							return randomScalingFactor();
+						});
+					});
 
-            <div class="blogs-home common-heading-2">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12 col-xs-12 col-sm-12 no-padding">
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/student.jpg" alt=""/>
-                                    </div>
-                                    <div class="bottom-details">
-                                      
-                                        
-                                        <a href="client_profile.php">PROFILE</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="te_admin.php">NOTICES</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="prin_admin.php">TIMETABLE</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-              <div class="blogs-home common-heading-2">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12 col-xs-12 col-sm-12 no-padding">
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/student.jpg" alt=""/>
-                                    </div>
-                                    <div class="bottom-details">
-                                      
-                                        
-                                        <a href="progress.php">STUDENT PROGRESS</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="te_admin.php">REPORT CARD</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="prin_admin.php">EXTRA CURRICULAR ACTIVITIES</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-            
-        </section>
+					window.myLine.update();
+				});
+			</script>
 
       
         
