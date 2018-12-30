@@ -108,8 +108,8 @@
             
       
 
-                 
-                <form action="profile.php" method="POST">
+                <center>
+                	<form action="profile.php" method="POST">
 
                 </div>
 
@@ -303,15 +303,7 @@
                         </div>
 
                         <br>
-
-
-
-
-                                         
-
-                       
-
-
+                        
                 <div class="col-3">
 
                 </div>
@@ -322,6 +314,8 @@
 
                 </div>
                 </form>
+                </center> 
+                
             </div>
         </div>
 

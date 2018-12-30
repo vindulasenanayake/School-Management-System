@@ -102,17 +102,7 @@ input[type=submit]:hover {
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
-  div {
-    background-color: lightgrey;
-    width: 300px;
-    border: 25px solid green;
-    padding: 25px;
-    margin: 25px;
 }
-
-
-  
-
 </style>
 
 <html>
@@ -168,16 +158,7 @@ input[type=submit]:hover {
                 </div>
             </div>
 
-            
-                
-<div id="Create" class="tabcontent">
-  <form action="add_class.php" method="post" align="center">
-    <header>
-      <h2 style="color: black">Time Table</h2>
-    </header>
-
-
-    <footer>
+            <footer>
 
             <div class="container">
                 <div class="row">
@@ -199,4 +180,3 @@ input[type=submit]:hover {
     </body>
 </html>
 
-                                      

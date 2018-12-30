@@ -91,7 +91,7 @@
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
+            <a href="admin_pannel.php" class="nav-page">Previous </a>      
         </div>        
         
         
@@ -120,7 +120,7 @@
                                 <br>
                                 <br>
                                 <br>
-                                <br>
+                                
 
 
                                     <div class='center'>
@@ -156,7 +156,7 @@
                                     <br>
                                     <br>
                                     <br>
-                                    <br>
+                                    
 
 
                                     <div class='center' bgcolor:green>
@@ -187,14 +187,14 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Search a Principal</strong></div>                                  
+                                    <div class='center'><strong>Principals Profile</strong></div>                                  
                                 </div><hr>
+                                <br>
+                                <br>
+                                <br>
 
                                     <div class='center'>
-                                        <form action="prin_admin.php" method="POST">
-                                            <input type="text" required name="user_name" placeholder="Type username">
-                                            <button type="submit" name="submit_view_user" class="btn btn-green btn-large btn-wide">Search</button>
-                                        </form>
+                                       <a class="btn btn-green btn-large btn-wide" href="p_profile.php">Principals Profile</a> 
                                     </div>
                                 <hr>
                                 

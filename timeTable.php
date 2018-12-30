@@ -219,7 +219,7 @@ body {
 .t-text h3 {
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
+  color:#ffffff;
   padding: 60px 0;
   font-size: 50px
 }
@@ -258,7 +258,7 @@ body {
   transition: all .2s ease;
 }
 .bgimg {
-    background-image: url('images/marks.jpg');
+    background-image: url('images/timetable.jpg');
     height: 600px;
     position: relative;
     margin-top: -150px;
@@ -314,7 +314,7 @@ body {
                 <div class="container">
                     <div class="row">
                         <div class="t-text">
-                            <h3>Exam Result Upload Terminal</h3>
+                            <h3>Time Table Upload Terminal</h3>
                             
                         </div>
                     </div>
