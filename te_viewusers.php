@@ -10,13 +10,7 @@
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
-        </div>
-        <div>
-        	<br>
-            <br>
-            <br>
-            <br>
+            <a href="te_admin.php" class="nav-page">Previous </a>      
         </div> 
            
 
@@ -40,7 +34,7 @@ if(!isset($_SESSION['admin'])){
  include("connection.php");
 
 
-$query="SELECT * FROM teacher_info";
+$query="SELECT * FROM teachers_info";
 $result=mysqli_query($con,$query);
 
 $numrow = mysqli_num_rows($result);
@@ -50,13 +44,13 @@ echo "
 			 	<tr>
 			 		<th> Username </th>
 			 		<th> Name </th>
-			 		<th> Email</th>
+			 		<th> Email </th>
 			 		<th> Address </th>
 			 		<th> Class </th>
 			 		<th> Telephone </th>
 			 		<th> Gender </th>
 			 		<th> Age</th>
-			 	
+			 		<th>Profile Picture</th>
 			 		
 			 	</tr>";
 
@@ -64,25 +58,18 @@ if($numrow>0){
 	
 	while($row = mysqli_fetch_assoc($result)){
 		$username=$row['username'];
-		$names =$row['names'];
+		$names=$row['names'];
 		$email=$row['email'];
 		$address=$row['address'];
 		$class=$row['class'];
 		$telephone=$row['telephone'];
 		$gender=$row['gender'];
 		$age=$row['age'];
-	
+		$pro_pic=$pro_pic=$row['pro_pic'];
 		
 		
 		
 
-		// echo $Username.'<br>';
-		// echo $Location. '<br>';
-		// echo $Email. '<br>';
-		// echo $Website. '<br>';
-		// echo $Category. '<br>';
-		// echo $Businessname. '<br>';
-		// echo '<br>';
 
 		echo '<tr>
 			 		<td>'.$username.'</td>
@@ -93,7 +80,7 @@ if($numrow>0){
 			 		<td>'.$telephone.'</td>
 			 		<td>'.$gender.'</td>
 			 		<td>'.$age.'</td>
-			 
+			 		<td>'.$pro_pic.'</td>
 			 		
 			 		
 			 	</tr>';
@@ -101,9 +88,7 @@ if($numrow>0){
 	echo "</table><br>";
 }
 
-// esle{
-// 	echo "Empty Database";
-// }
+
 ?>
 
 

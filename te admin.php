@@ -1,15 +1,4 @@
-<?php
-    session_start();
-    
-    if($_SESSION["type"] != 2)
-    {
-        header('location: logout.php');
-    }
 
-    $username = "";
-    $display_name = "";
-    $display_type = "";
-?>
 
 <html>
     <head>
@@ -18,74 +7,29 @@
         <link rel="icon" href="images/logo1.png" type="image/png">
        
 
-        <?php
-           if(isset($_POST["submit_user"]))
-            {
-                $username = $_POST["user_s"];
-                include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
-                $num = mysqli_num_rows($res);
-               
-                if($num == 1)
-                {
-                    mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
-                    echo "<script> alert('User successfully deleted'); </script>";
-                }
-                else
-                {
-                    echo "<script> alert('Could not find user'); </script>";
-                }                
-            }  
         
-            if(isset($_POST["submit_company"]))
-            {
-                $username = $_POST["user_s"];
-                include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
-                
-                $num = mysqli_num_rows($res);
-               
-                if($num == 1)
-                {
-                    mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
-                    echo "<script> alert('User successfully deleted'); </script>";
-                }
-                else
-                {
-                    echo "<script> alert('Could not find user'); </script>";
-                }                
-            }
-        
-            if(isset($_POST["submit_reset"]))
-                {
-                    $username = $_POST["user_s"];
-                    include("connection.php");  
-                    $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username'");
 
-                    $num = mysqli_num_rows($res);
-
-                    if($num == 1)
-                    {
-                        mysqli_query($con, "UPDATE user_login SET pw=md5('12345') WHERE username='$username' ");
-                        echo "<script> alert('Password successfully reset. New password is 12345'); </script>";
-                    }
-                    else
-                    {
-                        echo "<script> alert('Could not find user'); </script>";
-                    }                
-                }
-
-           
-        
-        ?>
     </head>  
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+</style>
+
         
     <body class="font">        
         <div class="nav-fixed font">
@@ -101,15 +45,8 @@
         
         <div class="container ">
             <div class="row"><div class="col-5 center big card-heading-blue">Teacher Panel  -  Academic and Publications</div></div><br>
-            <div class="row">
-                
-                
-
-               
-           
-            </div>
+            
             <div class="container ">
-            <br>
             <div class="row">
                 
                 <div class="col-3 center">
@@ -126,14 +63,15 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>View Timetable</strong></div>                                  
+                                    <div class='center'><strong>TIMETABLE</strong></div>                                  
                                 </div><hr>
 
-                                    <div class='center'>
-                                        <!-- <form action="client_profile.php" method="POST"> -->
-                                            <a href="view_time_table.php"><img src="images/up.png"></a>
+                                    <div class='row,center'>
+                                        
+                                            <a href="timeTable.php"><button class="button">UPLOAD</button></a>
+                                            <a href="view_timeTable.php"><button class="button button2">VIEW</button></a>
                                             
-                                        <!-- </form> -->
+                                       
                                     </div>
                                 <hr>
                                 
@@ -141,6 +79,8 @@
                         </div>                  
                     </div>
                  </div>
+
+
                 
                                 
                 <div class="col-3">
@@ -157,13 +97,14 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Activities</strong></div>                                  
+                                    <div class='center'><strong>STUDENT ACTIVITY</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
-                                        <!-- <form action="te admin.php" method="POST" > -->
-                                              <a href="upload_activities.php"><img src="images/up.png"></a>
-                                        <!-- </form> -->
+                                        
+                                              <a href="upload_activities.php"><button class="button">UPLOAD</button></a>
+                                              <a href="viewActivity.php"><button class="button button2">VIEW</button></a>
+                                       
                                     </div>
                                 <hr>
                                 
@@ -189,13 +130,14 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Notices</strong></div>                                  
+                                    <div class='center'><strong>NOTICE FOR STUDENT</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
-                                        <!-- <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')"> -->
-                                            <a href="notice.php"><img src="images/up.png"></a>
-                                        <!-- </form> -->
+                                        
+                                              <a href="notice.php"><button class="button">UPLOAD</button></a>
+                                              <a href="notice.php"><button class="button button2"> VIEW </button></a>
+                                        
                                     </div>
                                 <hr>
                                 
@@ -203,12 +145,12 @@
                         </div>                  
                     </div>
                  </div>
-                
-                <div class="col-3">
+<!-- 
+                 <div class="col-3 center">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/cover.jpg" width="100%">
+                                <img src="images/student.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -218,13 +160,45 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Marks</strong></div>                                  
+                                    <div class='center'><strong>View Notices</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
-                                        <!-- <form action="uploads.php" method="POST"> -->
-                                            <a href="marks.php"><img src="images/up.png"></a>
-                                        <!-- </form> -->
+                                       
+                                            <a href="view notices.php"><img src="images/up.png"></a>
+
+                                            
+                                        
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+                 -->
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/cover.jpg" width="100%" align="center">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>STUDENT MARKS</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                       
+                                            <a href="marks.php"><button class="button">UPLOAD</button></a>
+                                            <a href="marks.php"><button class="button button2">VIEW</button></a>
+                                        
                                     </div>
                                 <hr>
                                 
@@ -236,71 +210,31 @@
                
            
             </div>
-            <div class="row">
-                <div class="col-6">
-                
-                <?php
-                    if (isset($_POST["submit_view"]))
-                    {
-                        echo "All password reset requests"; 
-                    }
-                
-                ?>
+          
+    
             
-            
+        </div>
+
+  
+
+        
+
+<footer>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        
+                        <p class="copy-rights">Copyright by Lumbini College &reg;</p>
+                    </div>
                 </div>
             </div>
-            <br>
-            <br>
             
-            
-             <div class="row" id="cust_table" style="display:none">
-                
-                <?php
-                     if(isset($_POST["submit_view_user"]))
-                    {
-                        $username = $_POST["user_name"];
-                        include("connection.php");  
-                        $res = mysqli_query($con, "SELECT type FROM user_login WHERE username='$username' ");
-                        $row = mysqli_fetch_row($res);
+        
+ </footer>
 
-
-                        if($row[0] == 1)
-                        {
-                            $res2 = mysqli_query($con, "SELECT * FROM cust_name WHERE username='$username' ");
-                            $row2 = mysqli_fetch_row($res2);
-                            $display_name = $row2[2]." ".$row2[3]." ".  $row2[4];
-                            $display_type = "Student";
-
-                            echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
-                        }
-                       /* else if($row[0] == 2)
-                        {
-                            $res2 = mysqli_query($con, "SELECT * FROM client_info WHERE username='$username' ");
-                            $row2 = mysqli_fetch_row($res2);
-                            $display_name = $row2[1];
-                            $display_type = "Company";
-                            echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
-                        }*/
-                        else
-                        {
-                            echo "<script> alert('Could not find user'); </script>";
-                        }                
-                    }
-                ?>
-                
-                    <div class="col-5 center">
-                        <div class="card">
-                            <h2>User Details</h2>
-                        <table class="table table-striped center">
-                            <tr><th>Username</th><th>Name</th><th>Account type</th></tr>
-                            <tr><td><?php echo $username;  ?></td><td><?php echo $display_name; ?></td><td><?php echo $display_type; ?></td></tr>
-                        </table>
-
-                        </div>
-                    </div>
-            </div>
-        </div> 
+   
 
 </body>
 </html>
+

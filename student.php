@@ -31,7 +31,7 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_info WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
@@ -55,7 +55,7 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM client_info WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
@@ -110,8 +110,6 @@
                             
                             
                             <li><a href="logout.php"><b>logout</b></a></li>
-                            <li><a href="student_profile.php"><b>Profile</b></a></li>
-                            <li><a href="extra_activities.php"><b>Extra Activities</b></a></li>
                             <li class="hidden-xs"></li>
                             
                         </ul>
@@ -147,7 +145,7 @@
                                     <div class="bottom-details">
                                       
                                         
-                                        <a href="student_profile.php">PROFILE</a>
+                                        <a href="client_profile.php">PROFILE</a>
                                     </div>
                                 </div>
                             </div>
@@ -204,7 +202,7 @@
                                     <div class="bottom-details">
                                         
                                         
-                                        <a href="student_report.php">REPORT CARD</a>
+                                        <a href="te_admin.php">REPORT CARD</a>
                                     </div>
                                 </div>
                             </div>
@@ -216,7 +214,7 @@
                                     <div class="bottom-details">
                                         
                                         
-                                        <a href="prin_admin.php">EXTRA ACTIVITIES</a>
+                                        <a href="prin_admin.php">EXTRA CURRICULAR ACTIVITIES</a>
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +227,9 @@
             
         </section>
 
-       
+        <!-- section ends here -->
+
+        <!-- footer starts here -->
 
         <footer>
 
@@ -244,9 +244,11 @@
             
         </footer>
 
-        
+        <!-- footer ends here -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-       
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </body>
 </html>

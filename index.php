@@ -59,8 +59,6 @@
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="login.php"><b>Login</b></a></li>
-                            
-
                             <li class="hidden-xs"></li>
                            
                             
