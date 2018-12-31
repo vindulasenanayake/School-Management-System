@@ -10,7 +10,7 @@
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
+            <a href="prin_admin.php" class="nav-page">Previous </a>      
         </div>
         <div>
         	<br>

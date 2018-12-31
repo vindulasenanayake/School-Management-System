@@ -93,7 +93,8 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
+            <a href="admin.php" class="nav-page">Previous </a>
+            <a href="result_admin.php" class="nav-page">Next</a>      
         </div>        
         
         

@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    if($_SESSION["type"] != 3)
+    if($_SESSION["type"] != 4)
     {
         header('location: logout.php');
     }
@@ -13,7 +13,7 @@
 <html>
     <head>
         
-        <title>Admin Pannel | Lumbini College</title>
+        <title>Principal | Lumbini College</title>
 
         
         <link href="css/style1.css" rel="stylesheet">
@@ -27,18 +27,21 @@
         <header>
             <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
-            <a href="logout.php" class="nav-page"> Logout </a> 
+            <a href="logout.php" class="nav-page"> Logout </a>
+
+            <a href="principal.php" class="nav-page">Previous</a>
+
         </div>   
 
           <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Pannel</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Principal Pannel</div></div><br>
             <div class="row">
                 
                 <div class="col-3">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/student.jpg" width="100%">
+                                <img src="images/prin.jpg" width="100%">
                             </div>
                             <div class='col-12'>
                             <br>
@@ -48,7 +51,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Student</strong></div>                                  
+                                    <div class='center'><strong>Report Card</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -58,7 +61,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="admin.php">Student</a>
+                                         <a class="btn btn-green btn-large btn-wide" href=".php">Report Card</a>
                                         </div>
                                     </div>
                                 <hr>
@@ -74,7 +77,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/teacher.jpg" width="100%"  >
+                                <img src="images/prin.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -84,7 +87,8 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Teacher</strong></div>                                  
+                                         
+                                    <div class='center'><strong>Search Progress</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -92,7 +96,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="te_admin.php">Teacher</a>
+                                         <a class="btn btn-green btn-large btn-wide" href=".php">Student Progress</a>
                                         </div>
                                         </form>
                                     </div>
@@ -118,7 +122,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Principal</strong></div>                                  
+                                    <div class='center'><strong>Class Progress</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -126,7 +130,7 @@
 
                                     <div class='center'>
                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="prin_admin.php">Principal</a>
+                                         <a class="btn btn-green btn-large btn-wide" href=".php"> Class Progress</a>
                                         </div>
                                     </div>
                                 <hr>
