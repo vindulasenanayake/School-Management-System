@@ -96,22 +96,22 @@ th{
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2><b>UPLOADED ACTIVITIES</b></h2></div>
+                    <div class="col-sm-8"><h2><b>UPLOADED MARKS</b></h2></div>
                     <div class="col-sm-4">
                         
                     </div>
                 </div>
             </div>
             <table class="table table-bordered">
-                
-                        <th>File Name</th>
+      
+              <th>File Name</th>
                         <th>Uploaded On</th>
                         <th>class</th>
                         <th>Delete</th>
                         <?php
 
                         include 'connection.php';
-                        $sql ="SELECT id,file_name,uploaded_on,class FROM images WHERE types=1";
+                        $sql ="SELECT id,file_name,uploaded_on,class FROM images WHERE types=3";
                         $result=$con->query($sql);
 
                         if($result -> num_rows > 0 ){
@@ -145,7 +145,7 @@ th{
                                 
 
                         ?>
-                   
+         
                
               
             </table>

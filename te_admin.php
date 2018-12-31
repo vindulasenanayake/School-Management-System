@@ -9,6 +9,7 @@
     $username = "";
     $display_name = "";
     $display_type = "";
+    $email="";
 ?>
 
 <html>
@@ -23,16 +24,14 @@
             {
                 $username = $_POST["user_s"];
                 include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
                 $num = mysqli_num_rows($res);
                
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
+                   
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -52,9 +51,7 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
+                  
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -93,7 +90,7 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
+            <a href="admin_pannel.php" class="nav-page">Previous </a>      
         </div>        
         
         
@@ -122,14 +119,13 @@
                                 <br>
                                 <br>
                                 <br>
-                                <br>
+                                
 
 
                                     <div class='center'>
-                                        <form action="admin.php" method="POST" >
-                                            <a href="register.php"><img src="images/reg.png"></a>
-                                           
-                                        </form>
+                                        <div class='center'>                                                                               
+                                         <a class="btn btn-green btn-large btn-wide" href="register.php">Register</a>
+                                        </div>
                                     </div>
                                 <hr>
                                 
@@ -140,7 +136,43 @@
                 
                 
                 
-                <div class="col-3 center">
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/teacher.jpg" width="100%">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>View Teachers</strong></div>                                  
+                                </div><hr>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    
+
+
+                                    <div class='center' bgcolor:green>
+
+
+                                           <div class='center'>                                                                               
+                                         <a class="btn btn-green btn-large btn-wide" href="te_viewusers.php">View</a>
+                                        </div>
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+
+                 <div class="col-3 center">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -154,14 +186,17 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>View a Teacher</strong></div>                                  
+                                    <div class='center'><strong>Teachers Profiles</strong></div>                                  
                                 </div><hr>
+                                <br>
+                                <br>
+                                <br>
+                                    
 
                                     <div class='center'>
-                                        <form action="admin.php" method="POST">
-                                            <input type="text" required name="user_name" placeholder="Type username">
-                                            <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">View</button>
-                                        </form>
+                                        <div class='center'>                                                                               
+                                         <a class="btn btn-green btn-large btn-wide" href="t_profile.php">Teachers Profiles</a>
+                                        </div>
                                     </div>
                                 <hr>
                                 
@@ -189,9 +224,9 @@
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
+                                        <form action="te_admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                             <input type="text" required name="user_s" placeholder="Type username">
-                                            <button type="submit" name="submit_user" class="btn btn-red btn-large btn-wide">Delete</button>
+                                            <button type="submit" name="submit_user" class="btn btn-green btn-large btn-wide">Delete</button>
                                         </form>
                                     </div>
                                 <hr>
@@ -250,14 +285,14 @@
 
                             echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
                         }
-                       /* else if($row[0] == 2)
+                       else if($row[0] == 2)
                         {
-                            $res2 = mysqli_query($con, "SELECT * FROM client_info WHERE username='$username' ");
+                            $res2 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$username' ");
                             $row2 = mysqli_fetch_row($res2);
                             $display_name = $row2[1];
-                            $display_type = "Company";
+                            $display_type = "Teacher";
                             echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
-                        }*/
+                        }
                         else
                         {
                             echo "<script> alert('Could not find user'); </script>";

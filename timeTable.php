@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+ini_set('display_errors', 0);
 
 include 'connection.php';
     session_start();
@@ -11,6 +13,7 @@ include 'connection.php';
     {
 
         $statusMsg = '';
+        $typ=4;
         $targetDir = "uploads/";
         $grade = $_POST['grade'];
         $fileName = basename($_FILES["file"]["name"]);
@@ -24,7 +27,7 @@ include 'connection.php';
                 // Upload file to server
                 if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
                     // Insert image file name into database
-                    $insert = $con->query("INSERT into images (file_name, uploaded_on,class) VALUES ('".$fileName."', NOW(),'$grade')");
+                    $insert = $con->query("INSERT into images (file_name, uploaded_on,class,types) VALUES ('".$fileName."', NOW(),'$grade','$typ')");
                     if($insert){
                         $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
                     }else{
@@ -324,7 +327,7 @@ body {
    </section>
 
     <div class="upload">
-        <form action="upload_activities.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
+        <form action="timeTable.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
             <!-- <div> -->
  <!--            <input type="file" name="file" id="imgInp"> -->
