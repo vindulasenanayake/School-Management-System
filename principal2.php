@@ -28,7 +28,9 @@
             <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a>
-            <a href="principal2.php" class="nav-page">Next</a>
+
+            <a href="principal.php" class="nav-page">Previous</a>
+
         </div>   
 
           <div class="container ">
@@ -49,7 +51,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>View Student</strong></div>                                  
+                                    <div class='center'><strong>Report Card</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -59,7 +61,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="viewusers.php">View Student</a>
+                                         <a class="btn btn-green btn-large btn-wide" href=".php">Report Card</a>
                                         </div>
                                     </div>
                                 <hr>
@@ -86,7 +88,7 @@
                                 </div>
                                 <div class='row'>
                                          
-                                    <div class='center'><strong>Search student</strong></div>                                  
+                                    <div class='center'><strong>Search Progress</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -94,7 +96,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="s_profile.php">Search student</a>
+                                         <a class="btn btn-green btn-large btn-wide" href=".php">Student Progress</a>
                                         </div>
                                         </form>
                                     </div>
@@ -120,7 +122,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Principal</strong></div>                                  
+                                    <div class='center'><strong>Class Progress</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -128,7 +130,7 @@
 
                                     <div class='center'>
                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Principal</a>
+                                         <a class="btn btn-green btn-large btn-wide" href=".php"> Class Progress</a>
                                         </div>
                                     </div>
                                 <hr>

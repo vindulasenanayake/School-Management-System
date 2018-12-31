@@ -37,7 +37,8 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
+            <a href="admin.php" class="nav-page">Previous </a>
+            <a href="te_student_details.php" class="nav-page">Next</a>      
         </div>        
         
         
@@ -68,8 +69,8 @@
 
                                     <div class='row,center'>
                                         
-                                           
-                                            <a href="viewTimetable.php"><button class="button button2">VIEW</button></a>
+                                            <a href="timeTable.php"><button class="button">UPLOAD</button></a>
+                                            <a href="view_timeTable.php"><button class="button button2">VIEW</button></a>
                                             
                                        
                                     </div>
@@ -136,7 +137,7 @@
                                     <div class='center'>
                                         
                                               <a href="notice.php"><button class="button">UPLOAD</button></a>
-                                              <a href="view notices.php"><button class="button button2"> VIEW </button></a>
+                                              <a href="notice.php"><button class="button button2"> VIEW </button></a>
                                         
                                     </div>
                                 <hr>
@@ -197,7 +198,7 @@
                                     <div class='center'>
                                        
                                             <a href="marks.php"><button class="button">UPLOAD</button></a>
-                                            <a href="view_marks.php"><button class="button button2">VIEW</button></a>
+                                            <a href="marks.php"><button class="button button2">VIEW</button></a>
                                         
                                     </div>
                                 <hr>

@@ -93,15 +93,14 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>
-            <a href="result_admin.php" class="nav-page">Next</a>      
+            <a href="ac_admin.php" class="nav-page">Previous </a>      
         </div>        
         
         
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel  -  Academic and Publications</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin Panel - Result Evaluation</div></div><br>
             <div class="row">
                 
                 
@@ -127,7 +126,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Timetable</strong></div>                                  
+                                    <div class='center'><strong>Report Cards</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
@@ -158,7 +157,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Past Papers</strong></div>                                  
+                                    <div class='center'><strong>Student Progress</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
@@ -190,7 +189,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Notices</strong></div>                                  
+                                    <div class='center'><strong>Class Progress</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
@@ -219,7 +218,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Results</strong></div>                                  
+                                    <div class='center'><strong>Overall progress</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
