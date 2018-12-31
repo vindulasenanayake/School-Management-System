@@ -88,7 +88,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/cover.jpg" width="100%"  >
+                                <img src="cover.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -182,7 +182,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/cover.jpg" width="100%" align="center">
+                                <img src="cover.jpg" width="100%" align="center">
                             </div>
                             <div class='col-12'>
                             <br>

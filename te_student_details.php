@@ -125,7 +125,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/cover.jpg" width="100%"  >
+                                <img src="cover.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -212,7 +212,7 @@
 
 
                                     <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="">Progress Rrports Student</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="search_report.php">Progress Rrports Student</a>
                                     </div>
                                 <hr>
                                 
