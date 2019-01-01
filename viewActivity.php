@@ -111,14 +111,15 @@ th{
                         <?php
 
                         include 'connection.php';
-                        $sql ="SELECT id,file_name,uploaded_on,class FROM images";
+                        $sql ="SELECT id,file_name,uploaded_on,class FROM images WHERE types=1";
                         $result=$con->query($sql);
 
                         if($result -> num_rows > 0 ){
                           while ($row = $result -> fetch_array()) {
-                            // echo "<tr><td>".$row["file_name"]."</td><td>".$row["uploaded_on"]."</td><td>".$row["class"]."</td></tr>";
-                            // # code...
-                            ?>
+
+
+                           
+                              ?>
                             <tr>
                             <td><?php echo $row['file_name']; ?></td>
                             <td><?php echo $row['uploaded_on']; ?></td>
@@ -126,6 +127,10 @@ th{
                             <td><a href="deleteImage.php?id= <?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td> 
                             </tr>
                             <?php
+
+                           
+                           
+                            
                           }
                           echo "</table>";
                         }
