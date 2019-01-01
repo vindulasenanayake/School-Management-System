@@ -12,7 +12,7 @@
        
         $age = $_POST["age"];
         
-        include("connection.php");
+        include("../db_connection/connection.php");
         
         $result3 = mysqli_query($con,"UPDATE principals_info SET names='$names', gender='$gender',age='$age',class='$class',telephone='$telephone',address='$address', WHERE username='$user'");
         
@@ -23,13 +23,13 @@
 
     if(!isset($_SESSION["user"]) || $_SESSION["type"] != 4)
     {
-        header('Location: login.php');
+        header('Location: ../admin/login.php');
     }
     else
     {
         $user = $_SESSION["user"];
 
-        include("connection.php");
+        include("../db_connection/connection.php");
 
         $result1 = mysqli_query($con, "SELECT * FROM principals_info WHERE username='$user'");
         $row1 = mysqli_fetch_row($result1);
@@ -40,12 +40,12 @@
 
 <html>
     <head>
-        <link href="css/style1.css" rel="stylesheet" type="text/css">
+        <link href="../css/style1.css" rel="stylesheet" type="text/css">
         <title> Principal Profile | Lumbini College</title>
-        <link rel="icon" href="images/logo1.png" type="image/png">
+        <link rel="icon" href="../images/logo1.png" type="image/png">
         <style>
             body {
-            background-image: url("images/sh.jpg");
+            background-image: url("../images/sh.jpg");
             background-attachment: fixed;
             background-position:0;
             background-repeat: no-repeat;
@@ -61,13 +61,13 @@
 
                         if(!isset($_SESSION["user"]) || $_SESSION["type"] != 4)
                         {
-                            header('Location: login.php');
+                            header('Location:../admin/ login.php');
                         }
                         else
                         {
                             $user = $_SESSION["user"];
 
-                            include("connection.php");
+                            include("../db_connection/connection.php");
 
                             $result1 = mysqli_query($con, "SELECT * FROM principals_info WHERE username='$user'");
                             $row1 = mysqli_fetch_row($result1);
@@ -78,10 +78,10 @@
 
                     ?>
         <div class="nav-fixed">
-          <a href="home.php"> <img src="images/logo.png"></a>
+          <a href="home.php"> <img src="../images/logo.png"></a>
             
 
-            <a href="logout.php" class="nav-page"> Logout </a>       
+            <a href="../admin/logout.php" class="nav-page"> Logout </a>       
                 
             <a href="principal.php" class="nav-page"> Previous </a> 
           
@@ -236,7 +236,7 @@
              
             
         </script>
-        <?php include("footer.php"); ?>
+          <?php include("../admin/footer.php"); ?>
     </body>
 </html>
 

@@ -5,15 +5,15 @@
     {
         if ($_SESSION["type"] == 1)
         {
-            header('Location:student.php');
+            header('Location:../student/student.php');
         }
         else if ($_SESSION["type"] == 2)
         {
-            header('Location:te admin.php');
+            header('Location:../teacher/te admin.php');
         }
          else if ($_SESSION["type"] == 4)
         {
-            header('Location:principal.php');
+            header('Location:../principal/principal.php');
         }
         else if ($_SESSION["type"] == 3)
         {
@@ -28,15 +28,15 @@
         
         if ( $_COOKIE["type"] == 1)
         {
-            header('Location: student.php');
+            header('Location: ../student/student.php');
         }
         else if ( $_COOKIE["type"] == 2)
         {
-            header('Location: teacher.php');
+            header('Location:../teacher/ teacher.php');
         }
          else if ( $_COOKIE["type"] == 4)
         {
-            header('Location: teacher.php');
+            header('Location: ../principal/principal.php');
         }
         else 
         {
@@ -92,7 +92,7 @@
                                         Username and/or password is incorrect
                                     </div>
                                     
-                                    <u><a class="mute" href="#" >Forgot password?</a></u>
+                                  
                                    
                                 </center>
                             </div>

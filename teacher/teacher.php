@@ -3,7 +3,7 @@
     
     if($_SESSION["type"] != 2)
     {
-        header('location: logout.php');
+        header('location: ../admin/logout.php');
     }
 
     $username = "";
@@ -15,16 +15,16 @@
         
         <title>Lumbini College</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="icon" href="images/logo1.png" type="image/png">
+        <link href="../css/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/logo1.png" type="image/png">
         <?php
            if(isset($_POST["submit_user"]))
             {
                 $username = $_POST["user_s"];
-                include("connection.php");  
+                include("../db_connection/connection.php");  
                 $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
                 $num = mysqli_num_rows($res);
                
@@ -46,7 +46,7 @@
             if(isset($_POST["submit_company"]))
             {
                 $username = $_POST["user_s"];
-                include("connection.php");  
+                include("../db_connection/connection.php");  
                 $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
                 
                 $num = mysqli_num_rows($res);
@@ -68,7 +68,7 @@
             if(isset($_POST["submit_reset"]))
                 {
                     $username = $_POST["user_s"];
-                    include("connection.php");  
+                    include("../db_connection/connection.php");  
                     $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username'");
 
                     $num = mysqli_num_rows($res);
@@ -102,14 +102,14 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="#">
-                            <img src="images/logo.png" alt="logo" />
+                            <img src="../images/logo.png" alt="logo" />
                         </a>
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             
                             
-                            <li><a href="logout.php"><b>logout</b></a></li>
+                            <li><a href="../admin/logout.php"><b>logout</b></a></li>
                             <li><a href="teachers_profile.php"><b>profile</b></a></li>
                             <li class="hidden-xs"></li>
                             
@@ -141,7 +141,7 @@
                             <div class="col-md-4 col-xs-12 col-sm-4">
                                 <div class="blog-list">
                                     <div class="image">
-                                        <img src="images/student.jpg" alt=""/>
+                                        <img src="../images/student.jpg" alt=""/>
                                     </div>
                                     <div class="bottom-details">
                                       
@@ -153,7 +153,7 @@
                             <div class="col-md-4 col-xs-12 col-sm-4">
                                 <div class="blog-list">
                                     <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
+                                        <img src="../images/teacher.jpg" alt="" />
                                     </div>
                                     <div class="bottom-details">
                                         
@@ -165,7 +165,7 @@
                             <div class="col-md-4 col-xs-12 col-sm-4">
                                 <div class="blog-list">
                                     <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
+                                        <img src="../images/prin.jpg" alt="" />
                                     </div>
                                     <div class="bottom-details">
                                         
@@ -186,7 +186,7 @@
                             <div class="col-md-4 col-xs-12 col-sm-4">
                                 <div class="blog-list">
                                     <div class="image">
-                                        <img src="images/student.jpg" alt=""/>
+                                        <img src="../images/student.jpg" alt=""/>
                                     </div>
                                     <div class="bottom-details">
                                       
@@ -198,7 +198,7 @@
                             <div class="col-md-4 col-xs-12 col-sm-4">
                                 <div class="blog-list">
                                     <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
+                                        <img src="../images/teacher.jpg" alt="" />
                                     </div>
                                     <div class="bottom-details">
                                         
@@ -210,7 +210,7 @@
                             <div class="col-md-4 col-xs-12 col-sm-4">
                                 <div class="blog-list">
                                     <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
+                                        <img src="../images/prin.jpg" alt="" />
                                     </div>
                                     <div class="bottom-details">
                                         

@@ -12,7 +12,7 @@
        
         $age = $_POST["age"];
         
-        include("connection.php");
+        include("../db_connection/connection.php");
         
         $result3 = mysqli_query($con,"UPDATE teachers_info SET names='$names', gender='$gender',age='$age',class='$class',telephone='$telephone',address='$address', WHERE username='$user'");
         
@@ -29,7 +29,7 @@
     {
         $user = $_SESSION["user"];
 
-        include("connection.php");
+        include("../db_connection/connection.php");
 
         $result1 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$user'");
         $row1 = mysqli_fetch_row($result1);
@@ -148,11 +148,11 @@ input[type=submit]:hover {
         
         <title>Admin Panel | Lumbini College</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="icon" href="images/logo1.png" type="image/png">
+        <link href="../css/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/logo1.png" type="image/png">
 </head>
     <body>
         <header>
@@ -166,16 +166,16 @@ input[type=submit]:hover {
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="#">
-                            <img src="images/logo.png" alt="logo" />
+                            <img src="../images/logo.png" alt="logo" />
                         </a>
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="index.php"><b>Home</b></a></li>
                             <li class="hidden-xs"></li>
-                            <li><a href="ac_admin.php"><b>Academic and Publications</b></a></li>
+                            <li><a href="../admin/ac_admin.php"><b>Academic and Publications</b></a></li>
                             <li class="hidden-xs"></li>
-                            <li><a href="logout.php"><b>logout</b></a></li>
+                            <li><a href="../admin/logout.php"><b>logout</b></a></li>
                             <li class="hidden-xs"></li>
                             <li><a href="te admin.php"><b>Previous</b> </a></li>
                              <li class="hidden-xs"></li>  

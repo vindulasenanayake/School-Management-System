@@ -5,7 +5,7 @@ include '../db_connection/connection.php';
 
     if(!isset($_SESSION["user"]) && $_SESSION["type"] != 2 )
     {
-        header('Location: login.php');
+        header('Location: ../admin/login.php');
     }
     else
     {
@@ -273,7 +273,7 @@ body {
         
         <title>Admin Panel | Lumbini College</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../css/style.css" rel="stylesheet">
@@ -297,7 +297,7 @@ body {
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="logout.php"><b>logout</b></a></li>
+                            <li><a href="../admin/logout.php"><b>logout</b></a></li>
                             <li class="hidden-xs"></li>
                             <li><a href="te admin.php"><b>Previous</b> </a></li>
                              <li class="hidden-xs"></li>  

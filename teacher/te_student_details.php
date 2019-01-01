@@ -3,7 +3,7 @@
     
     if($_SESSION["type"] != 2)
     {
-        header('location: logout.php');
+        header('location: ../admin/logout.php');
     }
 
     $username = "";
@@ -14,16 +14,16 @@
 
 <html>
     <head>
-        <link href="css/style1.css" rel="stylesheet" type="text/css">
+        <link href="../css/style1.css" rel="stylesheet" type="text/css">
         <title> Teacher | Lumbini College! </title>
-        <link rel="icon" href="images/logo1.png" type="image/png">
+        <link rel="icon" href="../images/logo1.png" type="image/png">
        
 
         <?php
            if(isset($_POST["submit_user"]))
             {
                 $username = $_POST['s_name'];
-                include("connection.php");  
+                include("../db_connection/connection.php");  
                 $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
                 $num = mysqli_num_rows($res);
                
@@ -47,7 +47,7 @@
             if(isset($_POST["submit_reset"]))
                 {
                     $username = $_POST['username'];
-                    include("connection.php");  
+                    include("../db_connection/connection.php");  
                     $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username'");
 
                     $num = mysqli_num_rows($res);
@@ -70,8 +70,8 @@
         
     <body class="font">        
         <div class="nav-fixed font">
-            <a href="logout.php"> <img src="images/logo.png"></a>
-            <a href="logout.php" class="nav-page"> Logout </a> 
+            <img src="../images/logo.png"></a>
+            <a href="../admin/logout.php" class="nav-page"> Logout </a> 
             <a href="te admin.php" class="nav-page">Previous </a>
             
             
@@ -92,7 +92,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/sh.jpg" width="100%">
+                                <img src="../images/sh.jpg" width="100%">
                             </div>
                             <div class='col-12'>
                             <br>
@@ -111,7 +111,7 @@
 
 
                                     <div class='center' bgcolor:green>
-                                    	 <a class="btn btn-green btn-large btn-wide" href="viewusers.php">view</a>
+                                    	 <a class="btn btn-green btn-large btn-wide" href="../admin/viewusers.php">view</a>
                                         
                                     </div>
                                 <hr>
@@ -125,7 +125,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="cover.jpg" width="100%"  >
+                                <img src="../images/cover.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -145,7 +145,7 @@
 
 
                                     <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href="s_profile.php">Student Profile</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="../admin/s_profile.php">Student Profile</a>
                                         
                                     </div>
                                 <hr>
@@ -159,7 +159,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/sh.jpg" width="100%">
+                                <img src="../images/sh.jpg" width="100%">
                             </div>
                             <div class='col-12'>
                             <br>
@@ -192,7 +192,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/student.jpg" width="100%"  >
+                                <img src="../images/student.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -241,7 +241,7 @@
              
                    
                       
-        <?php include("footer.php"); ?>
+        <?php include("../admin/footer.php"); ?>
         
        
         

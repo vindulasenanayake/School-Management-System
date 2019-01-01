@@ -1,5 +1,3 @@
-
-
 <html>
     <head>
         <link href="../css/style1.css" rel="stylesheet" type="text/css">
@@ -12,7 +10,7 @@
     </head>  
 <style>
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #00C728; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -36,9 +34,9 @@
             <a href="logout.php"> <img src="../images/logo.png"></a>
 
                
-            <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>
-            <a href="te_student_details.php" class="nav-page">Next</a>      
+            <a href="../adminlogout.php" class="nav-page"> Logout </a> 
+            <a href="../admin/admin.php" class="nav-page">Previous </a>
+            <a href="te_student_details.php" class="nav-page">Student Details</a>      
         </div>        
         
         
@@ -218,21 +216,8 @@
 
   
 
-        
+         <?php include("../admin/footer.php"); ?>
 
-<footer>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-xs-12 col-sm-12">
-                        
-                        <p class="copy-rights">Copyright by Lumbini College &reg;</p>
-                    </div>
-                </div>
-            </div>
-            
-        
- </footer>
 
    
 
