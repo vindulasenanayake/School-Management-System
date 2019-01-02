@@ -1,52 +1,32 @@
-<?php
-    
 
-    if(isset($_POST['search']))
+<?php
+	 if(isset($_POST['search']))
     {
-        $username=$_POST['username'];
+    	$username = $_POST['username'];
+    	$query = "SELECT * FROM `extra_activities` WHERE username =$username ";
+    	$search_result = filterTable($query);
+    	}
+
+
 
         $connect =mysqli_connect("localhost","root","","school_mgt_system");
-
-        $query = "SELECT * FROM `extra_activities` WHERE username = $username";
-
-        $result = mysqli_query($connect, $query);
-
-        if(mysqli_num_rows($result)>0){
+        $query2 = "SELECT * FROM `student_info` WHERE username =$username ";
+        $result2 = mysqli_query($connect, $query2);
 
         
-            while ($row = mysqli_fetch_array($result)){
-                  $username= $row['username'];
-                  $year =$row['year'];
-                  $activity=$row['activity'];
-               
-    
-            }
+        $row2 = mysqli_fetch_row($result2);
+    	
+    	function filterTable($query){
+    		$connect =mysqli_connect("localhost","root","","school_mgt_system");
+    		$filter_result =mysqli_query($connect, $query);
+    		
+    		return $filter_result;
 
-        }
-
-        else{
-            echo "undefined ID";
-               $username= "";
-               $year="";
-               $activity="";
-               
-
-    }
-        
-
-    mysqli_free_result($result);
-    mysqli_close($connect); 
-
-    }
-
-    else{
-        $username= "";
-        $year ="";
-        $activity="";
-              
-    }
-
+    	}
 ?>
+
+
+
 
 
 <html>
@@ -72,9 +52,18 @@
             <br>
         </div> 
 	
-        <center>
-        	<form action="Admin_c_view.php" method="post"  
-        	<div class="col-6" >                  
+        
+<center>
+        	<form action="Admin_c_view.php" method="post" >
+        	
+  
+        	<div class="col-6" >
+        	<div class="row">                                
+            <div class="col-5 lbl">Index Number</div>
+		    <div class="col-3"  >
+			<input type="text" name="username" >	
+		</div><br>
+		<input type ="submit" name="search" value="search" class="btn btn-green btn-large "><br><br>                  
             <div class="card-profile">
                 <div class="row">
                     <div class="col-12 ">
@@ -84,15 +73,15 @@
                        
         <hr>
 		 <div class="row"  align="left">                                
-            <div class="col-3 lbl">My Number</div>
+           
 		<div class="col-5"  align="left">
-			<input type="text" name="username" >
+			
 		
 			
-		</div><input type ="submit" name="search" value="Find" class="btn btn-green btn-large "><br><br>
+		</div>
 
 	    </div>
-	     <div class="row" align="left"  align="left">                                
+	     <div class="row" align="left"  >                                
             <div class="col-3 lbl">Date</div>
 		<div class="col-5"  align="left" >
 			<br>
@@ -105,29 +94,34 @@
 	    </div>
 
 	    <p align="left"><b>To whom it may concern:</b></p>
-	    <p align="left"> Charini Peiris was a student of Lumbini College,colombo 05.</p>
-	    <p align="left">During his career in school he has oarticipated in extracurricular activities as follows:</p>
+	    <p align="left"><?php echo $row2[1]; ?> was a student of Lumbini College,colombo 05.</p>
+	    <p align="left">During his career in school he has participated in extracurricular activities as follows:</p>
 	    <div class="col-9" align="left">
 	    	
-	    	<?php echo "* ".$year." - " ;?>
-	    	<?php echo $activity; ?>
+	    		<table>
+	    			<?php while($row =mysqli_fetch_array($search_result)):?>
+	    			<tr>
+	    		      <td><?php echo "* ".$row[1]." - " ;?></td>
+	    		       <td><?php echo $row[2]; ?></td>
+	    	        </tr>
+	    	    <?php endwhile ?>
+	    		</table>
+	
+	   
 	    
         </div>
-	    <p  align="left">He was obidient ,honest and trustworthy.Hisconduct and behavior was saisfactory.</p>
-	    <p  align="left">I wish him success in all his future endeavers.</p><br>
+	    <p  align="left">He was obidient,honest and trustworthy.His conduct and behavior was saisfactory.</p>
+	    <p  align="left">I wish him success in all his future endeavors.</p><br>
 	    <br>
 	    
 	    <p  align="left">.......................</p><br>
 	    <p  align="left">Principal</p>
 
 
-
-
-
-		
+	
 		
 	</form>
-        </center> 
+    </center> 
         
 </body>
 </html>

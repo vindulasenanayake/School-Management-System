@@ -74,7 +74,7 @@
                     ?>
         <div class="nav-fixed">
           <a href="home.php"> <img src="images/logo.png"></a>
-          <a href="student.php" class="nav-page"> Previous </a> 
+          <a href="Student_index.php" class="nav-page"> Previous </a> 
             
          
         

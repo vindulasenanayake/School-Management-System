@@ -88,11 +88,7 @@
                     ?>
         <div class="nav-fixed">
           <a href="home.php"> <img src="images/logo.png"></a>
-            
-
-              
-                
-            <a href="student.php" class="nav-page"> Previous </a> 
+          <a href="Student_index.php" class="nav-page"> Previous </a> 
             
             <img class="nav-pro-pic" src="<?php echo $_SESSION['pic_path'];?>?<?php echo rand(1,3000); ?>">
         

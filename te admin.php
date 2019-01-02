@@ -33,11 +33,10 @@
         
     <body class="font">        
         <div class="nav-fixed font">
-            <a href="logout.php"> <img src="images/logo.png"></a>
-
-               
-            <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>      
+            <img src="images/logo.png"></a>
+            <a href="logout.php" class="nav-page"> Logout </a>
+            <a href="Teacher_R_Evaluation.php" class="nav-page">Result Evaluation</a> 
+            
         </div>        
         
         
@@ -48,40 +47,6 @@
             
             <div class="container ">
             <div class="row">
-
-
-                <div class="col-3">
-                    <div class='card-container'>                           
-                        <div class='card-job card-top'>
-                            <div>
-                                <img src="images/cover.jpg" width="100%"  >
-                            </div>
-                            <div class='col-12'>
-                            <br>
-                                <div class='row'>
-                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
-
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='center'><strong>STUDENT ACTIVITY</strong></div>                                  
-                                </div><hr>
-
-                                    <div class='center'>
-                                        
-                                              <a href="upload_activities.php"><button class="button">UPLOAD</button></a>
-                                              <a href="viewActivity.php"><button class="button button2">VIEW</button></a>
-                                       
-                                    </div>
-                                <hr>
-                                
-                            </div>
-                        </div>                  
-                    </div>
-                 </div>
-                
-                
-              
                 
                 <div class="col-3 center">
                     <div class='card-container'>                           
@@ -117,7 +82,38 @@
 
                 
                                 
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/cover.jpg" width="100%"  >
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>STUDENT ACTIVITY</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        
+                                              <a href="upload_activities.php"><button class="button">UPLOAD</button></a>
+                                              <a href="viewActivity.php"><button class="button button2">VIEW</button></a>
+                                       
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
                 
+                
+              
                 
                 <div class="col-3">
                     <div class='card-container'>                           
@@ -216,28 +212,10 @@
           
     
             
-        </div>
-
-  
-
-        
-
-<footer>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-xs-12 col-sm-12">
-                        
-                        <p class="copy-rights">Copyright by Lumbini College &reg;</p>
-                    </div>
-                </div>
-            </div>
-            
-        
- </footer>
-
-   
+        </div>   
 
 </body>
+    <?php include("footer.php"); ?>
+
 </html>
 
