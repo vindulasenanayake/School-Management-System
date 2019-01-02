@@ -94,7 +94,7 @@
                
             <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="Admin_student.php" class="nav-page">Previous </a>
-            <a href="Admin_ap_character.php" class="nav-page">Character Certificate </a>     
+            <a href="Admin_character_index.php" class="nav-page">Character Certificate </a>     
         </div>        
         
         
