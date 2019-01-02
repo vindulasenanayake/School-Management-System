@@ -22,7 +22,7 @@
         <?php
            if(isset($_POST["submit_user"]))
             {
-                $username = $_POST['s_name'];
+                $username = $_POST['user_s'];
                 include("connection.php");  
                 $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
                 $num = mysqli_num_rows($res);
@@ -31,7 +31,6 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-                   
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -39,31 +38,7 @@
                     echo "<script> alert('Could not find user'); </script>";
                 }                
             }  
-        
-           
-                             
-            
-        
-            if(isset($_POST["submit_reset"]))
-                {
-                    $username = $_POST['username'];
-                    include("connection.php");  
-                    $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username'");
-
-                    $num = mysqli_num_rows($res);
-
-                    if($num == 1)
-                    {
-                        mysqli_query($con, "UPDATE user_login SET pw=md5('12345') WHERE username='$username' ");
-                        echo "<script> alert('Password successfully reset. New password is 12345'); </script>";
-                    }
-                    else
-                    {
-                        echo "<script> alert('Could not find user'); </script>";
-                    }                
-                }
-
-           
+  
         
         ?>
     </head>  
@@ -73,7 +48,8 @@
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="admin_pannel.php" class="nav-page">Previous </a>
-            <a href="ac_admin.php" class="nav-page">Next</a>
+            <a href="ac_admin.php" class="nav-page">Academic and Publication</a>
+            <a href="result_admin.php" class="nav-page">Result Evaluation</a>
 
             
               
@@ -156,7 +132,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/cover.jpg" width="100%"  >
+                                <img src="images/sh.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -172,15 +148,15 @@
                                     <br>
                                     <br>
                                     <br>
-                                    
+                                   
+
 
 
                                     <div class='center' bgcolor:green>
                                          <a class="btn btn-green btn-large btn-wide" href="s_profile.php">Student Profile</a>
                                         
                                     </div>
-                                <hr>
-                                
+                                     <hr>                            
                             </div>
                         </div>                  
                     </div>
