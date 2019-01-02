@@ -241,7 +241,7 @@ th{
         </div> 
 
     <div class="container">
-      <div class="row"><div class="col-5 center big card-heading-blue">Teacher Panel  -  Academic and Publications</div></div><br>
+      <div class="row"><div class="col-5 center big card-heading-blue">Student Panel  -  Academic and Publications</div></div><br>
             
         <div class="table-wrapper">
             <div class="table-title">

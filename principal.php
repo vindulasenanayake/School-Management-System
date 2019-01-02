@@ -90,6 +90,26 @@
 
         
     </head>
+
+    <style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+</style>
     <body>
         <header>
             <div class="container">
@@ -143,87 +163,59 @@
                                     <div class="image">
                                         <img src="images/student.jpg" alt=""/>
                                     </div>
-                                    <div class="bottom-details">
-                                      
-                                        
-                                        <a href="client_profile.php">PROFILE</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="te_admin.php">NOTICES</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="prin_admin.php">TIMETABLE</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-              <div class="blogs-home common-heading-2">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12 col-xs-12 col-sm-12 no-padding">
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/student.jpg" alt=""/>
-                                    </div>
-                                    <div class="bottom-details">
-                                      
-                                        
-                                        <a href="st_admin.php">STUDENT PROGRESS</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/teacher.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="te_admin.php">REPORT CARD</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-xs-12 col-sm-4">
-                                <div class="blog-list">
-                                    <div class="image">
-                                        <img src="images/prin.jpg" alt="" />
-                                    </div>
-                                    <div class="bottom-details">
-                                        
-                                        
-                                        <a href="prin_admin.php">EXTRA CURRICULAR ACTIVITIES</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                    <div class='row'>
+                                    <div class='center'><strong>PROFILE</strong></div>                                  
+                                </div><hr>
 
+                                    <div class='row,center'>
+                                        
+                                           
+                                            <a href="princi_notice_view.php"><button class="button button2">VIEW</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12 col-sm-4">
+                                <div class="blog-list">
+                                    <div class="image">
+                                        <img src="images/teacher.jpg" alt="" />
+                                    </div>
+                                    <div class='row'>
+                                    <div class='center'><strong>NOTICE</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='row,center'>
+                                        
+                                           
+                                            <a href="princi_notice_view.php"><button class="button button2">VIEW</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12 col-sm-4">
+                                <div class="blog-list">
+                                    <div class="image">
+                                        <img src="images/prin.jpg" alt="" />
+                                    </div>
+                                    </div>
+                                <div class='row'>
+                                    <div class='center'><strong>TIMETABLE</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='row,center'>
+                                        
+                                           
+                                            <a href="princi_time_view.php"><button class="button button2">VIEW</button></a>
+
+
+                                            
+                                       
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+              
             
             
         </section>

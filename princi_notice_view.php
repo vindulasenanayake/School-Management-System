@@ -1,4 +1,5 @@
 
+
 <html>
 
 
@@ -241,12 +242,12 @@ th{
         </div> 
 
     <div class="container">
-      <div class="row"><div class="col-5 center big card-heading-blue">Teacher Panel  -  Academic and Publications</div></div><br>
+      <div class="row"><div class="col-5 center big card-heading-blue">Principal Panel  -  Academic and Publications</div></div><br>
             
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2><b>TIMETABLES</b></h2></div>
+                    <div class="col-sm-8"><h2><b>NOTICES</b></h2></div>
                     <div class="col-sm-4">
                     </div>
                 </div>
@@ -254,8 +255,7 @@ th{
         <div class="upload">
 
 
-
-        <form action="viewtt.php" method="post" >
+        <form action="princi_time_view.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
            
 
@@ -269,19 +269,41 @@ th{
                       <option value="9">Grade9</option>
                       <option value="10">Grade10</option>
                       <option value="11">Grade11</option>
-             </select>
-             <button class="file-upload-btn" type="submit" ">SHOW TIME TABLE </button>
+                    </select>
+                    <button class="file-upload-btn" type="input" ">SHOW TIME TABLE </button>
 
-             </div>
-        </form> 
-        </div>
+
+
+
+              
+                               
+                      </div>
+                    </div>
+                  </div>
+        </form>  
+     
     </div>
-   </div>
-
+                        
+                    </div>
+                </div>
+            </div>
+            
+               
+            
+        </div>
+    </div>     
+                          
 
 
    
-            
+
+
+
+
+
+
+        
+
               <footer>
 
                           <div class="container">
@@ -297,12 +319,4 @@ th{
                </footer>
 
     </body>
-
-
-
 </html>
-
-<!--   header('Content-type: application/pdf');
-  header('Content-Disposition: inline; filename="' . $filename . '"');
-  header('Content-Transfer-Encoding: binary');
-  header('Accept-Ranges: bytes'); -->
