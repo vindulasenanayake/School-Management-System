@@ -29,8 +29,10 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM principals_info WHERE username='$username' ");
-                    
+                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else

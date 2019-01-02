@@ -30,7 +30,9 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-                  
+                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -50,9 +52,9 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                   
+                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
-                    
+                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -88,9 +90,10 @@
     <body class="font">        
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
+
+               
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>
-                 
+            <a href="admin.php" class="nav-page">Previous </a>      
         </div>        
         
         
@@ -109,7 +112,7 @@
             <br>
             <div class="row">
                 
-                <div class="col-4 center">
+                <div class="col-3 center">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -127,8 +130,8 @@
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="admin.php" method="POST">
-                                            <a href="client_profile.php"><img src="images/up.png"></a>
+                                           
+                                            <a href="timeTable.php"><img src="images/up.png"></a>
                                             
                                         </form>
                                     </div>
@@ -140,11 +143,11 @@
                  </div>
                 
                                 
-                <div class="col-4">
+                <div class="col-3">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="cover.jpg" width="100%"  >
+                                <img src="images/cover.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -172,7 +175,7 @@
                 
               
                 
-                <div class="col-4">
+                <div class="col-3">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -201,7 +204,34 @@
                     </div>
                  </div>
                 
-                
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/cover.jpg" width="100%">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>Upload Results</strong></div>                                  
+                                </div><hr>
+
+                                    <div class='center'>
+                                        <form action="uploads.php" method="POST">
+                                            <a href="client_profile.php"><img src="images/up.png"></a>
+                                        </form>
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
                  
                
            
