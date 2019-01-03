@@ -128,29 +128,25 @@
                 </nav>
             </div>
         </header>
-			<div style="width: 75%;">
+			<div style="width: 85%; vertical-align:center;">
 				<canvas id="canvas"></canvas>
 				<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
 			</div>
 			<br>
 			<br>
-			<button id="randomizeData">Randomize Data</button>
+			<button id="grade9">Grade 9</button>
 			<script>
 				var progress = document.getElementById('animationProgress');
 				var config = {
 					type: 'line',
 					data: {
-						labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+						labels: ['1st Term', '2nd Term','3rd Term'],
 						datasets: [{
-							label: 'Subject 1',
+							label: 'Buddhism',
 							fill: false,
-							borderColor: window.chartColors.red,
-							backgroundColor: window.chartColors.red,
+							borderColor: window.chartColors.orange,
+							backgroundColor: window.chartColors.orange,
 							data: [
-								randomScalingFactor(),
-								randomScalingFactor(),
-								randomScalingFactor(),
-								randomScalingFactor(),
 								randomScalingFactor(),
 								randomScalingFactor(),
 								randomScalingFactor()
@@ -195,7 +191,7 @@
 					window.myLine = new Chart(ctx, config);
 				};
 
-				document.getElementById('randomizeData').addEventListener('click', function() {
+				document.getElementById('grade9').addEventListener('click', function() {
 					config.data.datasets.forEach(function(dataset) {
 						dataset.data = dataset.data.map(function() {
 							return randomScalingFactor();
