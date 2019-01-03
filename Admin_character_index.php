@@ -127,7 +127,7 @@
 
                                     <div class='center'>
                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_c_download.php">Download Character Certificate</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="fpdf/Admin_ch_download.php">Download Character Certificate</a>
                                         </div>
                                     </div>
                                 <hr>

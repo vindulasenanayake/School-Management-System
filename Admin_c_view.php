@@ -5,16 +5,19 @@
     	$username = $_POST['username'];
     	$query = "SELECT * FROM `extra_activities` WHERE username =$username ";
     	$search_result = filterTable($query);
-    	}
 
 
-
+    	
         $connect =mysqli_connect("localhost","root","","school_mgt_system");
-        $query2 = "SELECT * FROM `student_info` WHERE username =$username ";
+        $query2 = "SELECT * FROM `student_info` WHERE username = $username ";
         $result2 = mysqli_query($connect, $query2);
 
         
         $row2 = mysqli_fetch_row($result2);
+    	}
+
+
+
     	
     	function filterTable($query){
     		$connect =mysqli_connect("localhost","root","","school_mgt_system");
