@@ -30,7 +30,9 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-                    
+                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -50,9 +52,9 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    
+                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
-                   
+                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -61,7 +63,25 @@
                 }                
             }
         
-           
+            if(isset($_POST["submit_reset"]))
+                {
+                    $username = $_POST["user_s"];
+                    include("connection.php");  
+                    $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username'");
+
+                    $num = mysqli_num_rows($res);
+
+                    if($num == 1)
+                    {
+                        mysqli_query($con, "UPDATE user_login SET pw=md5('12345') WHERE username='$username' ");
+                        echo "<script> alert('Password successfully reset. New password is 12345'); </script>";
+                    }
+                    else
+                    {
+                        echo "<script> alert('Could not find user'); </script>";
+                    }                
+                }
+
            
         
         ?>
@@ -111,7 +131,7 @@
 
                                     <div class='center'>
                                         <form action="admin.php" method="POST">
-                                            <a href="search_report.php"><img src="images/up.png"></a>
+                                            <a href="client_profile.php"><img src="images/up.png"></a>
                                             
                                         </form>
                                     </div>
@@ -127,7 +147,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="cover.jpg" width="100%"  >
+                                <img src="images/cover.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -188,7 +208,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="cover.jpg" width="100%">
+                                <img src="images/cover.jpg" width="100%">
                             </div>
                             <div class='col-12'>
                             <br>

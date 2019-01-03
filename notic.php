@@ -40,7 +40,7 @@
         <li class="float-right">
             
 
-            <li><a href="admin_pannel.php"><b>Admin Panel</b></a></li>
+            <li><a href="admin_pannel.php"><b>Admin Pannel</b></a></li>
             <li class="hidden-xs"></li>
             <li><a href="ac_admin.php"><b>Academic and Publications</b></a></li>
             <li class="hidden-xs"></li>
@@ -150,8 +150,8 @@
                     </li>
                     <br>
                     <br>
-                         
-                  
+
+                    
 
 
                     <br>
