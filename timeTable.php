@@ -108,13 +108,14 @@ input[type=submit]:hover {
     
 }
 body {
-  font-family: sans-serif;
+  font-family: "Lato";
+  src: url('../fonts/lato.ttf');
   background-color: #eeeeee;
 }
 
 .file-upload {
   background-color: #ffffff;
-  width: 800px;
+  width: 600px;
   margin: 20px auto;
   padding: 20px;
 }
@@ -264,7 +265,7 @@ body {
     background-image: url('images/timetable.jpg');
     height: 600px;
     position: relative;
-    margin-top: -150px;
+    margin-top: -182px;
     padding-top: 345px;
     text-align: center;
     background-repeat: no-repeat;
@@ -412,7 +413,7 @@ $('.image-upload-wrap').bind('dragover', function () {
 <!--     <body class="font">   -->
 
         
-
+<center>
 <footer>
 
             <div class="container">
@@ -426,6 +427,7 @@ $('.image-upload-wrap').bind('dragover', function () {
             
         
  </footer>
+</center>
 
     </body>
 </html>

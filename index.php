@@ -27,15 +27,8 @@
        
         <title>Welocome to Lumbini College</title>
         <link rel="icon" href="images/logo1.png" type="image/png">
-
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <link href="css/style.css" rel="stylesheet">
-
         <link rel="icon" href="images/logo1.png" type="image/png">
 
     </head>
@@ -135,7 +128,9 @@
         </section>
 
         
-        <footer>
+       
+       <center>
+       <footer>
 
             <div class="container">
                 <div class="row">
@@ -146,12 +141,12 @@
                 </div>
             </div>
             
-        </footer>
-
+        
+     </footer>
+    </center>
        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+      
     </body>
+
 </html>

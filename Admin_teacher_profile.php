@@ -87,8 +87,8 @@
             <br>
         </div> 
 	
-        <center>
-        	<form action="s_profile.php" method="post">
+    <center>
+        <form action="s_profile.php" method="post">
         	<div class="col-6" >                  
             <div class="card-profile">
                 <div class="row">
@@ -96,62 +96,63 @@
                         <center><br><h1>Teachers Profile</h1> <br></center>
                     </div>
                 </div>
-                       
-        <hr>
-		 <div class="row">                                
-            <div class="col-3 lbl">Username</div>
-		<div class="col-5">
-			<input type="text" name="username" >
+         	    <hr>
+		 	<div class="row">                                
+            	<div class="col-3 lbl">Username</div>
+			<div class="col-5">
+				<input type="text" name="username" >
 		
-			<input type ="submit" name="search" value="Find" class="btn btn-green btn-large btn-wide"><br><br>
+				<input type ="submit" name="search" value="Find" class="btn btn-green btn-large btn-wide"><br><br>
 			
-		</div>
+			</div>
 
-	    </div>
+	    	</div>
 
 
-		<div class="row">                                
-            <div class="col-3 lbl">Name</div>
-		<div class="col-9">
-			<input type="text" name="names"  value="<?php echo $names; ?>"> <br><br>
-		</div>
-	    </div>
-		<div class="row">                                
-            <div class="col-3 lbl">Class</div>
-		<div class="col-9">
-			<input type="text" name="class"  value="<?php echo $class; ?>"><br><br>
-		</div>
-	    </div>
+			<div class="row">                                
+            	<div class="col-3 lbl">Name</div>
+			<div class="col-9">
+				<input type="text" name="names"  value="<?php echo $names; ?>"> <br><br>
+			</div>
+	    	</div>
+			<div class="row">                                
+            	<div class="col-3 lbl">Class</div>
+			<div class="col-9">
+				<input type="text" name="class"  value="<?php echo $class; ?>"><br><br>
+			</div>
+	    	</div>
 
-	    <div class="row">                                
-            <div class="col-3 lbl">Gender</div>
-		<div class="col-9">
-			<input type="text" name="gender"  value="<?php echo $gender; ?>"><br><br>
-		</div>
-	    </div>
+	    	<div class="row">                                
+            	<div class="col-3 lbl">Gender</div>
+			<div class="col-9">
+				<input type="text" name="gender"  value="<?php echo $gender; ?>"><br><br>
+			</div>
+	    	</div>
 
-		<div class="row">                                
-            <div class="col-3 lbl">Age</div>
+			<div class="row">                                
+            	<div class="col-3 lbl">Age</div>
 
-		<div class="col-9">
-			<input type="text" name="age"  value="<?php echo $age; ?>"><br><br>
-		</div>
-	    </div>
-		<div class="row">                                
-            <div class="col-3 lbl">Address</div>
-		<div class="col-9">
-			<input type="text" name="address"  value="<?php echo $address; ?>"><br><br>
-		</div>
-	    </div>
-	    <div class="row">                                
-            <div class="col-3 lbl">Telephone</div>
-	    <div class="col-9">
-			<input type="text" name="telephone"  value="<?php echo $telephone; ?>"><br><br>
-		</div>
-	    </div>
+			<div class="col-9">
+				<input type="text" name="age"  value="<?php echo $age; ?>"><br><br>
+			</div>
+	    	</div>
+			<div class="row">                                
+            	<div class="col-3 lbl">Address</div>
+			<div class="col-9">
+				<input type="text" name="address"  value="<?php echo $address; ?>"><br><br>
+			</div>
+	    	</div>
+	    	<div class="row">                                
+           		<div class="col-3 lbl">Telephone</div>
+	    	<div class="col-9">
+				<input type="text" name="telephone"  value="<?php echo $telephone; ?>"><br><br>
+			</div>
+	    	</div>
+                       
+        
 		
-	</form>
-        </center> 
+		</form>
+	</center> 
         
 </body>
 </html>

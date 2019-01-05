@@ -1,0 +1,49 @@
+/* Set a style for all buttons */
+.clearfix button {
+
+  color: white;
+
+  border: none;
+  cursor: pointer;
+
+  opacity: 0.9;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Clear floats */
+.clearfix{
+  width: 95%;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.signupbtn {
+ float: right;
+ width: 100px;
+ margin-left: 5%
+}
+.clear,.save{
+ background-color: #60A6DB;
+}
+
+.delete{
+ background-color: #FF6E5F;
+}
+
+ @media (max-width:520px) {
+   .signupbtn{
+     width: 100%;
+   }
+
+ }
