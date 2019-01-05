@@ -96,7 +96,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Student Progress</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="line-db-php.html">Student Progress</a>
                                         </div>
                                         </form>
                                     </div>
@@ -130,7 +130,7 @@
 
                                     <div class='center'>
                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=".php"> Class Progress</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="progress.php"> Class Progress</a>
                                         </div>
                                     </div>
                                 <hr>

@@ -38,15 +38,9 @@
         </li>
 
         <li class="float-right">
-
             <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
 
             <li><a href="admin_pannel.php"><b>Admin Pannel</b></a></li>
-
-            
-
-            <li><a href="admin_pannel.php"><b>Admin Panel</b></a></li>
-
             <li class="hidden-xs"></li>
             <li><a href="ac_admin.php"><b>Academic and Publications</b></a></li>
             <li class="hidden-xs"></li>
@@ -156,12 +150,8 @@
                     </li>
                     <br>
                     <br>
-                         
-                  
-
 
                     <li><a href="add_notices.php"><span>Add Notices</span></a></li>
-
 
 
                     <br>

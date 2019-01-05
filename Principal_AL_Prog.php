@@ -1,24 +1,126 @@
 <?php
-    session_start();
     
-    if($_SESSION["type"] != 4)
+
+    if(isset($_POST['search']))
     {
-        header('location: logout.php');
+        $username=$_POST['username'];
+
+        $connect =mysqli_connect("localhost","root","","school_mgt_system");
+
+        $query = "SELECT * FROM `student_result` WHERE username = $username";
+
+        $result = mysqli_query($connect, $query);
+
+
+        if(mysqli_num_rows($result)>0){
+
+        
+            while ($row = mysqli_fetch_array($result)){
+               $username= $row['username'];
+               $term =$row['term'];
+               $buddhism=$row['buddhism'];
+               $m_languaage=$row['m_languaage'];
+               $english=$row['english'];
+               $science =$row['science'];
+               $health=$row['health'];
+               $tamil=$row['tamil'];
+               $history=$row['history'];
+               $maths=$row['maths'];
+               $geography=$row['geography'];
+               $c_studiess=$row['c_studiess'];
+               $history=$row['history'];
+               $w_music=$row['w_music'];
+               $e_music=$row['e_music'];
+               $art=$row['art'];
+               $dancing=$row['dancing'];
+               $drama=$row['drama'];
+               $t_skill=$row['t_skill'];
+               $it=$row['it'];
+               $avg=$row['avg'];
+
+
+
+    
+            }
+
+        }
+
+        else{
+            echo "undefined ID";
+               $username= "";
+               $term="";
+               $buddhism="";
+               $m_languaage="";
+               $english="";
+               $science ="";
+               $health="";
+               $tamil="";
+               $history="";
+               $maths="";
+               $geography="";
+               $c_studiess="";
+               $history="";
+               $w_music="";
+               $e_music="";
+               $art="";
+               $dancing="";
+               $drama="";
+               $t_skill="";
+               $it="";
+               $avg="";
+
+    }
+        
+
+    mysqli_free_result($result);
+    mysqli_close($connect); 
+
     }
 
-    $username = "";
-    $display_name = "";
-    $display_type = "";
+        else{
+               $username= "";
+               $term ="";
+               $buddhism="";
+               $m_languaage="";
+               $english="";
+               $science ="";
+               $health="";
+               $tamil="";
+               $history="";
+               $maths="";
+               $geography="";
+               $c_studiess="";
+               $history="";
+               $w_music="";
+               $e_music="";
+               $art="";
+               $dancing="";
+               $drama="";
+               $t_skill="";
+               $it="";
+               $avg="";
+    }
+
 ?>
+
+
 <html>
+<head>
     <head>
-        
-        <title>Lumbini College</title>
-		
-		<script src="script/Chart.js"></script>
+        <link href="css/style1.css" rel="stylesheet" type="text/css">
+        <title> Student Report Card| Lumbini College</title>
+        <script src="script/Chart.js"></script>
 		<script src="script/utils.js"></script>
-		<style>
-			canvas {
+        <link rel="icon" href="images/logo1.png" type="image/png">
+        <style>
+            body {
+            background-color: White;
+            background-attachment: fixed;
+            background-position:0;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          canvas {
 				-moz-user-select: none;
 				-webkit-user-select: none;
 				-ms-user-select: none;
@@ -34,113 +136,22 @@
 				width: 40%;
 				float:right;
 			}
-
-		</style>
-
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="icon" href="images/logo1.png" type="image/png">
-        <?php
-           if(isset($_POST["submit_user"]))
-            {
-                $username = $_POST["user_s"];
-                include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
-                $num = mysqli_num_rows($res);
-               
-                if($num == 1)
-                {
-                    mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
-                    echo "<script> alert('User successfully deleted'); </script>";
-                }
-                else
-                {
-                    echo "<script> alert('Could not find user'); </script>";
-                }                
-            }  
-        
-            if(isset($_POST["submit_company"]))
-            {
-                $username = $_POST["user_s"];
-                include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
-                
-                $num = mysqli_num_rows($res);
-               
-                if($num == 1)
-                {
-                    mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
-                    echo "<script> alert('User successfully deleted'); </script>";
-                }
-                else
-                {
-                    echo "<script> alert('Could not find user'); </script>";
-                }                
-            }
-        
-            if(isset($_POST["submit_reset"]))
-                {
-                    $username = $_POST["user_s"];
-                    include("connection.php");  
-                    $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username'");
-
-                    $num = mysqli_num_rows($res);
-
-                    if($num == 1)
-                    {
-                        mysqli_query($con, "UPDATE user_login SET pw=md5('12345') WHERE username='$username' ");
-                        echo "<script> alert('Password successfully reset. New password is 12345'); </script>";
-                    }
-                    else
-                    {
-                        echo "<script> alert('Could not find user'); </script>";
-                    }                
-                }
-
-           
-        
-        ?>
-
-		
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <nav class="navbar navbar-inverse header">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <img src="images/logo.png" alt="logo" />
-                        </a>
-                    </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                            
-                            <li><a href="logout.php"><b>logout</b></a></li>
-                            <li><a href="prin_profile.php"><b>Profile</b></a></li>
-                            <li class="hidden-xs"></li>
-                            
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-		<div id="wrap">
+        </style>
+</head>
+<body class="font">        
+        <div class="nav-fixed font">
+            <a href="logout.php"> <img src="images/logo.png"></a>
+            
+            <a href="logout.php" class="nav-page"> Logout </a> 
+                 
+        </div>
+        <div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div> 
+        <div id="wrap">
 			<!Term Test Marks>
 			<div style="width: 40%;" class="left">
 				<canvas id="canvas"></canvas>
@@ -383,26 +394,10 @@
 					window.myLine.update();
 				});
 			</script>
-	
+
+    
+</body>
+
+<?php include("footer.php"); ?>
         
-
-
-        <footer>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-xs-12 col-sm-12">
-                        
-                        <p class="copy-rights">Copyright by Lumbini College &reg;</p>
-                    </div>
-                </div>
-            </div>
-            
-        </footer>
-
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
 </html>

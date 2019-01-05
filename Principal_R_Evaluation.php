@@ -112,7 +112,11 @@
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
+
+                                         <a class="btn btn-green btn-large btn-wide" href="Admin_re_reportcard.php"> Report Cards</a>
+
                                          <a class="btn btn-green btn-large btn-wide" href="Admin_re_reportcard.php"> View</a>
+
                                     </div>
                                     </div>
                                 <hr>
@@ -123,11 +127,48 @@
                  </div>
                 
                                 
+
+                <div class="col-3">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/cover.jpg" width="100%"  >
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong>Overall Results</strong></div>                                  
+                                </div><hr>
+
+                                     <div class='center'>
+                                       
+                                     <div class='center'>                                                                               
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Grade_Prog.php">Overall Results</a>
+                                    </div>
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+                
+                
+              
+                
+                <div class="col-3">
+
                
                 
               
                 
                 <div class="col-3 center">
+
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -141,13 +182,17 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Class Progress</strong></div>                                  
+
                                 </div><hr>
 
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
+
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Class_Prog.php">Class Results</a>
+
                                          <a class="btn btn-green btn-large btn-wide" href=".php">View</a>
+
                                     </div>
                                     </div>
                                 <hr>
@@ -157,7 +202,11 @@
                     </div>
                  </div>
                 
+
+                <div class="col-3">
+
                 <div class="col-3 center">
+
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -171,13 +220,21 @@
                                     </div>
                                 </div>
                                 <div class='row'>
+
+                                    <div class='center'><strong>AL Results</strong></div>                                  
+
                                     <div class='center'><strong>Overall progress</strong></div>                                  
+
                                 </div><hr>
 
                                   <div class='center'>
                                        
                                      <div class='center'>                                                                               
+
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_AL_Prog.php">AL Results</a>
+
                                          <a class="btn btn-green btn-large btn-wide" href=".php">View</a>
+
                                     </div>
                                     </div>
                                 <hr>
