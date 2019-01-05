@@ -72,7 +72,7 @@
             <a href="logout.php"> <img src="images/logo.png"></a>
 
                
-            <a href="lpogout.php" class="nav-page"> Logout </a> 
+            <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="Admin_student.php" class="nav-page">Previous </a>      
         </div>        
         

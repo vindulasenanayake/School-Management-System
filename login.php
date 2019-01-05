@@ -5,7 +5,7 @@
     {
         if ($_SESSION["type"] == 1)
         {
-            header('Location:student.php');
+            header('Location:Student_index.php');
         }
         else if ($_SESSION["type"] == 2)
         {
@@ -13,7 +13,7 @@
         }
          else if ($_SESSION["type"] == 4)
         {
-            header('Location:principal.php');
+            header('Location:Principal_index.php');
         }
         else if ($_SESSION["type"] == 3)
         {
@@ -28,7 +28,7 @@
         
         if ( $_COOKIE["type"] == 1)
         {
-            header('Location: student.php');
+            header('Location: Student_index.php');
         }
         else if ( $_COOKIE["type"] == 2)
         {
@@ -36,7 +36,7 @@
         }
          else if ( $_COOKIE["type"] == 4)
         {
-            header('Location: teacher.php');
+            header('Location: Principal_index.php');
         }
         else 
         {

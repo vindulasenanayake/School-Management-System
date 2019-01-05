@@ -27,11 +27,12 @@
         <header>
             <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
-            <a href="logout.php" class="nav-page"> Logout </a> 
+            <a href="logout.php" class="nav-page"> Logout </a>
+            <a href="Admin_student.php" class="nav-page"> Previous </a>  
         </div>   
 
           <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Pannel</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin Pannel - Character Certificate</div></div><br>
             <div class="row">
                 
                 <div class="col-3">
@@ -48,7 +49,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Student</strong></div>                                  
+                                    <div class='center'><strong>Enter Extra CurricularActivities</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -58,7 +59,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_student.php">Student</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Admin_c_extra.php">Enter Extra CurricularActivities</a>
                                         </div>
                                     </div>
                                 <hr>
@@ -74,7 +75,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/teacher.jpg" width="100%"  >
+                                <img src="images/student.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -84,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Teacher</strong></div>                                  
+                                    <div class='center'><strong>View Character Certificate</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -92,7 +93,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_teacher.php">Teacher</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Admin_c_view.php">View Character Certificate</a>
                                         </div>
                                         </form>
                                     </div>
@@ -108,7 +109,7 @@
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/prin.jpg" width="100%"  >
+                                <img src="images/student.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -118,7 +119,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Principal</strong></div>                                  
+                                    <div class='center'><strong>Download Character Certificate</strong></div>                                  
                                 </div><hr>
                                 <br>
                                 <br>
@@ -126,7 +127,7 @@
 
                                     <div class='center'>
                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_principal.php">Principal</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Admin_c_download.php">Download Character Certificate</a>
                                         </div>
                                     </div>
                                 <hr>

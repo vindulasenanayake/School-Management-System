@@ -58,6 +58,8 @@
        
         
     </head>
+
+
     <body>
         <header>
             <div class="nav-fixed font">
@@ -97,7 +99,7 @@
 
 
                                     <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="">Notices</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="studentnotice.php">VIEW</a>
                                     </div>
                                 <hr>
                                 
@@ -105,38 +107,7 @@
                         </div>                  
                     </div>
                  </div>
-                 <div class="col-3">
-                    <div class='card-container'>                           
-                        <div class='card-job card-top'>
-                            <div>
-                                <img src="images/sh.jpg" width="100%">
-                            </div>
-                            <div class='col-12'>
-                            <br>
-                                <div class='row'>
-                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
 
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='center'><strong>Assignments</strong></div>                                  
-                                </div><hr>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    
-
-
-                                    <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Assignments</a>
-                                        
-                                    </div>
-                                <hr>
-                                
-                            </div>
-                        </div>                  
-                    </div>
-                 </div>
 
                  <div class="col-3 center">
                     <div class='card-container'>                           
@@ -163,7 +134,7 @@
 
 
                                     <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Time Table</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="studenttimetable.php">VIEW</a>
                                         
                                     </div>
                                      <hr>                            
@@ -187,7 +158,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Extra Activities</strong></div>                                  
+                                    <div class='center'><strong>Activities</strong></div>                                  
                                 </div><hr>
 
                                     <br>
@@ -198,7 +169,7 @@
 
 
                                     <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Extra Activities</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="studentactivity.php">VIEW</a>
                                         
                                     </div>
                                 <hr>

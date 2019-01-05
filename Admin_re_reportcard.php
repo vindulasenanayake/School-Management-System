@@ -123,6 +123,7 @@
 <body class="font">        
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
+            <a href="teacher_R_Evaluation.php" class="nav-page"> Previous </a> 
             <a href="logout.php" class="nav-page"> Logout </a> 
                  
         </div>

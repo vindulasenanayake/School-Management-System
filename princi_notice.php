@@ -13,7 +13,7 @@ include 'connection.php';
     {
 
         $statusMsg = '';
-        $typ=4;
+        $typ = 2;
         $targetDir = "uploads/";
         $grade = $_POST['grade'];
         $fileName = basename($_FILES["file"]["name"]);
@@ -222,7 +222,7 @@ body {
 .t-text h3 {
   font-weight: 700;
   text-transform: uppercase;
-  color:#ffffff;
+  color: #ffffff;
   padding: 60px 0;
   font-size: 50px
 }
@@ -261,7 +261,7 @@ body {
   transition: all .2s ease;
 }
 .bgimg {
-    background-image: url('images/timetable.jpg');
+    background-image: url('images/banner.jpg');
     height: 600px;
     position: relative;
     margin-top: -150px;
@@ -302,7 +302,7 @@ body {
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="logout.php"><b>logout</b></a></li>
                             <li class="hidden-xs"></li>
-                            <li><a href="admin_academic_pub.php"><b>Previous</b> </a></li>
+                            <li><a href="te admin.php"><b>Previous</b> </a></li>
                              <li class="hidden-xs"></li>  
                             
                         </ul>
@@ -317,7 +317,7 @@ body {
                 <div class="container">
                     <div class="row">
                         <div class="t-text">
-                            <h3>Time Table Upload Terminal</h3>
+                            <h3>Notice Upload Terminal</h3>
                             
                         </div>
                     </div>
@@ -327,7 +327,7 @@ body {
    </section>
 
     <div class="upload">
-        <form action="timeTable.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
+        <form action="notice.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
             <!-- <div> -->
  <!--            <input type="file" name="file" id="imgInp"> -->
@@ -337,7 +337,7 @@ body {
 
             <div class="file-upload">
                 
-              <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Select File to Upload </button>
+              <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Select Notice File to Upload </button>
               <select class="class-upload-btn" name="grade">
                       <option value="6">Grade6</option>
                       <option value="7">Grade7</option>
