@@ -22,7 +22,7 @@
         <?php
            if(isset($_POST["submit_user"]))
             {
-                $username = $_POST['s_name'];
+                $username = $_POST["user_s"];
                 include("connection.php");  
                 $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
                 $num = mysqli_num_rows($res);
@@ -31,7 +31,9 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-                   
+                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -40,13 +42,31 @@
                 }                
             }  
         
-           
-                             
-            
+            if(isset($_POST["submit_company"]))
+            {
+                $username = $_POST["user_s"];
+                include("connection.php");  
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
+                
+                $num = mysqli_num_rows($res);
+               
+                if($num == 1)
+                {
+                    mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
+                    echo "<script> alert('User successfully deleted'); </script>";
+                }
+                else
+                {
+                    echo "<script> alert('Could not find user'); </script>";
+                }                
+            }
         
             if(isset($_POST["submit_reset"]))
                 {
-                    $username = $_POST['username'];
+                    $username = $_POST["user_s"];
                     include("connection.php");  
                     $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username'");
 
@@ -73,12 +93,12 @@
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="admin_pannel.php" class="nav-page">Previous </a>
-            <a href="ac_admin.php" class="nav-page">Next</a>
+            <a href="ac_admin.php" class="nav-page">Academic and Publication</a>
+            <a href="result_admin.php" class="nav-page">Result Evaluation</a>
 
             
               
         </div>        
-        
         
         
         
@@ -107,11 +127,18 @@
                                     <br>
                                     <br>
                                     <br>
-                                    
+                                    <br>
 
 
-                                    <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="register.php">Register</a>
+                                    <div class='center' bgcolor:green>
+
+
+                                           <form action="admin.php" method="POST" >
+
+                                           
+                                                <a href="register.php"><img src="images/reg.png"></a>
+                                            
+                                        </form>
                                     </div>
                                 <hr>
                                 
@@ -133,17 +160,23 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>View Students</strong></div>                                  
+                                    <div class='center'><strong>View Student</strong></div>                                  
                                 </div><hr>
                                     <br>
                                     <br>
                                     <br>
-                                    
+                                    <br>
 
 
                                     <div class='center' bgcolor:green>
-                                    	 <a class="btn btn-green btn-large btn-wide" href="viewusers.php">view</a>
-                                        
+
+
+                                           <form action="admin.php" method="POST" >
+
+                                           
+                                                <a href="viewusers.php"><img src="images/view.png"></a>
+                                            
+                                        </form>
                                     </div>
                                 <hr>
                                 
@@ -166,18 +199,14 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Student Profiles</strong></div>                                  
+                                    <div class='center'><strong>Search a Student</strong></div>                                  
                                 </div><hr>
 
-                                    <br>
-                                    <br>
-                                    <br>
-                                    
-
-
-                                    <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href="s_profile.php">Student Profile</a>
-                                        
+                                    <div class='center'>
+                                        <form action="admin.php" method="POST">
+                                            <input type="text" required name="user_name" placeholder="Type username">
+                                            <button type="submit" name="submit_view_user" class="btn btn-blue btn-large btn-wide">Search</button>
+                                        </form>
                                     </div>
                                 <hr>
                                 
@@ -207,7 +236,7 @@
                                     <div class='center'>
                                         <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                             <input type="text" required name="user_s" placeholder="Type username">
-                                            <button type="submit" name="submit_user" class="btn btn-green btn-large btn-wide">Delete</button>
+                                            <button type="submit" name="submit_user" class="btn btn-red btn-large btn-wide">Delete</button>
                                         </form>
                                     </div>
                                 <hr>
@@ -228,13 +257,78 @@
            
             </div>
             <div class="row">
+                <div class="col-6">
+                
+                <?php
+                    if (isset($_POST["submit_view"]))
+                    {
+                        echo "All password reset requests"; 
+                    }
+                
+                ?>
             
+            
+                </div>
+            </div>
             <br>
             <br>
             
             
-             
-                   
+             <div class="row" id="cust_table" style="display:none">
+                
+                <?php
+                     if(isset($_POST["submit_view_user"]))
+                    {
+                        $username = $_POST["user_name"];
+                        include("connection.php");  
+                        $res = mysqli_query($con, "SELECT type FROM user_login WHERE username='$username' ");
+                        $row = mysqli_fetch_row($res);
+
+
+                        if($row[0] == 1)
+                        {
+                            $res2 = mysqli_query($con, "SELECT * FROM student_info WHERE username='$username' ");
+                            $row2 = mysqli_fetch_row($res2);
+                            $display_name = $row2[1]." ".$row2[2]." ".$row2[3];
+                            $display_type = "Student";
+
+                            echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
+                        }
+                       else if($row[0] == 2)
+                        {
+                            $res2 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$username' ");
+                            $row2 = mysqli_fetch_row($res2);
+                            $display_name = $row2[1];
+                            $display_type = "Teacher";
+                            echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
+                        }
+                        else if($row[0] == 4)
+                        {
+                            $res2 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$username' ");
+                            $row2 = mysqli_fetch_row($res2);
+                            $display_name = $row2[1];
+                            $display_type = "Principal";
+                            echo "<script> document.getElementById('cust_table').style.display='block'; </script>";
+                        }
+                        else
+                        {
+                            echo "<script> alert('Could not find user'); </script>";
+                        }                
+                    }
+                ?>
+                
+                    <div class="col-5 center">
+                        <div class="card">
+                            <h2>User Details</h2>
+                        <table class="table table-striped center">
+                            <tr><th>Index Number</th><th>User Type</th><th>email</th><th>telephone</th></tr>
+                            <tr><td><?php echo $username;  ?></td></td><td><?php echo $display_type; ?></td></tr>
+                        </table>
+
+                        </div>
+                    </div>
+            </div>
+        </div> 
                       
         <?php include("footer.php"); ?>
         
