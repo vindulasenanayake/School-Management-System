@@ -97,7 +97,7 @@
 
 
                                     <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="">Notices</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Student_notices.php">Notices</a>
                                     </div>
                                 <hr>
                                 
@@ -163,7 +163,7 @@
 
 
                                     <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Time Table</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Student_Report_download.php">Time Table</a>
                                         
                                     </div>
                                      <hr>                            
@@ -198,7 +198,7 @@
 
 
                                     <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Extra Activities</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="A_student_c_view.php">Extra Activities</a>
                                         
                                     </div>
                                 <hr>

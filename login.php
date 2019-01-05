@@ -92,7 +92,7 @@
                                         Username and/or password is incorrect
                                     </div>
                                     
-                                    <u><a class="mute" href="#" >Forgot password?</a></u>
+                                   
                                    
                                 </center>
                             </div>

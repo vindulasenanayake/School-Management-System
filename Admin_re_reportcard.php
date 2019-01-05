@@ -77,9 +77,9 @@
 
     }
 
-    else{
-        $username= "";
-        $term ="";
+        else{
+               $username= "";
+               $term ="";
                $buddhism="";
                $m_languaage="";
                $english="";
@@ -281,7 +281,7 @@
 
         
     </form>
-        </center> 
+  </center> 
         
 </body>
 

@@ -17,24 +17,21 @@
             <br>
             <br>
         </div>
-
-
-           
-
-
-		
-
 		
 
 <?php 
 
+    session_start();
+    
+    if($_SESSION["type"] != 3)
+    {
+        header('location: logout.php');
+    }
 
-session_start();
-
-if(!isset($_SESSION['admin'])){
-	header("login.php");
-}
-
+    $username = "";
+    $display_name = "";
+    $display_type = "";
+    $email="";
 
 
 

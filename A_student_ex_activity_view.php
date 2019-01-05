@@ -57,7 +57,7 @@
 	
         
     <center>
-        <form action="Admin_c_view.php" method="post" >
+        <form action="A_student_ex_activity_view.php" method="post" >
         	
   
         	<div class="col-6" >
@@ -67,29 +67,26 @@
 				<input type="text" name="username" >	
 		    </div><br>
 		        <input type ="submit" name="search" value="search" class="btn btn-green btn-large "><br><br>                  
-            <div class="card-profile">
-                <div class="row">
-                    <div class="col-12 ">
-                        <br><img src="images/logo2.png"></a> <br>
-                    </div>
-                </div>
+            
                        
             <hr>
 		    
-	        <div class="row" align="left">                                
-            	<div class="col-3 lbl">Date</div>
-		    <div class="col-5"  align="left" >
-			<br>
-			   <?php
-					echo  date("Y/m/d") . "<br>";
-			   ?>
-			
-		    </div>
+	        
 
-	        </div>
+	        	<div class="card-profile">
 
-	        	<p align="left"><b>To whom it may concern:</b></p>
-	          	<p align="left"><?php echo $row2[1]; ?> was a student of Lumbini College,colombo 05.</p>
+                <div class="row" align="left">                                
+                <div class="col-3 lbl">Date</div>
+            <div class="col-5"  align="left" >
+            <br>
+               <?php
+                    echo  date("Y/m/d") . "<br>";
+               ?>
+            
+            </div>
+
+            </div>
+	          	<p align="left"><?php echo $row2[1]; ?>.</p>
 	    	  	<p align="left">During his career in school he has participated in extracurricular activities as follows:</p>
 
 	    	<div class="col-9" align="left">
@@ -103,14 +100,9 @@
 	    	        <?php endwhile ?>
 	    		</table>
 			</div>
+        </div>
 
-	    	<p  align="left">He was obidient,honest and trustworthy.His conduct and behavior was saisfactory.</p>
-	    	<p  align="left">I wish him success in all his future endeavors.</p><br>
-	    	<br>
-	    
-	    	<p  align="left">.......................</p><br>
-	    	<p  align="left">Principal</p>
-
+	    	
 
 	
 		

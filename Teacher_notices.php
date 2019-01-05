@@ -1,3 +1,16 @@
+<?php
+    session_start();
+
+    if($_SESSION["type"] != 2)
+    {
+        header('location: logout.php');
+    }
+
+    $username = "";
+    $display_name = "";
+    $display_type = "";
+?>
+
 <!doctype html>
 
 
@@ -38,97 +51,18 @@
         </li>
 
         <li class="float-right">
-            
+            <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
 
-            <li><a href="admin_pannel.php"><b>Admin Panel</b></a></li>
-            <li class="hidden-xs"></li>
-            <li><a href="ac_admin.php"><b>Academic and Publications</b></a></li>
-            <li class="hidden-xs"></li>
+
             <li><a href="logout.php"><b>Logout</b></a></li>
             <li class="hidden-xs"></li>
         </li>
     </ul>
 </nav>
 
-<!-- modal start -->
-<div id="add_notice" class="modal">
-  <div class="modalContent">
-    <div class="modalContentInner">
-
-      <form id="add_notice_form">
-
-        <h2>Add Notice</h2>
-
-        <div class="outer_textbox">
-          <div class="ErrorClass" id="titleError">
-          </div>
-          <label for="Title" class="labelClass_textBox"><b>Title</b></label>
-          <input type="text" placeholder="Enter tiltle here ...." name="tile" id="title" required>
-        </div>
-
-        <div class="outer_textarea">
-          <div class="ErrorClass" id="contentError">
-          </div>
-          <div for="content" class="labelClass_textarea"><b>Content</b></div>
-          <textarea name="content" id='content' name="content" placeholder="Enter New Notice here...."></textarea>
-        </div>
-
-        <div class="outer_textbox">
-          <div class="ErrorClass" id="writerError">
-          </div>
-          <label for="project_code" class="labelClass_textBox"><b>Writer</b></label>
-          <input type="text" placeholder="Enter writer name here..." name="writer" id="writer" required>
-        </div>
-
-        <div class="outer_selectDropDown">
-          <div class="ErrorClass" id="receiverError">
-          </div>
-          <label for="receiver" class="labelClass_selectDropDown"><b>Receiver</b></label>
-          <div class="custom-select">
-            <select id="receiver">
-              <option value="0">Select reciver</option>
-              <option value="1">All</option>
-              <option value="2">Students</option>
-              <option value="3">Teachers</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="clearfix">
-
-            <button type="button" id="no" class="signupbtn clear">cancel</button>
-            <button type="button" id="yes" class="signupbtn delete">Publish</button>
-
-        </div>
-
-      </form>
-    </div>
-  </div>
-</div>
-<!-- modal end -->
-
-<!-- delete modal start -->
-<div id="delete_notice" class="modal">
-  <div class="modalContent">
-    <div class="modalContentInner">
 
 
 
-        <h2>Delete notice</h2>
-          <p> Are you sure you want to delete thia notice ?</p>
-
-        <div class="clearfix">
-
-            <button type="button" id="delete_notice_no" class="signupbtn clear">No</button>
-            <button type="button" id="delete_notice_yes" class="signupbtn delete">Yes</button>
-
-        </div>
-
-
-    </div>
-  </div>
-</div>
-<!-- delete modal end -->
 
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
@@ -143,15 +77,15 @@
                             <div class="detail">
                             <br>
                             <br>
-                                <h4>Academic and Publications</h4>
+                                <h4>Notice</h4>
 
                             </div>
                         </div>
                     </li>
                     <br>
                     <br>
-                         
-                  
+
+
 
 
                     <br>
@@ -196,9 +130,7 @@
         </div>
     </div>
     <div class="container-fluid">
-      <div class="col-lg-6 col-md-12">
-          <button class="btn btn-primary btn-round btnCss" id="add_notice_button">Add Notice</button>
-      </div>
+
       <div class="row clearfix" id="new_notice_content">
 
       </div>
@@ -211,9 +143,7 @@
                           <h2><strong>ID:</strong> <span id="id_conatain">IDNUM</span></h2>
                           <small>Created by USER at: DATE </small>
                           <ul class="header-dropdown">
-                              <li class="remove">
-                                  <a id="notice_delete_click" role="button" class="boxs-close"><span class="idContainer hide">IDNUM</span><i class="zmdi zmdi-delete"></i></a>
-                              </li>
+                              
                           </ul>
                       </div>
                       <div class="body">
@@ -272,7 +202,7 @@
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
 <script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/notices.js"></script>
+<script src="assets/js/pages/Teacher_notices.js"></script>
 </body>
 
 

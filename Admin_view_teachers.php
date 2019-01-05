@@ -20,21 +20,22 @@
         </div> 
            
 
+<?php
+    session_start();
+    
+    if($_SESSION["type"] != 3)
+    {
+        header('location: logout.php');
+    }
 
-		
-
-		
-
-<?php 
-
-
-session_start();
-
-if(!isset($_SESSION['admin'])){
-	header("login.php");
-}
+    $username = "";
+    $display_name = "";
+    $display_type = "";
+    $email="";
 
 
+
+ 
 
 
  include("connection.php");
@@ -76,13 +77,7 @@ if($numrow>0){
 		
 		
 
-		// echo $Username.'<br>';
-		// echo $Location. '<br>';
-		// echo $Email. '<br>';
-		// echo $Website. '<br>';
-		// echo $Category. '<br>';
-		// echo $Businessname. '<br>';
-		// echo '<br>';
+		
 
 		echo '<tr>
 			 		<td>'.$username.'</td>
@@ -101,9 +96,7 @@ if($numrow>0){
 	echo "</table><br>";
 }
 
-// esle{
-// 	echo "Empty Database";
-// }
+
 ?>
 
 

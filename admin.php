@@ -86,15 +86,16 @@
                                     
 
 
-                                    <div class='center'>                                                                               
+                                <div class='center'>                                                                               
                                          <a class="btn btn-green btn-large btn-wide" href="register.php">Register</a>
-                                    </div>
+                                </div>
                                 <hr>
                                 
                             </div>
                         </div>                  
                     </div>
                  </div>
+
                  <div class="col-3">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
@@ -117,10 +118,10 @@
                                     
 
 
-                                    <div class='center' bgcolor:green>
+                                <div class='center' bgcolor:green>
                                     	 <a class="btn btn-green btn-large btn-wide" href="viewusers.php">view</a>
                                         
-                                    </div>
+                                </div>
                                 <hr>
                                 
                             </div>
@@ -136,27 +137,27 @@
                             </div>
                             <div class='col-12'>
                             <br>
-                                <div class='row'>
+                            <div class='row'>
                                     <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
 
                                     </div>
-                                </div>
-                                <div class='row'>
+                            </div>
+                            <div class='row'>
                                     <div class='center'><strong>Student Profiles</strong></div>                                  
-                                </div><hr>
+                            </div><hr>
 
-                                    <br>
-                                    <br>
-                                    <br>
+                             <br>
+                             <br>
+                             <br>
                                    
 
 
 
-                                    <div class='center' bgcolor:green>
+                            <div class='center' bgcolor:green>
                                          <a class="btn btn-green btn-large btn-wide" href="s_profile.php">Student Profile</a>
                                         
-                                    </div>
-                                     <hr>                            
+                            </div>
+                            <hr>                            
                             </div>
                         </div>                  
                     </div>
@@ -207,11 +208,11 @@
              
                    
                       
-        <?php include("footer.php"); ?>
+    <?php include("footer.php"); ?>
         
        
         
-        </body>
+    </body>
 </html>
 
 
