@@ -1,7 +1,7 @@
 <?php
 /**
- * filename: data.php
- * description: this will return the marks of students.
+ * filename: data_class.php
+ * description: this will return the marks of students in each class in grade 9.
  */
 
 //setting header to json
@@ -21,10 +21,10 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT subjects,term,mark FROM grade_9_avg ORDER BY term");
+$queryB = sprintf("SELECT subjects,A,B,C,D,E,F,term FROM classes_9 ORDER BY term");
 
 //execute query
-$result = $mysqli->query($query);
+$result = $mysqli->query($queryB);
 
 //loop through the returned data
 $data = array();
