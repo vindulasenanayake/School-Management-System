@@ -1,27 +1,216 @@
 
-<!-- <script>
-function myFunction(var1) {
-  alert(var1);
-}
-</script> -->
-
 
 <html>
 
 
+<style>
+input[type=text], select {
+    padding: 8px 15px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
+
+
+input[type=submit] {
+   
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+   
+}
+
+/*upload {
+    width:100%;
+    border-radius: 5px;
+    background-color: #ffffff;*/
+    
+}
+body {
+  font-family: sans-serif;
+  background-color: #eeeeee;
+}
+
+.file-upload {
+  background-color: #ffffff;
+  width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 10px;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+.class-upload-btn {
+  width: 100%;
+  margin: 10px;
+  color: #fff;
+  background:  #1aff66;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #1aff66;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*.class-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}*/
+
+.class-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed #1FB264;
+  position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #1FB264;
+  border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #15824B;
+  padding: 60px 0;
+}
+.t-text {
+  text-align: center;
+}
+
+.t-text h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 60px 0;
+  font-size: 50px
+}
+
+.file-upload-image {
+  max-height: 600px;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  
+  width: 49%;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+.bgimg {
+    background-image: url('images/activity.png');
+    height: 500px;
+    position: relative;
+    margin-top: -150px;
+    padding-top: 345px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+</style>
 
 <head>
         
         <title>Admin Panel | Lumbini College</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style2.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/style.css" rel="stylesheet">
         <link rel="icon" href="images/logo1.png" type="image/png">
-        
 </head>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <body>
         <header>
@@ -42,7 +231,7 @@ function myFunction(var1) {
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="logout.php"><b>logout</b></a></li>
                             <li class="hidden-xs"></li>
-                            <li><a href="ac_admin.php"><b>Previous</b> </a></li>
+                            <li><a href="Admin_academic_pub.php"><b>Previous</b> </a></li>
                              <li class="hidden-xs"></li>  
                             
                         </ul>
@@ -51,9 +240,23 @@ function myFunction(var1) {
             </div>
         </header>
 
-       
+       <section>
+
+            <div class="bgimg" >
+                <div class="container">
+                    <div class="row">
+                        <div class="t-text">
+                            <h3>Pastpapers Upload Terminal</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+   </section>
+
     <div class="upload">
-        <form action="uploadPastPapersPhp.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
+        <form action="pastpapers_save.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
             <!-- <div> -->
  <!--            <input type="file" name="file" id="imgInp"> -->
@@ -69,7 +272,7 @@ function myFunction(var1) {
                       <option value="10">Grade 10</option>
                       <option value="11">Grade 11</option>
                       <option value="11">Grade 12</option>
-                      <option value="11">Grade13</option>
+                      <option value="11">Grade 13</option>
                     </select>
 
 

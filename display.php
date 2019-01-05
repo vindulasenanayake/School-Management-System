@@ -1,230 +1,129 @@
+
 <?php
     session_start();
-    header('Cache-Control: no-cache');
-    header('Pragma: no-cache');
     
-    if(isset($_POST["btn_save"]))
+    if($_SESSION["type"] != 1)
     {
-        $user = $_SESSION["user"];
-        $cont_name = $_POST["cont_name"];
-        $cont_tele = $_POST["cont_tele"];
-        $com_name = $_POST["com_name"];
-        $com_add = $_POST["com_add"];
-        $br_no = $_POST["br_no"];
-        $bus_type = $_POST["bus_type"];
-        $email = $_POST["email"];
-       
-        
-         include("connection.php");
-        
-        $result3 = mysqli_query($con,"UPDATE teachers_info SET com_name='$com_name',com_add='$com_add', br_no='$br_no', bus_type='$bus_type' WHERE username='$user'");
-        
-        $result4 = mysqli_query($con,"UPDATE client_contact SET cont_name='$cont_name', cont_tele='$cont_tele', email='$email' WHERE username='$user'");
-        
-        header('Location: display.php');
-   
+        header('location: logout.php');
     }
 
-    if(!isset($_SESSION["user"]) || $_SESSION["type"] != 3 )
-    {
-        header('Location: login.php');
-    }
-    else
-    {
-        $user = $_SESSION["user"];
-
-        include("connection.php");
-
-        $result1 = mysqli_query($con, "SELECT * FROM teachers_info WHERE username='$user'");
-        $row1 = mysqli_fetch_row($result1); 
-                
-        $result2 = mysqli_query($con, "SELECT * FROM client_contact WHERE username='$user'");
-        $row2 = mysqli_fetch_row($result2);
-        
-        $_SESSION["real_name"] = $row1[1];
-        $_SESSION["pic_path"] = $row1[4];
-        
-        
-    }   
+    $username = "";
+    $display_name = "";
+    $display_type = "";
 ?>
 
+
+<!DOCTYPE html>
 <html>
-    <head>
-        <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title> Lumbini College</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<title>Admin Panel | Lumbini College</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet">
         
-    </head>  
-    
-    <body class="font">  
-        
-        
-        <div class="nav-fixed">
-          <a href="home.php"> <img src="images/logo.png"></a>
-          <a href="logout.php" class="nav-page"> Logout </a>       
-          <a href="ac_admin.php" class="nav-page"> Home </a> 
-        </div> 
-             
-            
-        <div class="container">
-            <div class="row">
-                <div class="col-12 center">
-                    <div class="card-name">                        
-                        <img src="<?php echo $_SESSION['pic_path']?>?<?php echo rand(1,3000); ?>?<?php echo rand(1,3000); ?>" width="100%">
-                    </div>
+        <link rel="icon" href="images/logo1.png" type="image/png">
 
-                    <form action="display.php" method="POST" enctype="multipart/form-data">
-                        <label class="btn btn-wide btn-blue">
-                        <input type="file" name="fileToUpload" id="fileToUpload" onchange="return upload_btn(this)" accept="image/*"><center>Choose the Notice</center></label>
-                        <input type="submit" value="Upload Image" name="upload" id="upload" class="btn btn-wide btn-green" disabled>
-                         <input type="reset" value="Cancel" name="cancel_up" id="cancel_up" class="btn btn-wide btn-red" onclick="cancel_btn()" disabled>
-                    </form>
+<style>
+    body{background-color: #f2f2f2; color: #333;}
+    .main{box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; margin-top: 10px;}
+    h3{background-color: #4294D1; color: #f7f7f7; padding: 15px; border-radius: 4px; box-shadow: 0 1px 6px rgba(57,73,76,0.35);}
+    .img-box{margin-top: 20px;}
+    .img-block{float: left; margin-right: 5px; text-align: center;}
+    p{margin-top: 0;}
+    img{width: 375px; min-height: 250px; margin-bottom: 10px; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; border:6px solid #f7f7f7;}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  height: 300px;
+  margin: auto;
+}
 
-                    <div class="alert-fail" hidden>
-                        <span class="close-btn-fail" id="fail_type" onclick="fail_type_close()">&times;</span>
-                        Only .jpg .jpeg or .png files can be uploaded   
-                    </div>
+.card img{
+    width: 100%;
+    height: 100px;
+}
 
-                    <div class="alert-fail" hidden>
-                        <span class="close-btn-fail" id="fail_size" onclick="fail_size_close()">&times;</span>
-                        File too large. Max 1MB.
-                    </div>
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-                    <div class="alert-fail" hidden>
-                        <span class="close-btn-fail" id="fail_error" onclick="fail_error_close()">&times;</span>
-                        Error uploading image. Try again later.
-                    </div>
+.container {
+  padding: 2px 16px;
+}
 
-                    <?php              
-                        if(isset($_POST["upload"]))
-                        {
-                            $target_dir = "images/uploads/";
-                            $user = $_SESSION["user"];
-                            $target_file = $target_dir.basename($_FILES["fileToUpload"]["name"]);
-                            $valid = 1;
-                            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+#pastPapersDisplay{
+    display: none;
+}
+</style>
+</head>
 
-                            if ($_FILES["fileToUpload"]["size"] > 10000000)
-                            {
-                                 echo "<script> fail_size.parentElement.style.display='block'; </script>";
-                                $valid = 0;
-                            }
+    <body>
 
-                            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") 
-                            {
-                                echo "<script> fail_type.parentElement.style.display='block'; </script>";
-                                $valid = 0;
-                            }
-
-                            if ($valid != 0) 
-                            {
-                                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$user.".".$imageFileType)) 
-                                {
-                                    $pro_pic = $target_dir.$_SESSION["user"].".".$imageFileType;
-                                    include("connection.php");
-                                    $result3 = mysqli_query($con, "UPDATE teachers_info SET logo='$pro_pic' WHERE username='$user'");
-                                    echo "<script> window.location.href = window.location.href; </script>";
-                                } 
-                                else
-                                {
-                                    echo "<script> fail_error.parentElement.style.display='block'; </script>";
-                                }
-
-                            }
-                        }
-
-
-
-                    ?>
-               
-
+    <header>
+            <div class="container">
+                <nav class="navbar navbar-inverse header">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="logout.php"><b>logout</b></a></li>
+                            <li class="hidden-xs"></li>
+                            <li><a href="Student_index.php"><b>Previous</b> </a></li>
+                             <li class="hidden-xs"></li>  
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+    <!---Main Content-->
+
+    <div class="container main">
+        <h3><center>Student - Notice Panel</center></h3>
         
-        
-        <script>
-            
-            function edit(){
-                document.getElementById("cont_name").disabled = false;
-                document.getElementById("cont_tele").disabled = false;
-                document.getElementById("email").disabled = false;
-                document.getElementById("com_name").disabled = false;
-                document.getElementById("com_add").disabled = false;
-                document.getElementById("br_no").disabled = false;
-                document.getElementById("bus_type").disabled = false;               
-                document.getElementById("btn_save").disabled = false;
-                document.getElementById("btn_cancel").disabled = false;
-                document.getElementById("btn_edit").disabled = true;
-            }
-            
-             function cancel(){
-                document.getElementById("cont_name").disabled = true;
-                document.getElementById("cont_tele").disabled = true;
-                document.getElementById("email").disabled = true;
-                document.getElementById("com_name").disabled = true;
-                document.getElementById("com_add").disabled = true;
-                document.getElementById("br_no").disabled = true;
-                document.getElementById("bus_type").disabled = true;               
-                document.getElementById("btn_save").disabled = true;
-                document.getElementById("btn_cancel").disabled = true;
-                document.getElementById("btn_edit").disabled = false;
-             }
-            
-            function upload_btn(file) {
-                var ext = file.files[0].name.split('.').pop();                
-                var valid = 1;
-                var FileSize = file.files[0].size / 1024 / 1024; 
+        <div id="pastPapersDisplay">
                 
-                if (FileSize > 
-                {
-                    fail_size.parentElement.style.display='block';
-                    valid = 0;   
-                }                 
-                else if ( ext == "jpg" || ext == "JPG" || ext == "jpeg" || ext == "JPEG" || ext == "png" || ext == "PNG" ) 
-                {
-                    valid = 1 
-                }
-                else 
-                {
-                    fail_type.parentElement.style.display='block';
-                    valid = 0
-                }
-                
-                if (valid == 1) 
-                {
-                    document.getElementById("upload").disabled = false;
-                    document.getElementById("cancel_up").disabled = false; 
-                    fail_size.parentElement.style.display='none';
-                    fail_type.parentElement.style.display='none';
-                }
-                else
-                {
-                    document.getElementById("upload").disabled = true;
-                    document.getElementById("cancel_up").disabled = true;    
-                }
-            }
+            <div class="card">
+                <a href="BLOCKIMG" download>
+                    <img src="BLOCKIMG" alt="" style="width:100%">
+                </a>
+                <div class="containerCard">
+                 
+                </div>
+            </div> 
+
+        </div>
+
+        <div id="pastPapers">
             
-            function fail_type_close() {
-                fail_type.parentElement.style.display='none';
-            }
-            
-            function fail_size_close() {
-                fail_size.parentElement.style.display='none';
-            }
-            
-            function fail_error_close() {
-                fail_error.parentElement.style.display='none';
-            }
-            
-            function cancel_btn() {
-                document.getElementById("upload").disabled = true;
-                document.getElementById("cancel_up").disabled = true;
-                fail_type.parentElement.style.display='none';
-                fail_size.parentElement.style.display='none';
-                fail_error.parentElement.style.display='none';
-            }
-             
-            
-        </script>
+        </div>
         
-        <?php include("footer.php"); ?>
-    </body>
-</html
+
+
+    </div>
+    
+</body>
+<script src="assets/js/pages/display.js"></script>
+
+</html>

@@ -33,10 +33,12 @@
         
     <body class="font">        
         <div class="nav-fixed font">
-            <img src="images/logo.png"></a>
-            <a href="logout.php" class="nav-page"> Logout </a>
-            <a href="Teacher_R_Evaluation.php" class="nav-page">Result Evaluation</a> 
-            
+            <a href="logout.php"> <img src="images/logo.png"></a>
+
+            <a href="Teacher_notices.php" class="nav-page"> View Notices </a>   
+            <a href="logout.php" class="nav-page"> Logout </a> 
+            <a href="admin.php" class="nav-page">Previous </a>
+            <a href="te_student_details.php" class="nav-page">Next</a>      
         </div>        
         
         
@@ -67,8 +69,8 @@
 
                                     <div class='row,center'>
                                         
-                                           
-                                            <a href="viewTimetable.php"><button class="button button2">VIEW</button></a>
+                                            <a href="timeTable.php"><button class="button">UPLOAD</button></a>
+                                            <a href="view_timeTable.php"><button class="button button2">VIEW</button></a>
                                             
                                        
                                     </div>
@@ -135,7 +137,7 @@
                                     <div class='center'>
                                         
                                               <a href="notice.php"><button class="button">UPLOAD</button></a>
-                                              <a href="view notices.php"><button class="button button2"> VIEW </button></a>
+                                              <a href="notice.php"><button class="button button2"> VIEW </button></a>
                                         
                                     </div>
                                 <hr>
@@ -196,7 +198,7 @@
                                     <div class='center'>
                                        
                                             <a href="marks.php"><button class="button">UPLOAD</button></a>
-                                            <a href="view_marks.php"><button class="button button2">VIEW</button></a>
+                                            <a href="marks.php"><button class="button button2">VIEW</button></a>
                                         
                                     </div>
                                 <hr>
@@ -212,10 +214,28 @@
           
     
             
-        </div>   
+        </div>
+
+  
+
+        
+
+<footer>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        
+                        <p class="copy-rights">Copyright by Lumbini College &reg;</p>
+                    </div>
+                </div>
+            </div>
+            
+        
+ </footer>
+
+   
 
 </body>
-    <?php include("footer.php"); ?>
-
 </html>
 

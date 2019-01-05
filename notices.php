@@ -205,6 +205,7 @@
 
       <div class="row clearfix" id="notice_content">
             <div id="BLOCK">
+              
               <div class="col-lg-12 col-md-12" id="IDNUM">
                   <div class="card">
                       <div class="header">
@@ -224,6 +225,7 @@
                       </div>
                   </div>
               </div>
+              
             </div>
             <!-- <div class="col-lg-6 col-md-12">
                 <div class="card">

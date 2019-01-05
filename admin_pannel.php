@@ -58,7 +58,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_student.php">Student</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="admin.php">Student</a>
                                         </div>
                                     </div>
                                 <hr>
@@ -92,7 +92,7 @@
 
                                     <div class='center'>
                                         <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_teacher.php">Teacher</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="te_admin.php">Teacher</a>
                                         </div>
                                         </form>
                                     </div>
@@ -126,7 +126,7 @@
 
                                     <div class='center'>
                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_principal.php">Principal</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="prin_admin.php">Principal</a>
                                         </div>
                                     </div>
                                 <hr>
