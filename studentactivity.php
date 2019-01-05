@@ -48,7 +48,7 @@ body {
 }
 
 .file-upload-btn {
-  width: 100%;
+  width: 70%;
   margin: 10px;
   color: #fff;
   background: #1FB264;
@@ -74,7 +74,7 @@ body {
   transition: all .2s ease;
 }
 .class-upload-btn {
-  width: 100%;
+  width: 70%;
   margin: 10px;
   color: #fff;
   background:  #e6e600;
@@ -237,16 +237,16 @@ th{
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="te admin.php" class="nav-page">Previous </a>      
+            <a href="student_index.php" class="nav-page">Previous </a>      
         </div> 
 
     <div class="container">
-      <div class="row"><div class="col-5 center big card-heading-blue">Teacher Panel  -  Academic and Publications</div></div><br>
+      <div class="row"><div class="col-5 center big card-heading-blue">Student  -  Academic and Publications</div></div><br>
             
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2><b>TIMETABLES</b></h2></div>
+                    <div class="col-sm-8"><h2><b>ACTIVITIES</b></h2></div>
                     <div class="col-sm-4">
                     </div>
                 </div>
@@ -255,7 +255,7 @@ th{
 
 
 
-        <form action="viewtt.php" method="post" >
+        <form action="viewaa.php" method="post" >
         
            
 
@@ -270,7 +270,7 @@ th{
                       <option value="10">Grade10</option>
                       <option value="11">Grade11</option>
              </select>
-             <button class="file-upload-btn" type="submit" ">SHOW TIME TABLE </button>
+             <button class="file-upload-btn" type="submit" ">SHOW ACTIVITIES </button>
 
              </div>
         </form> 

@@ -99,11 +99,7 @@
 
 
                                     <div class='center'>                                                                               
-<<<<<<< HEAD
                                          <a class="btn btn-green btn-large btn-wide" href="studentnotice.php">VIEW</a>
-=======
-                                         <a class="btn btn-green btn-large btn-wide" href="Student_notices.php">Notices</a>
->>>>>>> 0b918d14b51a110b79de95c133ed45996c746e7e
                                     </div>
                                 <hr>
                                 
@@ -138,11 +134,7 @@
 
 
                                     <div class='center' bgcolor:green>
-<<<<<<< HEAD
                                          <a class="btn btn-green btn-large btn-wide" href="studenttimetable.php">VIEW</a>
-=======
-                                         <a class="btn btn-green btn-large btn-wide" href="Student_Report_download.php">Time Table</a>
->>>>>>> 0b918d14b51a110b79de95c133ed45996c746e7e
                                         
                                     </div>
                                      <hr>                            
@@ -177,11 +169,7 @@
 
 
                                     <div class='center' bgcolor:green>
-<<<<<<< HEAD
                                          <a class="btn btn-green btn-large btn-wide" href="studentactivity.php">VIEW</a>
-=======
-                                         <a class="btn btn-green btn-large btn-wide" href="A_student_c_view.php">Extra Activities</a>
->>>>>>> 0b918d14b51a110b79de95c133ed45996c746e7e
                                         
                                     </div>
                                 <hr>

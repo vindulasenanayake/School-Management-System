@@ -51,11 +51,8 @@
           <a href="home.php"> <img src="images/logo.png"></a>
           <a href="Admin_character_index.php" class="nav-page"> Previous </a> 
             
-<<<<<<< HEAD
          
         
-=======
->>>>>>> 0b918d14b51a110b79de95c133ed45996c746e7e
         </div> 
         <br>
         <br>
@@ -86,10 +83,7 @@
                         <div class="row">                                
                             <div class="col-3 lbl">Username</div>
                             <div class="col-9">
-<<<<<<< HEAD
                             
-=======
->>>>>>> 0b918d14b51a110b79de95c133ed45996c746e7e
                                 <input type="text" id="username" name="username" placeholder="Username" >
                             </div>
                         </div>
@@ -101,13 +95,9 @@
                         <div class="row">
                             <div class="col-3 lbl">Year</div>
                             <div class="col-9">
-<<<<<<< HEAD
                                
                                          <input type="text" id="year" name="year" placeholder="Year" >
                                 
-=======
-                                <input type="text" id="year" name="year" placeholder="Year" >
->>>>>>> 0b918d14b51a110b79de95c133ed45996c746e7e
                             </div>
                         </div>
 
@@ -116,7 +106,6 @@
                         <div class="row">
                             <div class="col-3 lbl">Activity</div>
                             <div class="col-9">
-<<<<<<< HEAD
                                
                                          <input type="text" id="activity" name="activity" placeholder="Activity" >
                                 
@@ -150,24 +139,6 @@
             
         </script>
         <?php include("footer.php"); ?>
-=======
-                               <input type="text" id="activity" name="activity" placeholder="Activity" >
-                            </div>
-                        </div>
-                                   
-                        <br>
-
-                        <button name="btn_submit" id="btn_submit" type="submit" class="btn btn-green btn-large " >Submit</button>              
-
-                        
-
-
-
-            </form>
-      </center>
-
-     <?php include("footer.php"); ?>
->>>>>>> 0b918d14b51a110b79de95c133ed45996c746e7e
     </body>
 </html>
 
