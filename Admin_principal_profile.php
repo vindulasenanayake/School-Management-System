@@ -83,7 +83,8 @@
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="Admin_principal.php" class="nav-page">Previous </a>      
+            <a href="Admin_principal.php" class="nav-page">Previous </a> 
+            <a href="Admin_p_profile_create.php" class="nav-page">Create Profile </a>      
         </div>
         <div>
         	<br>
@@ -93,7 +94,7 @@
         </div> 
 	
     <center>
-        <form action="p_profile.php" method="post">
+        <form action="Admin_principal_profile.php" method="post">
         	<div class="col-6" >                  
             <div class="card-profile">
                 <div class="row">

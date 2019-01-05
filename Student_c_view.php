@@ -45,7 +45,7 @@
         <div class="nav-fixed font">
              <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a>
-            <a href="Admin_character_index.php" class="nav-page"> Previous </a> 
+            <a href="Student_index.php" class="nav-page"> Previous </a> 
            
         </div>
         <div>
@@ -57,7 +57,7 @@
 	
         
     <center>
-        <form action="Admin_c_view.php" method="post" >
+        <form action="Student_c_view.php" method="post" >
         	
   
         	<div class="col-6" >
@@ -88,7 +88,7 @@
 
 	        </div>
 
-	        	<p align="left"><b>To whom it may concern:</b></p>
+	        	
 	          	<p align="left"><?php echo $row2[1]; ?> was a student of Lumbini College,colombo 05.</p>
 	    	  	<p align="left">During his career in school he has participated in extracurricular activities as follows:</p>
 
@@ -104,13 +104,7 @@
 	    		</table>
 			</div>
 
-	    	<p  align="left">He was obidient,honest and trustworthy.His conduct and behavior was saisfactory.</p>
-	    	<p  align="left">I wish him success in all his future endeavors.</p><br>
-	    	<br>
 	    
-	    	<p  align="left">.......................</p><br>
-	    	<p  align="left">Principal</p>
-
 
 	
 		

@@ -30,7 +30,7 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM teacher_info WHERE username='$username' ");
                    
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
@@ -172,7 +172,7 @@
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="te_admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
+                                        <form action="Admin_teacher.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                             <input type="text" required name="user_s" placeholder="Type username">
                                             <button type="submit" name="submit_user" class="btn btn-green btn-large btn-wide">Delete</button>
                                         </form>

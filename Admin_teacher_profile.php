@@ -7,7 +7,7 @@
 
 		$connect =mysqli_connect("localhost","root","","school_mgt_system");
 
-		$query = "SELECT * FROM `student_info` WHERE username = $username";
+		$query = "SELECT * FROM `teacher_info` WHERE username = $username";
 
 		$result = mysqli_query($connect, $query);
 
@@ -23,6 +23,7 @@
 		       $class =$row['class'];
 		       $gender=$row['gender'];
 	           $telephone=$row['telephone'];
+	           $email=$row['email'];
 	
 			}
 
@@ -32,11 +33,13 @@
 			echo "undefined ID";
 			$username="";
 		    $names="";
+		    $email="";
 		    $class ="";
 		    $age="";
 		    $gender="";
 		    $address="";
 		    $telephone="";
+
 	}
 		
 
@@ -48,11 +51,13 @@
 	else{
 		$username="";
 	    $names="";
+	    $email="";
 	    $class ="";
 	    $age="";
 	    $gender="";
 	    $address="";
 	    $telephone="";
+	   
 	}
 
 ?>
@@ -62,11 +67,11 @@
 <head>
 	<head>
         <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title> Student Profile | Lumbini College</title>
+        <title> Teacher Profile | Lumbini College</title>
         <link rel="icon" href="images/logo1.png" type="image/png">
         <style>
             body {
-            background-image: url("images/sh.jpg");
+            background-image: url("images/shk.jpg");
             background-attachment: fixed;
             background-position:0;
             background-repeat: no-repeat;
@@ -76,9 +81,10 @@
 </head>
 <body class="font">        
         <div class="nav-fixed font">
-            <a href="logout.php"> <img src="images/logo.png"></a>
+            <a href="logout.php"> <img src="images/lo2go.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="Admin_teacher.php" class="nav-page">Previous </a>      
+            <a href="Admin_teacher.php" class="nav-page">Previous </a>
+            <a href="Teacher_profile_create.php" class="nav-page">Create Profile</a>       
         </div>
         <div>
         	<br>
@@ -88,7 +94,7 @@
         </div> 
 	
     <center>
-        <form action="s_profile.php" method="post">
+        <form action="Admin_teacher_profile.php" method="post">
         	<div class="col-6" >                  
             <div class="card-profile">
                 <div class="row">
@@ -115,10 +121,32 @@
 				<input type="text" name="names"  value="<?php echo $names; ?>"> <br><br>
 			</div>
 	    	</div>
+	    	
+	    	<div class="row">                                
+            	<div class="col-3 lbl">Email</div>
+			<div class="col-9">
+				<input type="text" name="email"  value="<?php echo $email; ?>"> <br><br>
+			</div>
+	    	</div>
+	    	
+	    	
+
+	    	<div class="row">                                
+            	<div class="col-3 lbl">Address</div>
+			<div class="col-9">
+				<input type="text" name="address"  value="<?php echo $address; ?>"><br><br>
+			</div>
+	    	</div>
 			<div class="row">                                
-            	<div class="col-3 lbl">Class</div>
+            	<div class="col-3 lbl">Section</div>
 			<div class="col-9">
 				<input type="text" name="class"  value="<?php echo $class; ?>"><br><br>
+			</div>
+	    	</div>
+	    	<div class="row">                                
+           		<div class="col-3 lbl">Telephone</div>
+	    	<div class="col-9">
+				<input type="text" name="telephone"  value="<?php echo $telephone; ?>"><br><br>
 			</div>
 	    	</div>
 
@@ -136,18 +164,8 @@
 				<input type="text" name="age"  value="<?php echo $age; ?>"><br><br>
 			</div>
 	    	</div>
-			<div class="row">                                
-            	<div class="col-3 lbl">Address</div>
-			<div class="col-9">
-				<input type="text" name="address"  value="<?php echo $address; ?>"><br><br>
-			</div>
-	    	</div>
-	    	<div class="row">                                
-           		<div class="col-3 lbl">Telephone</div>
-	    	<div class="col-9">
-				<input type="text" name="telephone"  value="<?php echo $telephone; ?>"><br><br>
-			</div>
-	    	</div>
+			
+	    	
                        
         
 		

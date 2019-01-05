@@ -23,13 +23,13 @@
             {
                 $username = $_POST["username"];
                 include("connection.php");  
-                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 4 ");
                 $num = mysqli_num_rows($res);
                
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
-                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM principals_info WHERE username='$username' ");
                    
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
@@ -178,7 +178,7 @@
                                 </div><hr>
 
                                     <div class='center'>
-                                        <form action="prin_admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
+                                        <form action="Admin_principal.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                             <input type="text" required name="username" placeholder="Type username">
                                             <button type="submit" name="submit_user" class="btn btn-green btn-large btn-wide">Delete</button>
                                         </form>

@@ -9,7 +9,8 @@
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="Admin_student.php" class="nav-page">Previous </a>     
+            <a href="Admin_student.php" class="nav-page">Previous </a>
+               
         </div> 
         <div>
         	<br>
@@ -82,7 +83,7 @@ if($numrow>0){
 			 		
 			 		
 			 		
-			 	</tr>';
+			</tr>';
 	}
 	echo "</table><br>";
 }
@@ -90,6 +91,8 @@ if($numrow>0){
 
 ?>
 
+
+<a href="Admin_s_profile_edit.php?edit_id=<?php echo $row['$username'];?> "alt="edit" class=>Edit</a>  
 
 </body>
 </html>

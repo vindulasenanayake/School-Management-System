@@ -38,9 +38,9 @@
         <p>Please wait...</p>
     </div>
 </div>
-<!-- Overlay For Sidebars -->
+
 <div class="overlay"></div>
-<!-- Top Bar -->
+
 <nav class="navbar p-l-5 p-r-5">
     <ul class="nav navbar-nav navbar-left">
 
@@ -55,6 +55,8 @@
 
 
             <li><a href="logout.php"><b>Logout</b></a></li>
+            <li><a href="Student_index.php"><b>Previous</b></a></li>
+
             <li class="hidden-xs"></li>
         </li>
     </ul>
@@ -155,44 +157,7 @@
                   </div>
               </div>
             </div>
-            <!-- <div class="col-lg-6 col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h2><strong>ID:</strong> 25823</h2>
-                        <small>Created by Admin at: 5 Nov, 2018</small>
-                        <ul class="header-dropdown">
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-delete"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <h6>This is Note</h6>
-                        <p class="m-b-0">There will be a techers meeting on 9th of november from 1.00 p.m onward in the school main hall. All the teachers are requested to be present on that meeting.
-                        <br><br> Principal
-                        </p>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="col-lg-6 col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h2><strong>ID:</strong> 25824</h2>
-                        <small>Created by Admin at: 1st Nov, 2018</small>
-                        <ul class="header-dropdown">
-                            <li class="remove">
-                                <a role="button" class="boxs-close"><i class="zmdi zmdi-delete"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="body">
-                        <h6>This is Note</h6>
-                        <p class="m-b-0">There will be a techers meeting on 1st of november from 1.00 p.m onward in the school main hall. All the teachers are requested to be present on that meeting.
-                        <br><br> Principal
-                        </p>
-                    </div>
-                </div>
-            </div> -->
+            <
 
         </div>
     </div>

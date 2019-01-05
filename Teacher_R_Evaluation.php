@@ -76,41 +76,12 @@
                     </div>
                  </div>
                 
-                                
-                <div class="col-3">
-                    <div class='card-container'>                           
-                        <div class='card-job card-top'>
-                            <div>
-                                <img src="images/cover.jpg" width="100%"  >
-                            </div>
-                            <div class='col-12'>
-                            <br>
-                                <div class='row'>
-                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
-
-                                    </div>
-                                </div>
-                                <div class='row'>
-                                    <div class='center'><strong>Student Progress</strong></div>                                  
-                                </div><hr>
-
-                                     <div class='center'>
-                                       
-                                     <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Student Progress</a>
-                                    </div>
-                                    </div>
-                                <hr>
-                                
-                            </div>
-                        </div>                  
-                    </div>
-                 </div>
+                
                 
                 
               
                 
-                <div class="col-3">
+                <div class="col-3 center">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -140,7 +111,7 @@
                     </div>
                  </div>
                 
-                <div class="col-3">
+                <div class="col-3 center">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>

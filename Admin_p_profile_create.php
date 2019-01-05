@@ -11,7 +11,7 @@
 
         <?php
 
-            if(isset($_POST["btn_update"]))
+            if(isset($_POST["btn_submit"]))
             {  
                  include("connection.php");
 
@@ -23,27 +23,38 @@
                 $address = $_POST["address"];
                 $class =$_POST["class"];
                 $age = $_POST["age"];
-                $update ="UPDATE data SET names='$names',username='$username' ,gender='$gender',telephone='$telephone',address='$address',class='$class',age='$age'";
+                $email=$_POST["email"];
               
                 include("connection.php");
                 
                 
                    
-            $sql = "INSERT INTO `student_info`(`username`, `names`, `address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username','$names','$address','$class','$telephone','$gender','$age')";
-            $up =mysqli_query($con,$update);
+            $sql = "INSERT INTO `principals_info`(`username`, `names`,'email', `address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username','$names','$email','$address','$class','$telephone','$gender','$age')";
 
+           if ($con->query($sql) === TRUE) {
+                 echo "New record created successfully";
+                 
+                } else {
+                  echo "Error " . $sql . "<br>" . $con->error;
+                }      
+                   
+                
+                   
+                   
+                
 
-           }
+            }
+
 
         ?>
 <html>
     <head>
         <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title> Student Profile | Lumbini College</title>
+        <title> Teachers Profile | Lumbini College</title>
         <link rel="icon" href="images/logo1.png" type="image/png">
         <style>
             body {
-            background-image: url("images/sh.jpg");
+            background-image: url("images/shh.jpg");
             background-attachment: fixed;
             background-position:0;
             background-repeat: no-repeat;
@@ -57,8 +68,8 @@
         
            
         <div class="nav-fixed">
-          <a href="home.php"> <img src="images/logo.png"></a>
-          <a href="Admin_s_profile_index.php" class="nav-page"> Previous </a> 
+          <a href="home.php"> <img src="images/log1o.png"></a>
+          <a href="Admin_principal_profile.php" class="nav-page"> Previous </a> 
             
         </div> 
         <br>
@@ -71,7 +82,7 @@
       
             
       <center>
-           <form action="Admin_s_profile_edit.php" method="POST">
+           <form action="Admin_p_profile_create.php" method="POST">
 
                
                 <div class="col-6 center">
@@ -108,6 +119,16 @@
 
                         <br>
 
+                        <div class="row">                                
+                            <div class="col-3 lbl">Email</div>
+                            <div class="col-9">
+                            
+                                <input type="text" id="email" name="email" placeholder="Email" >
+                            </div>
+                        </div>
+
+                        <br>
+
                         <div class="row">
                             <div class="col-3 lbl">Address</div>
                             <div class="col-9">
@@ -117,9 +138,9 @@
                         <br>
 
                         <div class="row">
-                            <div class="col-3 lbl">Class</div>
+                            <div class="col-3 lbl">Section</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="class" placeholder="eg - 7A" >
+                                   <input type="text" id="class" name="class" placeholder="eg:primary/secondary" >
                             </div>
                         </div>
 
@@ -156,14 +177,13 @@
 
                         <br>
 
-                        <a href="Admin_s_profile_edit.php?edit_id=<?php echo $row['$username'];?> "alt="edit">Edit</a>
-
                         
 
 
             
 
-                        
+                        <button name="btn_submit" id="btn_submit" type="submit" class="btn btn-green btn-large " >Submit</button>              
+
                         
 
 

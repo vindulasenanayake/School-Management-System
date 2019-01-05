@@ -1,4 +1,5 @@
 <?php
+
 require('fpdf17/fpdf.php');
 $con =mysqli_connect("localhost","root","","school_mgt_system");
 
@@ -12,7 +13,7 @@ class PDF extends FPDF{
 		$this->Cell(0.5,40,'----------------------------------------------------------------------------------------------------------------------------------------',0,1);
 		$this->Cell(0.5,5,'To whom it may concern:',0,1);
 		$this->Cell(0.5,5,'',0,1);
-		$this->Cell(0.5,5,'Samarapulige Bilesh Sashrika Frando was a student of Lumbini College,colombo 05.',0,1);
+		$this->Cell(0.5,5,'was a student of Lumbini College,colombo 05.',0,1);
 		$this->Cell(0.5,5,'',0,1);
 		$this->Cell(0.5,5,'During his career in school he has participated in extracurricular activities as follows:',0,1);
 		$this->Cell(0.5,5,'',0,1);
@@ -43,14 +44,15 @@ $pdf = new PDF('P','mm','A4');
 $pdf->AddPage();
 
 //$username =$_POST['$username'];
+$query = mysqli_query($con,"SELECT * FROM student_result WHERE username= '$use'
+");
 
-$query = mysqli_query($con, "SELECT * FROM extra_activities ");
 while($data = mysqli_fetch_array($query)){
 
 	
 	
-	$pdf->Cell(40,5,$data['year'],0,0);
-	$pdf->Cell(60,5,$data['activity'],0,1);
+	$pdf->Cell(40,5,$data['english'],0,0);
+	$pdf->Cell(60,5,$data['buddhism'],0,1);
 
 
 }

@@ -21,7 +21,7 @@
         <?php
            if(isset($_POST["submit_user"]))
             {
-                $username = $_POST["username"];
+                $username = $_POST["user_s"];
                 include("connection.php");  
                 $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
                 $num = mysqli_num_rows($res);
@@ -172,7 +172,7 @@
                                
 
                                 <div class='center'>
-                                    <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
+                                    <form action="Admin_student.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
                                         <input type="text" required name="user_s" placeholder="Type username">
                                         <button type="submit" name="submit_user" class="btn btn-green btn-large btn-wide">Delete</button>
                                     </form>

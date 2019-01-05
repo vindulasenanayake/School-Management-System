@@ -303,7 +303,7 @@ body {
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="logout.php"><b>logout</b></a></li>
                             <li class="hidden-xs"></li>
-                            <li><a href="te admin.php"><b>Previous</b> </a></li>
+                            <li><a href="Admin_academic_pub.php"><b>Previous</b> </a></li>
                              <li class="hidden-xs"></li>  
                             
                         </ul>
