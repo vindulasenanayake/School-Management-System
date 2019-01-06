@@ -1,6 +1,4 @@
 <?php
-error_reporting(0);
-ini_set('display_errors', 0);
 
 include 'connection.php';
     session_start();
@@ -13,7 +11,6 @@ include 'connection.php';
     {
 
         $statusMsg = '';
-        $typ=3;
         $targetDir = "uploads/";
         $grade = $_POST['grade'];
         $fileName = basename($_FILES["file"]["name"]);
@@ -22,12 +19,12 @@ include 'connection.php';
 
         if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
             // Allow certain file formats
-            $allowTypes = array('jpg','png','jpeg','gif','pdf','xlsx');
+            $allowTypes = array('jpg','png','jpeg','gif','pdf');
             if(in_array($fileType, $allowTypes)){
                 // Upload file to server
                 if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
                     // Insert image file name into database
-                    $insert = $con->query("INSERT into images (file_name, uploaded_on,class,types) VALUES ('".$fileName."', NOW(),'$grade','$typ')");
+                    $insert = $con->query("INSERT into images (file_name, uploaded_on,class) VALUES ('".$fileName."', NOW(),'$grade')");
                     if($insert){
                         $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
                     }else{
@@ -37,7 +34,7 @@ include 'connection.php';
                     $statusMsg = "Sorry, there was an error uploading your file.";
                 }
             }else{
-                $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF,xlsx, & PDF files are allowed to upload.';
+                $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
             }
         }
         // else{
@@ -264,7 +261,7 @@ body {
     background-image: url('images/marks.jpg');
     height: 600px;
     position: relative;
-    margin-top: -182px;
+    margin-top: -150px;
     padding-top: 345px;
     text-align: center;
     background-repeat: no-repeat;
@@ -327,7 +324,7 @@ body {
    </section>
 
     <div class="upload">
-        <form action="marks.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
+        <form action="upload_activities.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
             <!-- <div> -->
  <!--            <input type="file" name="file" id="imgInp"> -->

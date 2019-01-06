@@ -33,10 +33,7 @@
 <body class="theme-blush">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
-    <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="images/logo1.png" width="48" height="48" alt="Lumbini College"></div>
-        <p>Please wait...</p>
-    </div>
+    
 </div>
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
@@ -51,10 +48,12 @@
         </li>
 
         <li class="float-right">
-            <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
+            
 
 
             <li><a href="logout.php"><b>Logout</b></a></li>
+            <li class="hidden-xs"></li>
+            <li><a href="te admin.php"><b>Previous</b></a></li>
             <li class="hidden-xs"></li>
         </li>
     </ul>
