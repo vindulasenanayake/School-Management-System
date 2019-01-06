@@ -12,7 +12,7 @@ class PDF extends FPDF{
 		$this->Cell(0.5,40,'----------------------------------------------------------------------------------------------------------------------------------------',0,1);
 		$this->Cell(0.5,5,'To whom it may concern:',0,1);
 		$this->Cell(0.5,5,'',0,1);
-		$this->Cell(0.5,5,'was a student of Lumbini College,colombo 05.',0,1);
+		$this->Cell(0.5,5,'Samarapulige Bilesh Sashrika Frando was a student of Lumbini College,colombo 05.',0,1);
 		$this->Cell(0.5,5,'',0,1);
 		$this->Cell(0.5,5,'During his career in school he has participated in extracurricular activities as follows:',0,1);
 		$this->Cell(0.5,5,'',0,1);

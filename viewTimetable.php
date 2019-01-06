@@ -1,4 +1,5 @@
 
+
 <html>
 
 
@@ -254,8 +255,7 @@ th{
         <div class="upload">
 
 
-
-        <form action="viewtt.php" method="post" >
+        <form action="viewtt.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
            
 
@@ -269,19 +269,41 @@ th{
                       <option value="9">Grade9</option>
                       <option value="10">Grade10</option>
                       <option value="11">Grade11</option>
-             </select>
-             <button class="file-upload-btn" type="submit" ">SHOW TIME TABLE </button>
+                    </select>
+                    <button class="file-upload-btn" type="input" ">SHOW TIME TABLE </button>
 
-             </div>
-        </form> 
-        </div>
+
+
+
+              
+                               
+                      </div>
+                    </div>
+                  </div>
+        </form>  
+     
     </div>
-   </div>
-
+                        
+                    </div>
+                </div>
+            </div>
+            
+               
+            
+        </div>
+    </div>     
+                          
 
 
    
-            
+
+
+
+
+
+
+        
+
               <footer>
 
                           <div class="container">
@@ -297,12 +319,4 @@ th{
                </footer>
 
     </body>
-
-
-
 </html>
-
-<!--   header('Content-type: application/pdf');
-  header('Content-Disposition: inline; filename="' . $filename . '"');
-  header('Content-Transfer-Encoding: binary');
-  header('Accept-Ranges: bytes'); -->

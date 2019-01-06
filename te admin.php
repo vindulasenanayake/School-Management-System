@@ -135,7 +135,7 @@
                                     <div class='center'>
                                         
                                               <a href="notice.php"><button class="button">UPLOAD</button></a>
-                                              <a href="view notices.php"><button class="button button2"> VIEW </button></a>
+                                              <a href="view_notices.php"><button class="button button2"> VIEW </button></a>
                                         
                                     </div>
                                 <hr>

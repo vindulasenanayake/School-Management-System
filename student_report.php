@@ -3,20 +3,7 @@
     
     if(isset($_POST["btn_save"]))
     {
-        $user = $_SESSION["user"];
-        $names = $_POST["names"];
-        $term = $_POST["term"];
-        $m_language = $_POST["m_language"];
-        $buddhism = $_POST["buddhism"];
-        $english = $_POST["english"];
-        $science = $_POST["science"];
-        $health = $_POST["health"];
-        $tamil = $_POST["tamil"];
-        $gender = $_POST["gender"];
-        $gender = $_POST["gender"];
-        $address = $_POST["address"];
-       
-        $age = $_POST["age"];
+               
         
         include("connection.php");
 
@@ -286,15 +273,31 @@
                         <div class="row">
                             <div class="col-3 lbl">ICT</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="it" placeholder="eg - 7A" value="<?php echo $row1[18];?>"disabled disabled>
+                                   <input type="text" id="class" name="it" placeholder="IT" value="<?php echo $row1[18];?>"disabled disabled>
                             </div>
                         </div>
 
                         <br>
                          <div class="row">
+                            <div class="col-3 lbl"> Total</div>
+                            <div class="col-9">
+                                   <input type="text" id="class" name="tot" placeholder="Total" value="<?php echo $row1[19];?>"disabled >
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
                             <div class="col-3 lbl">Average</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="avg" placeholder="eg - 7A" value="<?php echo $row1[19];?>"disabled >
+                                   <input type="text" id="class" name="avg" placeholder="average" value="<?php echo $row1[20];?>"disabled >
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-3 lbl">Position</div>
+                            <div class="col-9">
+                                   <input type="text" id="class" name="position" placeholder="position" value="<?php echo $row1[21];?>"disabled >
                             </div>
                         </div>
 

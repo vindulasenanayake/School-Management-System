@@ -11,7 +11,7 @@
 
         <?php
 
-            if(isset($_POST["btn_submit"]))
+            if(isset($_POST["btn_update"]))
             {  
                  include("connection.php");
 
@@ -23,28 +23,17 @@
                 $address = $_POST["address"];
                 $class =$_POST["class"];
                 $age = $_POST["age"];
+                $update ="UPDATE data SET names='$names',username='$username' ,gender='$gender',telephone='$telephone',address='$address',class='$class',age='$age'";
               
                 include("connection.php");
                 
                 
                    
             $sql = "INSERT INTO `student_info`(`username`, `names`, `address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username','$names','$address','$class','$telephone','$gender','$age')";
+            $up =mysqli_query($con,$update);
 
 
-           if ($con->query($sql) === TRUE) {
-                 echo "New record created successfully";
-                 
-                } else {
-                  echo "Error " . $sql . "<br>" . $con->error;
-                }      
-                   
-                
-                   
-                   
-                
-
-            }
-
+           }
 
         ?>
 <html>
@@ -167,13 +156,14 @@
 
                         <br>
 
+                        <a href="Admin_s_profile_edit.php?edit_id=<?php echo $row['$username'];?> "alt="edit">Edit</a>
+
                         
 
 
             
 
-                        <button name="btn_submit" id="btn_submit" type="submit" class="btn btn-green btn-large " >Submit</button>              
-
+                        
                         
 
 

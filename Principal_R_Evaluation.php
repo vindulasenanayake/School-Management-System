@@ -137,13 +137,13 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Student Progress</strong></div>                                  
+                                    <div class='center'><strong>Overall Results</strong></div>                                  
                                 </div><hr>
 
                                      <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Student Progress</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Grade_Prog.php">Overall Results</a>
                                     </div>
                                     </div>
                                 <hr>
@@ -170,13 +170,13 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Class Progress</strong></div>                                  
+                                    <div class='center'><strong>Class Results</strong></div>                                  
                                 </div><hr>
 
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Class Progress</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Class_Prog.php">Class Results</a>
                                     </div>
                                     </div>
                                 <hr>
@@ -200,13 +200,13 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Overall progress</strong></div>                                  
+                                    <div class='center'><strong>AL Results</strong></div>                                  
                                 </div><hr>
 
                                   <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=".php">Overall Progress</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_AL_Prog.php">AL Results</a>
                                     </div>
                                     </div>
                                 <hr>

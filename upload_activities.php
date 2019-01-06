@@ -265,7 +265,7 @@ body {
     background-image: url('images/activity.png');
     height: 600px;
     position: relative;
-    margin-top: -150px;
+    margin-top: -182px;
     padding-top: 345px;
     text-align: center;
     background-repeat: no-repeat;

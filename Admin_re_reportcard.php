@@ -36,7 +36,11 @@
                $drama=$row['drama'];
                $t_skill=$row['t_skill'];
                $it=$row['it'];
+               $tot=$row['tot'];
                $avg=$row['avg'];
+               $position=$row['position'];
+               
+
 
 
 
@@ -67,7 +71,9 @@
                $drama="";
                $t_skill="";
                $it="";
+               $tot="";
                $avg="";
+               $position="";
 
     }
         
@@ -77,9 +83,9 @@
 
     }
 
-    else{
-        $username= "";
-        $term ="";
+        else{
+               $username= "";
+               $term ="";
                $buddhism="";
                $m_languaage="";
                $english="";
@@ -90,15 +96,17 @@
                $maths="";
                $geography="";
                $c_studiess="";
-               $history="";
+              
                $w_music="";
                $e_music="";
                $art="";
                $dancing="";
                $drama="";
                $t_skill="";
+               $tot="";
                $it="";
                $avg="";
+               $position="";
     }
 
 ?>
@@ -123,7 +131,6 @@
 <body class="font">        
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
-            <a href="teacher_R_Evaluation.php" class="nav-page"> Previous </a> 
             <a href="logout.php" class="nav-page"> Logout </a> 
                  
         </div>
@@ -270,10 +277,22 @@
             <input type="text" name="it"  value="<?php echo $it; ?>"><br><br>
         </div>
         </div>
+        <div class="row">                                
+            <div class="col-3 lbl">Total</div>
+        <div class="col-9">
+            <input type="text" name="tot"  value="<?php echo $tot; ?>"><br><br>
+        </div>
+        </div>
          <div class="row">                                
             <div class="col-3 lbl">Average</div>
         <div class="col-9">
             <input type="text" name="avg"  value="<?php echo $avg; ?>"><br><br>
+        </div>
+        </div>
+        <div class="row">                                
+            <div class="col-3 lbl">Position</div>
+        <div class="col-9">
+            <input type="text" name="position"  value="<?php echo $position; ?>"><br><br>
         </div>
         </div>
         
@@ -282,7 +301,7 @@
 
         
     </form>
-        </center> 
+  </center> 
         
 </body>
 
