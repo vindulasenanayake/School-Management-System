@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Progress | Lumbini College</title>
+    <title>Class Results | Lumbini College</title>
     <link href="css/style1.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="images/logo1.png" type="image/png">
     <style>
@@ -20,7 +20,7 @@
                 background-color:#f2f2f2;
             }
             .right {
-                width: 80%;
+                width: 79%;
             }
             .block {
                 display: block;
@@ -56,6 +56,8 @@
     </div> 
     <div class="row">
         <div class="column left">
+            <br>
+            <div class='center'><strong>Grade 9</strong></div>
             <a href="Prog_ClassA.php" target = "prog_chart"><button id="classA" type="submit" class="block">Class A</button></a>
             <a href="Prog_ClassB.php" target = "prog_chart"><button id="classB" type="submit" class="block">Class B</button></a>
             <a href="Prog_ClassC.php" target = "prog_chart"><button id="classC" type="submit" class="block">Class C</button></a>
@@ -65,7 +67,7 @@
         </div>
         <div class="column right">
                 
-                    <iframe name="prog_chart" src="Prog_ClassA.php">
+                    <iframe name="prog_chart" src="Prog_ClassA.php" scrolling="no">
                         <p>Your browser does not support iframes.</p>
                     </iframe>
                 

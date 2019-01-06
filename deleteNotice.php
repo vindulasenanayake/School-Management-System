@@ -1,30 +1,14 @@
-
-  <?php
-    $servername = "localhost";
-    $username = "root";
-    $password ="";
-    $dbname = "school_mgt_system";
-
-    $id = $_POST["id"];
-
-
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+<?php
+    include 'connection.php';
+    
+    if (isset($_GET['id']) && is_numeric($_GET['id']))
+    {
+        // get the 'id' variable from the URL
+        $id = $_GET['id'];
+        echo $id;
+        $sql = "DELETE FROM images WHERE id = $id";
+        $query = mysqli_query($con, $sql);
+       
+        header("Location: view_notices.php");
     }
-
-
-    $sql ="DELETE FROM `notice` WHERE `id` = '".$id."'";
-
-
-    if ($conn->query($sql) === TRUE) {
-        $getResult= "DONE!";
-    } else {
-        $getResult= "Error";
-    }
-    echo json_encode($getResult);
-    $conn->close();
-  ?>
+    ?>

@@ -43,9 +43,8 @@
         <li class="float-right">
             
 
-            <li><a href="admin_pannel.php"><b>Admin Panel</b></a></li>
-            <li class="hidden-xs"></li>
-            <li><a href="Admin_academic_pub.php"><b>Academic and Publications</b></a></li>
+            
+            <li><a href="Principal_index.php"><b>Previous</b></a></li>
             <li class="hidden-xs"></li>
             <li><a href="logout.php"><b>Logout</b></a></li>
             <li class="hidden-xs"></li>

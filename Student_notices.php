@@ -56,6 +56,8 @@
 
             <li><a href="logout.php"><b>Logout</b></a></li>
             <li class="hidden-xs"></li>
+            <li><a href="Student_index.php"><b>Previous</b></a></li>
+            <li class="hidden-xs"></li>
         </li>
     </ul>
 </nav>

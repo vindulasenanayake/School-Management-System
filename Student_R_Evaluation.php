@@ -32,7 +32,7 @@
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Teacher - Result Evaluation</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin - Result Evaluation</div></div><br>
             <div class="row">
                 
                 
@@ -64,7 +64,7 @@
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Teacher_re_reportcard.php"> Report Cards</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Admin_re_reportcard.php"> Report Cards</a>
                                     </div>
                                     </div>
                                 <hr>

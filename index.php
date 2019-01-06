@@ -25,7 +25,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
        
-        <title>Welocome to Lumbini College</title>
+        <title>Welcome to Lumbini College</title>
         <link rel="icon" href="images/logo1.png" type="image/png">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">

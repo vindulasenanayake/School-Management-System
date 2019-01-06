@@ -78,7 +78,7 @@
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="Admin_s_profile_index.php" class="nav-page"> Previous </a> 
+            <a href="Principal_index.php" class="nav-page"> Previous </a> 
            
         </div>
         <div>
@@ -89,7 +89,7 @@
         </div> 
 	
         <center>
-        	<form action="Admin_student_profile.php" method="post">
+        	<form action="Prin_student_profile.php" method="post">
         	<div class="col-6" >                  
             <div class="card-profile">
                 <div class="row">

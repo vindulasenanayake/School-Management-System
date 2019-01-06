@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Overall Results | Lumbini College</title>
+    <title>Student Progress | Lumbini College</title>
     <link href="css/style1.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="images/logo1.png" type="image/png">
     <style>
@@ -20,7 +20,7 @@
                 background-color:#f2f2f2;
             }
             .right {
-                width: 80%;
+                width: 77%;
             }
             .block {
                 display: block;
@@ -45,8 +45,9 @@
 <body class="font">        
     <div class="nav-fixed font">
         <a href="logout.php"> <img src="images/logo.png"></a>
-        <a href="logout.php" class="nav-page"> Logout </a> 
-        <a href="Principal_R_Evaluation.php" class="nav-page">Previous</a>
+        <a href="logout.php" class="nav-page"> Logout </a>
+        <a href="Teacher_R_Evaluation.php " class="nav-page"> Previous</a> 
+        
                          
     </div>
     <div>
@@ -56,8 +57,6 @@
     </div> 
     <div class="row">
         <div class="column left">
-            <br>
-            <div class='center'><strong>Average Marks</strong></div>
             <button id="grade11" type="button" class="block">Grade 11</button>
             <button id="grade10" type="button" class="block">Grade 10</button>
             <a href="Prin_grade9.php" target = "grade_chart"><button id="grade9" type="submit" class="block">Grade 9</button></a>
@@ -66,7 +65,7 @@
             <button id="grade6" type="button" class="block">Grade 6</button>
         </div>
         <div class="column right">
-            <iframe name="grade_chart" src="Prin_grade9.php" scrolling="no">
+            <iframe name="grade_chart" src="Prin_grade9.php">
                 <p>Your browser does not support iframes.</p>
             </iframe>
 

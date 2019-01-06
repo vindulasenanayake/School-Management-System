@@ -270,6 +270,7 @@ th{
                       <option value="10">Grade10</option>
                       <option value="11">Grade11</option>
              </select>
+             
              <button class="file-upload-btn" type="submit" ">SHOW ACTIVITIES </button>
 
              </div>
@@ -280,7 +281,7 @@ th{
 
 
 
-   
+<!--    
             
               <footer>
 
@@ -295,7 +296,7 @@ th{
                           
                       
                </footer>
-
+ -->
     </body>
 
 

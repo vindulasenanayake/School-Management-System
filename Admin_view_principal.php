@@ -37,7 +37,7 @@
     $username = "";
     $display_name = "";
     $display_type = "";
-    $email="";
+    
 
 
 
@@ -54,7 +54,7 @@ echo "
 			 	<tr>
 			 		<th> Username </th>
 			 		<th> Name </th>
-			 		<th> Email</th>
+			 		
 			 		<th> Address </th>
 			 		<th> Class </th>
 			 		<th> Telephone </th>
@@ -69,7 +69,7 @@ if($numrow>0){
 	while($row = mysqli_fetch_assoc($result)){
 		$username=$row['username'];
 		$names =$row['names'];
-		$email=$row['email'];
+	
 		$address=$row['address'];
 		$class=$row['class'];
 		$telephone=$row['telephone'];
@@ -84,7 +84,7 @@ if($numrow>0){
 		echo '<tr>
 			 		<td>'.$username.'</td>
 			 		<td>'.$names.'</td>
-			 		<td>'.$email.'</td>
+			 	
 			 		<td>'.$address.'</td>
 			 		<td>'.$class.'</td>
 			 		<td>'.$telephone.'</td>

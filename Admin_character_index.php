@@ -25,7 +25,7 @@
         </div>   
 
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Pannel - Character Certificate</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin panel - Character Certificate</div></div><br>
             <div class="row">
                 
                 <div class="col-3 center">

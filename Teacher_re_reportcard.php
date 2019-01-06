@@ -131,8 +131,9 @@
 <body class="font">        
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
-            <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="Admin_R_Evaluation.php" class="nav-page"> Previous</a>      
+            <a href="logout.php" class="nav-page"> Logout </a>
+            <a href="Teacher_R_Evaluation.php" class="nav-page"> Previous</a> 
+                 
         </div>
         <div>
             <br>
@@ -144,7 +145,7 @@
        
     
         <center>
-            <form action="Admin_re_reportcard.php" method="post">
+            <form action="Teacher_re_reportcard.php" method="post">
             <div class="col-6" >                  
             <div class="card-profile">
                 <div class="row">

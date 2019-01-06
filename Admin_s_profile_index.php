@@ -10,7 +10,7 @@
 <html>
     <head>
         
-        <title>Admin Pannel | Lumbini College</title>
+        <title>Admin panel | Lumbini College</title>
         <link href="css/style1.css" rel="stylesheet">
         <link rel="icon" href="images/logo1.png" type="image/png">
        
@@ -23,7 +23,7 @@
         </div>   
 
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Pannel- Profile</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin panel- Profile</div></div><br>
 
             <div class="row">
                 

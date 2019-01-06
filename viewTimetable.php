@@ -255,7 +255,7 @@ th{
         <div class="upload">
 
 
-        <form action="viewTimetable.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
+        <form action="viewtt.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
            
 
@@ -279,7 +279,7 @@ th{
                                
                       </div>
                     </div>
-                  </div>
+<!--                   </div>
         </form>  
      
     </div>
@@ -287,7 +287,7 @@ th{
                     </div>
                 </div>
             </div>
-            
+             -->
                
             
         </div>
@@ -302,9 +302,9 @@ th{
 
 
 
-        
+        <!-- 
 
-              <footer>
+             / <footer>
 
                           <div class="container">
                               <div class="row">
@@ -316,7 +316,7 @@ th{
                           </div>
                           
                       
-               </footer>
+               </footer> -->
 
     </body>
 </html>

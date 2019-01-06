@@ -68,6 +68,7 @@
             <a href="student_profile.php" class="nav-page">Profile</a>
             <a href="student_report.php" class="nav-page">Report Card</a>
             <a href="display.php" class="nav-page">Past Papers</a>
+            <a href="Student_notices.php" class="nav-page">Academic and Publication Notices</a>
         </div>  
          <div class="container ">
             <div class="row"><div class="col-5 center big card-heading-blue">Student</div></div><br> 

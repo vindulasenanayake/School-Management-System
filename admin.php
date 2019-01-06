@@ -59,7 +59,7 @@
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Pannel  -  Student</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin panel  -  Student</div></div><br>
             <div class="row">
                 
                 

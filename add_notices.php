@@ -86,7 +86,7 @@
 
             <a href="logout.php" class="nav-page"> Logout </a>       
             <a href="ac_admin.php" class="nav-page">Academic and publicatio</a> 
-            <a href="admin_pannel.php" class="nav-page">Admin Pannel</a>       
+            <a href="admin_pannel.php" class="nav-page">Admin panel</a>       
             
             <a class="nav-name">Welcome <?php echo $_SESSION['real_name']; ?>!</a>
             <img class="nav-pro-pic" src="<?php echo $_SESSION['pic_path'];?>">

@@ -28,8 +28,8 @@
                 include("connection.php");
                 
                 
-                   
-            $sql = "INSERT INTO `teacher_info`(`username`, `names`,'email', `address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username','$names','$email','$address','$class','$telephone','$gender','$age')";
+            //$sql =  INSERT INTO `teacher_info`(`username`, `names`, `email`, `address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username',[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])      
+           $sql = "INSERT INTO `teacher_info`(`username`, `names`,`address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username','$names','$address','$class','$telephone','$gender','$age')";
 
            if ($con->query($sql) === TRUE) {
                  echo "New record created successfully";

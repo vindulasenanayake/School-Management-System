@@ -23,13 +23,12 @@
                 $address = $_POST["address"];
                 $class =$_POST["class"];
                 $age = $_POST["age"];
-                $email=$_POST["email"];
               
                 include("connection.php");
                 
                 
                    
-            $sql = "INSERT INTO `principals_info`(`username`, `names`,'email', `address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username','$names','$email','$address','$class','$telephone','$gender','$age')";
+            $sql = "INSERT INTO `principals_info`(`username`, `names`, `address`, `class`, `telephone`, `gender`, `age`) VALUES ('$username','$names','$address','$class','$telephone','$gender','$age')";
 
            if ($con->query($sql) === TRUE) {
                  echo "New record created successfully";
@@ -50,11 +49,11 @@
 <html>
     <head>
         <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title> Teachers Profile | Lumbini College</title>
+        <title> Principal Profile | Lumbini College</title>
         <link rel="icon" href="images/logo1.png" type="image/png">
         <style>
             body {
-            background-image: url("images/shh.jpg");
+            background-image: url("images/sh.jpg");
             background-attachment: fixed;
             background-position:0;
             background-repeat: no-repeat;
@@ -68,8 +67,8 @@
         
            
         <div class="nav-fixed">
-          <a href="home.php"> <img src="images/log1o.png"></a>
-          <a href="Admin_principal_profile.php" class="nav-page"> Previous </a> 
+          <a href="home.php"> <img src="images/logo.png"></a>
+          <a href="Admin_principal.php" class="nav-page"> Previous </a> 
             
         </div> 
         <br>
@@ -93,7 +92,7 @@
                     <div class="card-profile">
                         <div class="row">
                             <div class="col-12 card-heading-blue">
-                                <center><br><h1>Student Profile</h1> <br></center>
+                                <center><br><h1>Principal Profile</h1> <br></center>
                             </div>
                         </div>
                        
@@ -119,16 +118,6 @@
 
                         <br>
 
-                        <div class="row">                                
-                            <div class="col-3 lbl">Email</div>
-                            <div class="col-9">
-                            
-                                <input type="text" id="email" name="email" placeholder="Email" >
-                            </div>
-                        </div>
-
-                        <br>
-
                         <div class="row">
                             <div class="col-3 lbl">Address</div>
                             <div class="col-9">
@@ -138,9 +127,9 @@
                         <br>
 
                         <div class="row">
-                            <div class="col-3 lbl">Section</div>
+                            <div class="col-3 lbl">Class</div>
                             <div class="col-9">
-                                   <input type="text" id="class" name="class" placeholder="eg:primary/secondary" >
+                                   <input type="text" id="class" name="class" placeholder="eg - 7A" >
                             </div>
                         </div>
 

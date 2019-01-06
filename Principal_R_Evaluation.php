@@ -6,17 +6,65 @@
         header('location: logout.php');
     }
 
-    
+    $username = "";
+    $display_name = "";
+    $display_type = "";
 ?>
 
 <html>
     <head>
         <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title> Admin panel | Lumbini College! </title>
+        <title> Results Evaluation | Lumbini College! </title>
         <link rel="icon" href="images/logo1.png" type="image/png">
        
 
+        <?php
+           if(isset($_POST["submit_user"]))
+            {
+                $username = $_POST["user_s"];
+                include("connection.php");  
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 1 ");
+                $num = mysqli_num_rows($res);
+               
+                if($num == 1)
+                {
+                    mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
+                    
+                    echo "<script> alert('User successfully deleted'); </script>";
+                }
+                else
+                {
+                    echo "<script> alert('Could not find user'); </script>";
+                }                
+            }  
         
+            if(isset($_POST["submit_company"]))
+            {
+                $username = $_POST["user_s"];
+                include("connection.php");  
+                $res = mysqli_query($con, "SELECT * FROM user_login WHERE username='$username' AND type = 2 ");
+                
+                $num = mysqli_num_rows($res);
+               
+                if($num == 1)
+                {
+                    mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
+                    
+                    mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
+                   
+                    echo "<script> alert('User successfully deleted'); </script>";
+                }
+                else
+                {
+                    echo "<script> alert('Could not find user'); </script>";
+                }                
+            }
+        
+           
+           
+        
+        ?>
     </head>  
         
     <body class="font">        
@@ -32,7 +80,7 @@
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Principal- Result Evaluation</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue"> Results Evaluation</div></div><br>
             <div class="row">
                 
                 
@@ -64,7 +112,7 @@
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_re_reportcard.php"> Report Cards</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Admin_re_reportcard.php"> View </a>
                                     </div>
                                     </div>
                                 <hr>
@@ -95,7 +143,7 @@
                                      <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Grade_Prog.php">Overall Results</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Grade_Prog.php">Grades 6-11</a>
                                     </div>
                                     </div>
                                 <hr>
@@ -128,7 +176,7 @@
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Class_Prog.php">Class Results</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Class_Prog.php">Grade 9</a>
                                     </div>
                                     </div>
                                 <hr>
@@ -158,7 +206,7 @@
                                   <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Principal_AL_Prog.php">AL Results</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_AL_Prog.php">Commerce Stream</a>
                                     </div>
                                     </div>
                                 <hr>

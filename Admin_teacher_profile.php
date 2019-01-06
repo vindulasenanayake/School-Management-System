@@ -23,7 +23,7 @@
 		       $class =$row['class'];
 		       $gender=$row['gender'];
 	           $telephone=$row['telephone'];
-	           $email=$row['email'];
+	       
 	
 			}
 
@@ -33,7 +33,7 @@
 			echo "undefined ID";
 			$username="";
 		    $names="";
-		    $email="";
+		    
 		    $class ="";
 		    $age="";
 		    $gender="";
@@ -51,7 +51,7 @@
 	else{
 		$username="";
 	    $names="";
-	    $email="";
+	  
 	    $class ="";
 	    $age="";
 	    $gender="";
@@ -71,7 +71,7 @@
         <link rel="icon" href="images/logo1.png" type="image/png">
         <style>
             body {
-            background-image: url("images/shk.jpg");
+            background-image: url("images/shkjpg");
             background-attachment: fixed;
             background-position:0;
             background-repeat: no-repeat;
@@ -81,7 +81,7 @@
 </head>
 <body class="font">        
         <div class="nav-fixed font">
-            <a href="logout.php"> <img src="images/lo2go.png"></a>
+            <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="Admin_teacher.php" class="nav-page">Previous </a>
             <a href="Teacher_profile_create.php" class="nav-page">Create Profile</a>       
@@ -122,15 +122,8 @@
 			</div>
 	    	</div>
 	    	
-	    	<div class="row">                                
-            	<div class="col-3 lbl">Email</div>
-			<div class="col-9">
-				<input type="text" name="email"  value="<?php echo $email; ?>"> <br><br>
-			</div>
-	    	</div>
+	    
 	    	
-	    	
-
 	    	<div class="row">                                
             	<div class="col-3 lbl">Address</div>
 			<div class="col-9">

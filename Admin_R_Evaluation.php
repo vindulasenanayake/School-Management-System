@@ -1,13 +1,13 @@
 <?php
     session_start();
     
-    if($_SESSION["type"] != 2)
+    if($_SESSION["type"] != 3)
     {
         header('location: logout.php');
     }
 
     
-?>
+?> 
 
 <html>
     <head>
@@ -25,14 +25,14 @@
 
                
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="te admin.php" class="nav-page">Previous </a>      
+            <a href="Admin_student.php" class="nav-page">Previous </a>      
         </div>        
         
         
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Teacher - Result Evaluation</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue"> Results Evaluation</div></div><br>
             <div class="row">
                 
                 
@@ -64,7 +64,7 @@
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Teacher_re_reportcard.php"> Report Cards</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Admin_re_reportcard.php"> View </a>
                                     </div>
                                     </div>
                                 <hr>
@@ -95,7 +95,7 @@
                                      <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Grade_Prog.php">Overall Results</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Grade_Prog.php">Grades 6-11</a>
                                     </div>
                                     </div>
                                 <hr>
@@ -128,7 +128,7 @@
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Class_Prog.php">Class Results</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_Class_Prog.php">Grade 9</a>
                                     </div>
                                     </div>
                                 <hr>
@@ -158,7 +158,7 @@
                                   <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Principal_AL_Prog.php">AL Results</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Principal_AL_Prog.php">Commerce Stream</a>
                                     </div>
                                     </div>
                                 <hr>

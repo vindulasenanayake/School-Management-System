@@ -36,7 +36,8 @@
             <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a>
             <a href="Teacher_R_Evaluation.php" class="nav-page">Result Evaluation</a> 
-            
+            <a href="T_student_profile.php" class="nav-page">Student Profile</a>  
+          
         </div>        
         
         
@@ -135,7 +136,7 @@
                                     <div class='center'>
                                         
                                               <a href="notice.php"><button class="button">UPLOAD</button></a>
-                                              <a href="view notices.php"><button class="button button2"> VIEW </button></a>
+                                              <a href="view_notices.php"><button class="button button2"> VIEW </button></a>
                                         
                                     </div>
                                 <hr>

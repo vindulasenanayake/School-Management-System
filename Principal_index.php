@@ -75,7 +75,7 @@
 
 
                                     <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="prin_notice.php"> View</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="prin_notice.php"> View </a>
                                     </div>
                                 <hr>
                                 
@@ -83,11 +83,12 @@
                         </div>                  
                     </div>
                  </div>
+ 
                  <div class="col-3 center">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
-                                <img src="images/sh.jpg" width="100%">
+                                <img src="images/student.jpg" width="100%"  >
                             </div>
                             <div class='col-12'>
                             <br>
@@ -97,12 +98,14 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong> Upload Notices</strong></div>                                  
+                                    <div class='center'><strong>Upload Notices</strong></div>                                  
                                 </div><hr>
+
                                     <br>
                                     <br>
                                     <br>
-                                    
+                                   
+
 
 
                                     <div class='center' bgcolor:green>
@@ -138,7 +141,7 @@
 
 
                                     <div class='center' bgcolor:green>
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_student_profile.php">View</a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Prin_student_profile.php">View</a>
                                         
                                     </div>
                                 <hr>

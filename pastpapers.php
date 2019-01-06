@@ -340,7 +340,7 @@ $('.image-upload-wrap').bind('dragover', function () {
 <!--     <body class="font">   -->
 
         
-
+<center>
 <footer>
 
             <div class="container">
@@ -354,6 +354,6 @@ $('.image-upload-wrap').bind('dragover', function () {
             
         
 </footer>
-
+</center>
 </body>
 </html>

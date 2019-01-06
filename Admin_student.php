@@ -16,7 +16,7 @@
 <html>
     <head>
         <link href="css/style1.css" rel="stylesheet" type="text/css">
-        <title> Admin pannel | Lumbini College! </title>
+        <title> Admin panel | Lumbini College! </title>
         <link rel="icon" href="images/logo1.png" type="image/png">
         <?php
            if(isset($_POST["submit_user"]))
@@ -49,7 +49,7 @@
             <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="admin_pannel.php" class="nav-page">Previous </a>
             <a href="Admin_academic_pub.php" class="nav-page">Academic and Publication</a>
-            <a href="Admin_results_evaluation.php" class="nav-page">Result Evaluation</a>
+            <a href="Admin_R_Evaluation.php" class="nav-page">Result Evaluation</a>
 
             
         </div>        
@@ -58,7 +58,7 @@
         
         
         <div class="container ">
-            <div class="row"><div class="col-5 center big card-heading-blue">Admin Pannel  -  Student</div></div><br>
+            <div class="row"><div class="col-5 center big card-heading-blue">Admin panel  -  Student</div></div><br>
             <div class="row">
                 
                 

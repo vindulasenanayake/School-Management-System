@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Overall Results | Lumbini College</title>
+    <title>Student Progress | Lumbini College</title>
     <link href="css/style1.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="images/logo1.png" type="image/png">
     <style>
@@ -46,7 +46,7 @@
     <div class="nav-fixed font">
         <a href="logout.php"> <img src="images/logo.png"></a>
         <a href="logout.php" class="nav-page"> Logout </a> 
-        <a href="Principal_R_Evaluation.php" class="nav-page">Previous</a>
+      
                          
     </div>
     <div>
@@ -56,24 +56,28 @@
     </div> 
     <div class="row">
         <div class="column left">
-            <br>
-            <div class='center'><strong>Average Marks</strong></div>
-            <button id="grade11" type="button" class="block">Grade 11</button>
-            <button id="grade10" type="button" class="block">Grade 10</button>
-            <a href="Prin_grade9.php" target = "grade_chart"><button id="grade9" type="submit" class="block">Grade 9</button></a>
-            <a href="Prin_grade8.php" target = "grade_chart"><button id="grade8" type="submit" class="block">Grade 8</button></a>
-            <button id="grade7" type="button" class="block">Grade 7</button>
-            <button id="grade6" type="button" class="block">Grade 6</button>
+            <a href="Prog_ClassA.php" target = "prog_chart"><button id="classA" type="submit" class="block">Class A</button></a>
+            <a href="Prog_ClassB.php" target = "prog_chart"><button id="classB" type="submit" class="block">Class B</button></a>
+            <a href="Prog_ClassC.php" target = "prog_chart"><button id="classC" type="submit" class="block">Class C</button></a>
+            <a href="Prog_ClassD.php" target = "prog_chart"><button id="classD" type="submit" class="block">Class D</button></a>
+            <a href="Prog_ClassE.php" target = "prog_chart"><button id="classE" type="submit" class="block">Class E</button></a>
+            <a href="Prog_ClassF.php" target = "prog_chart"><button id="classF" type="submit" class="block">Class F</button></a>
         </div>
         <div class="column right">
-            <iframe name="grade_chart" src="Prin_grade9.php" scrolling="no">
-                <p>Your browser does not support iframes.</p>
-            </iframe>
-
+                
+                    <iframe name="prog_chart" src="Prog_ClassA.php">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe>
+                
         </div>
     </div>
 	
 
+	<!-- javascript -->
+    <script src="script/jquery.js"></script>
+    <script src="script/Chart.js"></script>
+    <script src="script/utils.js"></script>
+    <script src="script/grade9_class.js"></script>
     
 </body>
 

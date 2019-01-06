@@ -18,7 +18,7 @@
 			while ($row = mysqli_fetch_array($result)){
 	           $username= $row['username'];
 		       $names=$row['names'];
-		       $email=$row['email'];
+		      
 		       $address=$row['address'];
 		       $class =$row['class'];
 		       $telephone=$row['telephone'];
@@ -34,7 +34,7 @@
 			echo "undefined ID";
 			$username="";
 		    $names="";
-		    $email="";
+		  
 		    $address="";
 		    $class ="";
 		    $telephone="";
@@ -52,7 +52,7 @@
 	else{
 		    $username="";
 		    $names="";
-		    $email="";
+		  
 		    $address="";
 		    $class ="";
 		    $telephone="";
@@ -119,12 +119,7 @@
 				<input type="text" name="names"  value="<?php echo $names; ?>"> <br><br>
 			</div>
 	    	</div>
-	    	<div class="row">                                
-            	<div class="col-3 lbl">Email</div>
-			<div class="col-9">
-				<input type="text" name="email"  value="<?php echo $email; ?>"> <br><br>
-			</div>
-	    	</div>
+	    	
 	    	<div class="row">                                
             	<div class="col-3 lbl">Address</div>
 			<div class="col-9">
