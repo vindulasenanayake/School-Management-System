@@ -22,8 +22,8 @@
         <div class="nav-fixed font">
             <a href="logout.php"> <img src="images/logo.png"></a>
             <a href="logout.php" class="nav-page"> Logout </a> 
-            <a href="admin.php" class="nav-page">Previous </a>
-                 
+            <a href="Admin_student.php" class="nav-page">Previous </a>
+            <a href="Admin_character_index.php" class="nav-page">Character Certificate </a>     
         </div>        
         
         
@@ -36,11 +36,7 @@
             <br>
             <div class="row">
                 
-<<<<<<< HEAD
                <div class="col-3">
-=======
-                <div class="col-4 center">
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -57,17 +53,9 @@
                                     <div class='center'><strong>Upload Timetable</strong></div>                                  
                                 </div><hr>
 
-<<<<<<< HEAD
                                     
                                     <div class='center'>                                                                               
                                          <a class="btn btn-green btn-large btn-wide" href="timeTable.php">Upload Timetable</a>
-=======
-                                    <div class='center'>
-                                        <form action="admin.php" method="POST">
-                                            <a href="client_profile.php"><img src="images/up.png"></a>
-                                            
-                                        </form>
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                                     </div>
                                     
                                 <hr>
@@ -77,13 +65,8 @@
                     </div>
                  </div>              
                 
-<<<<<<< HEAD
                 
                   <div class="col-3">
-=======
-                                
-                <div class="col-4">
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -100,16 +83,9 @@
                                     <div class='center'><strong>Upload Pastpapers</strong></div>                                  
                                 </div><hr>
 
-<<<<<<< HEAD
                                     
                                     <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="timeTable.php">Upload Pastpapers</a>
-=======
-                                    <div class='center'>
-                                        <form action="admin.php" method="POST" >
-                                              <a href="pastpapers.php"><img src="images/up.png"></a>
-                                        </form>
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
+                                         <a class="btn btn-green btn-large btn-wide" href="pastpapers.php">Upload Pastpapers</a>
                                     </div>
                                     
                                 <hr>
@@ -123,7 +99,7 @@
                 
               
                 
-                <div class="col-4">
+                <div class="col-3">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
                             <div>
@@ -140,16 +116,9 @@
                                     <div class='center'><strong>Upload Notices</strong></div>                                  
                                 </div><hr>
 
-<<<<<<< HEAD
                                     
                                     <div class='center'>                                                                               
                                          <a class="btn btn-green btn-large btn-wide" href="notices.php">Upload Notices</a>
-=======
-                                    <div class='center'>
-                                        <form action="admin.php" method="POST" onsubmit="return confirm('Are you sure you want to delete?')">
-                                            <a href="notices.php"><img src="images/up.png"></a>
-                                        </form>
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                                     </div>
                                     
                                 <hr>
@@ -159,7 +128,6 @@
                     </div>
                  </div>
                 
-<<<<<<< HEAD
                 <div class="col-3">
                     <div class='card-container'>                           
                         <div class='card-job card-top'>
@@ -188,9 +156,6 @@
                         </div>                  
                     </div>
                  </div>
-=======
-                
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                  
                
            

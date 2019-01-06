@@ -67,6 +67,7 @@
             <a href="logout.php" class="nav-page"> Logout </a> 
             <a href="student_profile.php" class="nav-page">Profile</a>
             <a href="student_report.php" class="nav-page">Report Card</a>
+            <a href="display.php" class="nav-page">Past Papers</a>
         </div>  
          <div class="container ">
             <div class="row"><div class="col-5 center big card-heading-blue">Student</div></div><br> 

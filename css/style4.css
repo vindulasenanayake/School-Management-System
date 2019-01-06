@@ -1,0 +1,10 @@
+<.bgimg {
+    background-image: url('images/activity.png');
+    height: 500px;
+    position: relative;
+    margin-top: -150px;
+    padding-top: 345px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

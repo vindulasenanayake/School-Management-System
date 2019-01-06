@@ -143,6 +143,7 @@
             <a href="logout.php"> <img src="images/logo.png"></a>
             
             <a href="logout.php" class="nav-page"> Logout </a> 
+			<a href="Principal_R_Evaluation.php" class="nav-page">Previous</a>
                  
         </div>
         <div>

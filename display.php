@@ -29,45 +29,11 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/style.css" rel="stylesheet">
-        
+        <link href="css/style1.css" rel="stylesheet" type="text/css">
+        <link href="css/style3.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="images/logo1.png" type="image/png">
 
-<style>
-    body{background-color: #f2f2f2; color: #333;}
-    .main{box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; margin-top: 10px;}
-    h3{background-color: #4294D1; color: #f7f7f7; padding: 15px; border-radius: 4px; box-shadow: 0 1px 6px rgba(57,73,76,0.35);}
-    .img-box{margin-top: 20px;}
-    .img-block{float: left; margin-right: 5px; text-align: center;}
-    p{margin-top: 0;}
-    img{width: 375px; min-height: 250px; margin-bottom: 10px; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; border:6px solid #f7f7f7;}
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
-  height: 300px;
-  margin: auto;
-}
 
-.card img{
-    width: 100%;
-    height: 100px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-#pastPapersDisplay{
-    display: none;
-}
-</style>
 </head>
 
     <body>
@@ -86,10 +52,12 @@
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="logout.php"><b>logout</b></a></li>
-                            <li class="hidden-xs"></li>
-                            <li><a href="Student_index.php"><b>Previous</b> </a></li>
-                             <li class="hidden-xs"></li>  
+                            <div class="nav-fixed font">
+                                <a href="logout.php"> <img src="images/logo.png"></a>
+                                <a href="logout.php" class="nav-page"> Logout </a> 
+                                <a href="Student_index.php" class="nav-page">Previous </a>
+                 
+                            </div>  
                             
                         </ul>
                     </div>
@@ -100,13 +68,14 @@
     <!---Main Content-->
 
     <div class="container main">
-        <h3><center>Student - Notice Panel</center></h3>
+         <!--<div class="row"><div class="col-5 center big card-heading-blue">Admin Panel  -  Student</div></div>-->
+         <h3><center>Student - Pastpaper Panel</center></h3> 
         
         <div id="pastPapersDisplay">
                 
-            <div class="card">
+            <div class="card center">
                 <a href="BLOCKIMG" download>
-                    <img src="BLOCKIMG" alt="" style="width:100%">
+                    <img class="container " src="BLOCKIMG" alt="" style="width:75%">
                 </a>
                 <div class="containerCard">
                  

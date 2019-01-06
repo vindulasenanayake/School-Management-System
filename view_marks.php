@@ -124,7 +124,7 @@ th{
                             <td><?php echo $row['file_name']; ?></td>
                             <td><?php echo $row['uploaded_on']; ?></td>
                             <td><?php echo $row['class']; ?></td>
-                            <td><a href="deleteMarks.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td> 
+                            <td><a href="deleteImage.php?id= <?php echo $row['id']; ?>"><i class="fa fa-trash"></i></a></td> 
                             </tr>
                             <?php
 

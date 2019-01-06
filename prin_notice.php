@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if($_SESSION["type"] != 3)
+    if($_SESSION["type"] != 4)
     {
         header('location: logout.php');
     }
@@ -53,7 +53,7 @@
 
             <li><a href="logout.php"><b>Logout</b></a></li>
             <li class="hidden-xs"></li>
-            <li><a href="prin_admin.php"><b>Previous</b></a></li>
+            <li><a href="principal_index.php"><b>Previous</b></a></li>
             <li class="hidden-xs"></li>
         </li>
     </ul>

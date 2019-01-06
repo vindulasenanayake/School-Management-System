@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='center'><strong>Upload Notices</strong></div>                                  
+                                    <div class='center'><strong>View Notices</strong></div>                                  
                                 </div><hr>
                                     <br>
                                     <br>
@@ -75,7 +75,39 @@
 
 
                                     <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href=""> Upload </a>
+                                         <a class="btn btn-green btn-large btn-wide" href="prin_notice.php"> View</a>
+                                    </div>
+                                <hr>
+                                
+                            </div>
+                        </div>                  
+                    </div>
+                 </div>
+                 <div class="col-3 center">
+                    <div class='card-container'>                           
+                        <div class='card-job card-top'>
+                            <div>
+                                <img src="images/sh.jpg" width="100%">
+                            </div>
+                            <div class='col-12'>
+                            <br>
+                                <div class='row'>
+                                    <div class='center' style='padding-right:0.1rem; padding-left:0.1rem;font-weight:bold;'>
+
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='center'><strong> Upload Notices</strong></div>                                  
+                                </div><hr>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    
+
+
+                                    <div class='center' bgcolor:green>
+                                         <a class="btn btn-green btn-large btn-wide" href="prin_notice_upload.php">Upload</a>
+                                        
                                     </div>
                                 <hr>
                                 

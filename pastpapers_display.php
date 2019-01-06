@@ -29,7 +29,7 @@
               'file_name' => $row['file_name'],
               'uploaded_on' => $row['uploaded_on'],
               'class' => $row['class'],
-              'type' => $row['type'],
+              
               
              );
             array_push($getResult, $noticeResult);

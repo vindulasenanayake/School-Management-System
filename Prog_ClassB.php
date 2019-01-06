@@ -3,7 +3,7 @@
 <head>
     <title>Class B | Grade 9</title>
     
-    <link href="css/default.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
     
 </head>
 <body>

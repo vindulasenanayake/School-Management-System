@@ -46,19 +46,11 @@
                                 
 
 
-<<<<<<< HEAD
                                     
                                 <div class='center'>                                                                               
                                     <a class="btn btn-green btn-large btn-wide" href="Admin_student.php">Student</a>
                                 </div>
                                   
-=======
-                                    <div class='center'>
-                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="admin.php">Student</a>
-                                        </div>
-                                    </div>
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                                 <hr>
                                 
                             </div>
@@ -88,19 +80,10 @@
                                 <br>
                                 <br>
 
-<<<<<<< HEAD
                                     
                                 <div class='center'>                                                                               
                                     <a class="btn btn-green btn-large btn-wide" href="Admin_teacher.php">Teacher</a>
                                 </div>
-=======
-                                    <div class='center'>
-                                        <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="te_admin.php">Teacher</a>
-                                        </div>
-                                        </form>
-                                    </div>
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                                 <hr>
                                 
                             </div>
@@ -127,16 +110,9 @@
                                 <br>
                                 <br>
 
-<<<<<<< HEAD
                                 <div class='center'>
                                     <div class='center'>                                                                               
                                         <a class="btn btn-green btn-large btn-wide" href="Admin_principal.php">Principal</a>
-=======
-                                    <div class='center'>
-                                       <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="prin_admin.php">Principal</a>
-                                        </div>
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
                                     </div>
                                 </div>
                                 <hr>
