@@ -259,7 +259,7 @@ body {
         <form action="pastpapers_save.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
         
             <!-- <div> -->
- <!--            <input type="file" name="file" id="imgInp"> -->
+   <!-- <input type="file" name="file" id="imgInp"> -->
             
            
             <!-- </div> -->
@@ -273,7 +273,7 @@ body {
                       <option value="11">Grade 11</option>
                       <option value="11">Grade 12</option>
                       <option value="11">Grade 13</option>
-                    </select>
+              </select>
 
 
               <div class="image-upload-wrap">
@@ -353,7 +353,7 @@ $('.image-upload-wrap').bind('dragover', function () {
             </div>
             
         
- </footer>
+</footer>
 
-    </body>
+</body>
 </html>

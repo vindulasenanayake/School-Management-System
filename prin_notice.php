@@ -201,7 +201,7 @@
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 
 <script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/Teacher_notices.js"></script>
+<script src="assets/js/pages/principal_notices.js"></script>
 </body>
 
 
