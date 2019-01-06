@@ -23,6 +23,18 @@
 				-webkit-user-select: none;
 				-ms-user-select: none;
 			}
+			#wrap {
+ 				width: 100%;
+			}
+			.left{
+				width: 40%;
+				float:left;
+			}
+			.right{
+				width: 40%;
+				float:right;
+			}
+
 		</style>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -128,17 +140,20 @@
                 </nav>
             </div>
         </header>
-		
+		<div id="wrap">
 			<!Term Test Marks>
-			<div style="width: 48%; vertical-align: left; ">
+			<div style="width: 40%;" class="left">
 				<canvas id="canvas"></canvas>
-				<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+				<progress id="animationProgress1" max="1" value="0" style="width: 100%"></progress>
 			</div>
+		
 			<br>
 			<br>
-			<button id="randomizeData">Term Test Marks</button>
+			<div class="left">
+				<button id="randomizeData">Term Test Marks</button>
+			</div>
 			<script>
-				var progress = document.getElementById('animationProgress');
+				var progress = document.getElementById('animationProgress1');
 				var config = {
 					type: 'line',
 					data: {
@@ -214,7 +229,7 @@
 					options: {
 						title: {
 							display: true,
-							text: 'Student Progress'
+							text: 'Grade 9 Results'
 						},
 						animation: {
 							duration: 2000,
@@ -232,8 +247,8 @@
 				};
 
 				window.onload = function() {
-					var ctx = document.getElementById('canvas').getContext('2d');
-					window.myLine = new Chart(ctx, config);
+					var ctx1 = document.getElementById('canvas').getContext('2d');
+					window.myLine = new Chart(ctx1, config);
 				};
 
 				document.getElementById('randomizeData').addEventListener('click', function() {
@@ -246,17 +261,21 @@
 					window.myLine.update();
 				});
 			</script>
-			
+		
 			<!A/L results>
-			<div style="width: 47%; vertical-align: right;">
-				<canvas id="canvas"></canvas>
-				<progress id="animationProgress" max="1" value="0" style="width: 100%"></progress>
+			<div style="width: 40%;" class="right">
+				<canvas id="canvas2"></canvas>
+				<progress id="animationProgress2" max="1" value="0" style="width: 100%"></progress>
 			</div>
+		
 			<br>
 			<br>
-			<button id="randomizeData">A/L Results</button>
+			<div class="right">
+				<button id="randomizeData">A/L Results</button>
+			</div>
+		</div>
 			<script>
-				var progress = document.getElementById('animationProgress');
+				var progress = document.getElementById('animationProgress2');
 				var config = {
 					type: 'line',
 					data: {
@@ -332,7 +351,7 @@
 					options: {
 						title: {
 							display: true,
-							text: 'Student Progress'
+							text: 'A/L Results'
 						},
 						animation: {
 							duration: 2000,
@@ -350,8 +369,8 @@
 				};
 
 				window.onload = function() {
-					var ctx = document.getElementById('canvas').getContext('2d');
-					window.myLine = new Chart(ctx, config);
+					var ctx2 = document.getElementById('canvas2').getContext('2d');
+					window.myLine = new Chart(ctx2, config);
 				};
 
 				document.getElementById('randomizeData').addEventListener('click', function() {
@@ -364,7 +383,7 @@
 					window.myLine.update();
 				});
 			</script>
-      
+	
         
 
 

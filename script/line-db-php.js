@@ -4,11 +4,7 @@ $(document).ready(function() {
 	 * call the data.php file to fetch the result from db table.
 	 */
 	$.ajax({
-<<<<<<< HEAD
-		url : "http://localhost/Group_10/api/data9.php",
-=======
-		url : "http://localhost/Group_10_Charini/api/data9.php",
->>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
+		url : "http://localhost/School-Management-System/api/data.php",
 		type : "GET",
 		success : function(data){
 			console.log(data);
@@ -67,7 +63,7 @@ $(document).ready(function() {
 			}
 
 			//get canvas
-			var ctx = $("#line-chart9");
+			var ctx = $("#line-chartcanvas");
 
 			var data = {
 				labels : ["Term1", "Term2","Term3"],
@@ -181,7 +177,6 @@ $(document).ready(function() {
 					text : "Grade 9",
 					fontSize : 18,
 					fontColor : "#111"
-					
 				},
 				legend : {
 					display : true,

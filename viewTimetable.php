@@ -255,7 +255,11 @@ th{
         <div class="upload">
 
 
+<<<<<<< HEAD
         <form action="viewtt.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
+=======
+        <form action="viewTimetable.php" method="post" enctype="multipart/form-data" id="form1" runat="server">
+>>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
         
            
 

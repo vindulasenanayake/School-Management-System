@@ -3,7 +3,11 @@ $(document).ready(function () {
 	 * call the data_class.php file to fetch the result from db table.
 	 */
 	$.ajax({
+<<<<<<< HEAD
 		url : "http://localhost/Group_10/api/data_class.php",
+=======
+		url : "http://localhost/Group_10_Charini/api/data_class.php",
+>>>>>>> 06b5edf6c9396e4d7b2f1d307ebbbb6376e2b286
 		type : "GET",
 		success : function(data){
 			console.log(data);

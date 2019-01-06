@@ -38,9 +38,9 @@
         </li>
 
         <li class="float-right">
-            
+            <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
 
-            <li><a href="admin_pannel.php"><b>Admin Panel</b></a></li>
+            <li><a href="admin_pannel.php"><b>Admin Pannel</b></a></li>
             <li class="hidden-xs"></li>
             <li><a href="ac_admin.php"><b>Academic and Publications</b></a></li>
             <li class="hidden-xs"></li>
@@ -90,7 +90,6 @@
               <option value="1">All</option>
               <option value="2">Students</option>
               <option value="3">Teachers</option>
-              <option value="4">Principal</option>
             </select>
           </div>
         </div>
@@ -151,8 +150,8 @@
                     </li>
                     <br>
                     <br>
-                         
-                  
+
+                    <li><a href="add_notices.php"><span>Add Notices</span></a></li>
 
 
                     <br>
@@ -206,7 +205,6 @@
 
       <div class="row clearfix" id="notice_content">
             <div id="BLOCK">
-              
               <div class="col-lg-12 col-md-12" id="IDNUM">
                   <div class="card">
                       <div class="header">
@@ -226,7 +224,6 @@
                       </div>
                   </div>
               </div>
-              
             </div>
             <!-- <div class="col-lg-6 col-md-12">
                 <div class="card">
@@ -276,21 +273,7 @@
 
 <script src="assets/bundles/mainscripts.bundle.js"></script>
 <script src="assets/js/pages/notices.js"></script>
-
-<footer>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-xs-12 col-sm-12">
-                        
-                        <p class="copy-rights">Copyright by Lumbini College &reg;</p>
-                    </div>
-                </div>
-            </div>
-            
-        
- </footer>
-
 </body>
+
 
 </html>

@@ -60,7 +60,7 @@ function getMonth(month) {
 $(document).ready(function(){
   var deleteNoticeId;
   var datax = {
-    receiver : "Students",
+    receiver : "Principal",
   };
   //load all notice page
   $.ajax({

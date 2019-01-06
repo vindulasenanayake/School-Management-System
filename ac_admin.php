@@ -30,7 +30,9 @@
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM student_info WHERE username='$username' ");
-             
+                    mysqli_query($con, "DELETE FROM cust_name WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual_deg WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM cust_qual WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -50,8 +52,9 @@
                 if($num == 1)
                 {
                     mysqli_query($con, "DELETE FROM user_login WHERE username='$username' ");
+                    mysqli_query($con, "DELETE FROM client_contact WHERE username='$username' ");
                     mysqli_query($con, "DELETE FROM teachers_info WHERE username='$username' ");
-                 
+                    mysqli_query($con, "DELETE FROM client_job_vc WHERE username='$username' ");
                     echo "<script> alert('User successfully deleted'); </script>";
                 }
                 else
@@ -205,7 +208,20 @@
                
            
             </div>
-           
+            <div class="row">
+                <div class="col-6">
+                
+                <?php
+                    if (isset($_POST["submit_view"]))
+                    {
+                        echo "All password reset requests"; 
+                    }
+                
+                ?>
+            
+            
+                </div>
+            </div>
             <br>
             <br>
             
@@ -245,6 +261,16 @@
                     }
                 ?>
                 
+                    <div class="col-5 center">
+                        <div class="card">
+                            <h2>User Details</h2>
+                        <table class="table table-striped center">
+                            <tr><th>Username</th><th>Name</th><th>Account type</th></tr>
+                            <tr><td><?php echo $username;  ?></td><td><?php echo $display_name; ?></td><td><?php echo $display_type; ?></td></tr>
+                        </table>
+
+                        </div>
+                    </div>
             </div>
         </div> 
                       

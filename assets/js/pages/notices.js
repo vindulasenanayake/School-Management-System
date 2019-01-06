@@ -52,7 +52,7 @@ function getMonth(month) {
       return "Error";
 
   }
-  // TODO: add all 12 months in switch case
+  
 
   return date;
 }
@@ -193,7 +193,7 @@ $(document).ready(function(){
               alert("error");
             }
             else{
-
+              // Get current date
               var date = getDate();
               var noticeDiv  = $("#BLOCK").html();
               console.log(noticeDiv);
