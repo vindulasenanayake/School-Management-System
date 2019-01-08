@@ -37,7 +37,8 @@
             <a href="logout.php" class="nav-page"> Logout </a>
             <a href="Teacher_R_Evaluation.php" class="nav-page">Result Evaluation</a> 
             <a href="T_student_profile.php" class="nav-page">Student Profile</a>  
-          
+            <a href="Teacher_t_profile.php" class="nav-page">My Profile</a> 
+            <a href="Teacher_prin_notice.php" class="nav-page">Principal notices</a> 
         </div>        
         
         

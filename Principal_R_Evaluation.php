@@ -112,7 +112,7 @@
                                     <div class='center'>
                                        
                                      <div class='center'>                                                                               
-                                         <a class="btn btn-green btn-large btn-wide" href="Admin_re_reportcard.php"> View </a>
+                                         <a class="btn btn-green btn-large btn-wide" href="Prin_re_reportcard.php"> View </a>
                                     </div>
                                     </div>
                                 <hr>

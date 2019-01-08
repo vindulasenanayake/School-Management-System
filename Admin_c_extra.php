@@ -73,7 +73,7 @@
                     <div class="card-profile">
                         <div class="row">
                             <div class="col-12 card-heading-blue">
-                                <center><br><h1>Extara Currricular Activities</h1> <br></center>
+                                <center><br><h1>Extra Currricular Activities</h1> <br></center>
                             </div>
                         </div>
                        
